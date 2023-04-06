@@ -62,6 +62,7 @@ func add_coin():
 #			JUMP_VELOCITY = 100
 
 func throw_coin():
+	# default is Z
 	if coins <= 0:
 		coins = 0
 		return
