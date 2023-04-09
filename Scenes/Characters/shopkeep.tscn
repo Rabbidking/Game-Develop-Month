@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5btdutqafj81"]
+
+[ext_resource type="Texture2D" uid="uid://dvbg65h2l8c2v" path="res://icon.svg" id="1_3gmnn"]
+[ext_resource type="Script" path="res://Scripts/shopkeep.gd" id="1_jd5lh"]
+[ext_resource type="PackedScene" uid="uid://bo1fsqp4c043x" path="res://Scenes/UI/Shop.tscn" id="3_82sax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koh25"]
+
+[node name="Shopkeep" type="Area2D"]
+script = ExtResource("1_jd5lh")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_koh25")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+texture = ExtResource("1_3gmnn")
+
+[node name="Shop" parent="." instance=ExtResource("3_82sax")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

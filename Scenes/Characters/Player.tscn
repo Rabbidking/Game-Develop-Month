@@ -13,6 +13,7 @@ script = ExtResource("1_r040e")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
 texture = ExtResource("2_7vdvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

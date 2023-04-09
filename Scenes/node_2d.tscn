@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctr41k87yka3m"]
+[gd_scene load_steps=7 format=3 uid="uid://ctr41k87yka3m"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="1_mlrhm"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="2_5w26j"]
+[ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="3_b4e6w"]
+[ext_resource type="Script" path="res://Scripts/Collectables.gd" id="3_bxp7d"]
+[ext_resource type="PackedScene" uid="uid://b5btdutqafj81" path="res://Scenes/Characters/shopkeep.tscn" id="5_2qcv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgc2"]
 size = Vector2(1104.5, 40)
@@ -38,11 +41,24 @@ offset_bottom = 40.0
 position = Vector2(612.75, 20)
 shape = SubResource("RectangleShape2D_ekgc2")
 
-[node name="Coin" parent="." instance=ExtResource("2_5w26j")]
+[node name="UI" parent="." instance=ExtResource("3_b4e6w")]
+
+[node name="Collectables" type="Node2D" parent="."]
+script = ExtResource("3_bxp7d")
+
+[node name="Coin" parent="Collectables" instance=ExtResource("2_5w26j")]
 position = Vector2(1047, 455)
 
-[node name="Coin2" parent="." instance=ExtResource("2_5w26j")]
+[node name="Coin2" parent="Collectables" instance=ExtResource("2_5w26j")]
 position = Vector2(839, 564)
 
-[node name="Coin3" parent="." instance=ExtResource("2_5w26j")]
+[node name="Coin3" parent="Collectables" instance=ExtResource("2_5w26j")]
 position = Vector2(687, 564)
+
+[node name="Timer" type="Timer" parent="Collectables"]
+autostart = true
+
+[node name="Shopkeep" parent="." instance=ExtResource("5_2qcv6")]
+position = Vector2(1142, 437)
+
+[connection signal="timeout" from="Collectables/Timer" to="Collectables" method="_on_timer_timeout"]

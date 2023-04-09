@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-var coins = 0
+#var coins = Game.coins
+var health = 10
 var SPEED = 400.0
 var JUMP_VELOCITY = -500.0
 #var jump_max = 2
@@ -50,10 +51,11 @@ func _physics_process(delta):
 		throw_coin()
 
 func add_coin():
-	coins += 1
-	print("Num coins: " + str(coins))
-	print("Speed: " + str(SPEED))
-	print("Jump Height: " + str(JUMP_VELOCITY))
+	Game.coins += 1
+	Utils.saveGame()
+	#print("Num coins: " + str(coins))
+	#print("Speed: " + str(SPEED))
+	#print("Jump Height: " + str(JUMP_VELOCITY))
 #	if coins >= 10:
 #		SPEED -= 100
 #		JUMP_VELOCITY += 100
@@ -63,9 +65,9 @@ func add_coin():
 
 func throw_coin():
 	# default is Z
-	if coins <= 0:
-		coins = 0
+	if Game.coins <= 0:
+		Game.coins = 0
 		return
 	else:
-		coins -= 1
-	print("Num coins: " + str(coins))
+		Game.coins -= 1
+	#print("Num coins: " + str(Game.coins))

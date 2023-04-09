@@ -24,3 +24,4 @@ func _on_body_entered(body):
 		#ADD COINS TO PLAYER BEFORE CALLING QUEUE FREE
 		body.add_coin()
 		tween.tween_callback(self.queue_free)
+		
