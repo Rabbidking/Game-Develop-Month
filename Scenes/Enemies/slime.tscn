@@ -1,0 +1,84 @@
+[gd_scene load_steps=15 format=3 uid="uid://dm2wferv1am2t"]
+
+[ext_resource type="Texture2D" uid="uid://cdfy5yp40osww" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 1.png" id="1_gl1fy"]
+[ext_resource type="Script" path="res://Scripts/Enemies/slime.gd" id="1_tact6"]
+[ext_resource type="Texture2D" uid="uid://b2t4a5sc6tf71" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 1.png" id="2_1hrat"]
+[ext_resource type="Texture2D" uid="uid://borobjet84vgx" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 2.png" id="2_bb3yf"]
+[ext_resource type="Texture2D" uid="uid://dfu6t5bfwpcd3" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 3.png" id="3_kd7cn"]
+[ext_resource type="Texture2D" uid="uid://bkskcbckeoayi" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 2.png" id="3_r2r06"]
+[ext_resource type="Texture2D" uid="uid://p3w0uu4ur2j3" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 3.png" id="4_f36ii"]
+[ext_resource type="Texture2D" uid="uid://dm5nmnogs7dkx" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 4.png" id="4_lwe31"]
+[ext_resource type="Texture2D" uid="uid://rlucmfq53xjs" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 5.png" id="5_t1bsl"]
+[ext_resource type="Texture2D" uid="uid://dnhmnakfum11d" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 4.png" id="5_x7ila"]
+[ext_resource type="Texture2D" uid="uid://m557w1kwc2a2" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 6.png" id="6_r5hsj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3b08d"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_po8xt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gl1fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bb3yf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kd7cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lwe31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t1bsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r5hsj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smkgs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1hrat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r2r06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f36ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x7ila")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}]
+
+[node name="Slime" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_tact6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_3b08d")
+
+[node name="AnimatedSprite2D_Alive" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_po8xt")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AnimatedSprite2D_Death" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_smkgs")
+animation = &"Death"
+speed_scale = 3.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D_Death" to="." method="_on_animated_sprite_2d_death_animation_finished"]
