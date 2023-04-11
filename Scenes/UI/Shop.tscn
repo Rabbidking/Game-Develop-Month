@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo1fsqp4c043x"]
+[gd_scene load_steps=7 format=3 uid="uid://bo1fsqp4c043x"]
 
-[sub_resource type="Animation" id="Animation_7cy3d"]
+[ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_3cyfx"]
+
+[sub_resource type="Animation" id="Animation_lv6l8"]
 resource_name = "TransIn"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -15,22 +17,7 @@ tracks/0/keys = {
 "values": [Vector2(0, -300), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_5crkb"]
-resource_name = "TransOut"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 300)]
-}
-
-[sub_resource type="Animation" id="Animation_wb5gb"]
+[sub_resource type="Animation" id="Animation_qh44x"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -45,24 +32,110 @@ tracks/0/keys = {
 "values": [Vector2(0, -300)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ssrhc"]
-_data = {
-"RESET": SubResource("Animation_wb5gb"),
-"TransIn": SubResource("Animation_7cy3d"),
-"TransOut": SubResource("Animation_5crkb")
+[sub_resource type="Animation" id="Animation_5efe4"]
+resource_name = "TransOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -300)]
 }
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_28jlt"]
+_data = {
+"RESET": SubResource("Animation_qh44x"),
+"TransIn": SubResource("Animation_lv6l8"),
+"TransOut": SubResource("Animation_5efe4")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0ib6"]
+
 [node name="Shop" type="CanvasLayer"]
+process_mode = 3
 offset = Vector2(0, -300)
 transform = Transform2D(1, 0, 0, 1, 0, -300)
+script = ExtResource("1_3cyfx")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
-process_mode = 3
 libraries = {
-"": SubResource("AnimationLibrary_ssrhc")
+"": SubResource("AnimationLibrary_28jlt")
 }
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 80.0
-offset_right = 784.0
-offset_bottom = 280.0
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 512.0
+offset_bottom = 268.0
+
+[node name="Close" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 12.0
+offset_right = 506.0
+offset_bottom = 44.0
+text = "Close"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="Control"]
+sprite_frames = SubResource("SpriteFrames_t0ib6")
+
+[node name="Name" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 12.0
+offset_right = 376.0
+offset_bottom = 38.0
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Des" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 148.0
+offset_right = 384.0
+offset_bottom = 204.0
+text = "This is a description!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Next" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 92.0
+offset_right = 378.0
+offset_bottom = 123.0
+text = ">"
+
+[node name="Prev" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 92.0
+offset_right = 226.0
+offset_bottom = 123.0
+text = "<"
+
+[node name="Buy" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 212.0
+offset_right = 352.0
+offset_bottom = 259.0
+text = "Purchase"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Control/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Control/Prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="Control/Buy" to="." method="_on_buy_pressed"]

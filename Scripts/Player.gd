@@ -50,9 +50,13 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("throw_coin"):
 		throw_coin()
 
-func add_coin():
-	Game.coins += 1
-	Utils.saveGame()
+func add_coin(value):
+	var final_value = value
+	for multiplier in Game.coin_multipliers:
+		final_value *= multiplier
+	Game.coins += final_value
+	print(Game.coin_multipliers)
+	#Utils.saveGame()
 	#print("Num coins: " + str(coins))
 	#print("Speed: " + str(SPEED))
 	#print("Jump Height: " + str(JUMP_VELOCITY))

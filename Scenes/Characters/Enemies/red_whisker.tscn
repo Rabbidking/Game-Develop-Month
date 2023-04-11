@@ -1,0 +1,100 @@
+[gd_scene load_steps=18 format=3 uid="uid://dkal0vu5er4bo"]
+
+[ext_resource type="Texture2D" uid="uid://lndd2vmxo66h" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Chomp 1.png" id="1_3iglb"]
+[ext_resource type="Texture2D" uid="uid://dig670njfacqr" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Chomp 2.png" id="2_i2qy6"]
+[ext_resource type="Texture2D" uid="uid://dbegtfte1r18w" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Chomp 3.png" id="3_kqb5d"]
+[ext_resource type="Texture2D" uid="uid://cage3fsf6hls1" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Death 1.png" id="4_50hvm"]
+[ext_resource type="Texture2D" uid="uid://nmwecx7n8ub4" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Death 2.png" id="5_1g4wh"]
+[ext_resource type="Texture2D" uid="uid://dllu0cglsb0lo" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Death 3.png" id="6_mjeh2"]
+[ext_resource type="Texture2D" uid="uid://7si37rdw248k" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Death 4.png" id="7_afd4s"]
+[ext_resource type="Texture2D" uid="uid://77r3iviyxkuj" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Idle 1.png" id="8_pwofk"]
+[ext_resource type="Texture2D" uid="uid://c7xfqoxt8tdor" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Idle 2.png" id="9_ork1k"]
+[ext_resource type="Texture2D" uid="uid://burww7ci6atx7" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Idle 3.png" id="10_yflxn"]
+[ext_resource type="Texture2D" uid="uid://xmuahyi2jkr8" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 1.png" id="11_afdly"]
+[ext_resource type="Texture2D" uid="uid://bmahl41sqm7tr" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 2.png" id="12_e00nf"]
+[ext_resource type="Texture2D" uid="uid://okcbwsc36bba" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 3.png" id="13_4u1ue"]
+[ext_resource type="Texture2D" uid="uid://ddb4eel175pnm" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 4.png" id="14_yv26t"]
+[ext_resource type="Texture2D" uid="uid://p00guunas0bc" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 5.png" id="15_12trt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eg3ak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3iglb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i2qy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kqb5d")
+}],
+"loop": true,
+"name": &"chomp",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_50hvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1g4wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mjeh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_afd4s")
+}],
+"loop": true,
+"name": &"die",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_pwofk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ork1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yflxn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_afdly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e00nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4u1ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yv26t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_12trt")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux3ss"]
+size = Vector2(64, 48)
+
+[node name="Red Whisker" type="CharacterBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eg3ak")
+animation = &"idle"
+frame_progress = 0.273362
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_ux3ss")

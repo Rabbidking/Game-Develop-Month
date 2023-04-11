@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://ey2aogsdwxgm"]
+
+[ext_resource type="Texture2D" uid="uid://dhj8j22vnv6br" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 1.png" id="1_qpm2x"]
+[ext_resource type="Texture2D" uid="uid://243jhvct6ibo" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 2.png" id="2_gocjx"]
+[ext_resource type="Texture2D" uid="uid://b0kgf62363cf6" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Death 1.png" id="3_4pauq"]
+[ext_resource type="Texture2D" uid="uid://qrl348d63xd1" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Death 2.png" id="4_v325g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqoiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qpm2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gocjx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4pauq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v325g")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrlvh"]
+
+[node name="Fly" type="CharacterBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cqoiv")
+frame_progress = 0.589977
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lrlvh")

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="2_5w26j"]
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="3_b4e6w"]
 [ext_resource type="Script" path="res://Scripts/Collectables.gd" id="3_bxp7d"]
-[ext_resource type="PackedScene" uid="uid://b5btdutqafj81" path="res://Scenes/Characters/shopkeep.tscn" id="5_2qcv6"]
+[ext_resource type="PackedScene" uid="uid://dvgsg4hw8fq80" path="res://Scenes/Characters/shopkeep.tscn" id="5_2qcv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgc2"]
 size = Vector2(1104.5, 40)

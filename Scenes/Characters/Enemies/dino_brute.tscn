@@ -1,0 +1,106 @@
+[gd_scene load_steps=20 format=3 uid="uid://bbso357r141vk"]
+
+[ext_resource type="Texture2D" uid="uid://b6qttpqct8lmf" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 1.png" id="1_wqbl4"]
+[ext_resource type="Texture2D" uid="uid://dcm0s08d0ukri" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 2.png" id="2_xnntw"]
+[ext_resource type="Texture2D" uid="uid://cbhlic6i0uy7f" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 3.png" id="3_fcvcf"]
+[ext_resource type="Texture2D" uid="uid://c8hhx4u62d7b0" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 4.png" id="4_73byw"]
+[ext_resource type="Texture2D" uid="uid://culpnbll4k6ja" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 5.png" id="5_boqh5"]
+[ext_resource type="Texture2D" uid="uid://dagt02bevd4n2" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Idle 1.png" id="6_cp1f7"]
+[ext_resource type="Texture2D" uid="uid://biiidvjl88ptk" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Idle 2.png" id="7_56x1c"]
+[ext_resource type="Texture2D" uid="uid://gqgnh6i3bm43" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Idle 3.png" id="8_nug41"]
+[ext_resource type="Texture2D" uid="uid://dsaxlgif0dbcx" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Punch 1.png" id="9_bj1nn"]
+[ext_resource type="Texture2D" uid="uid://borvh63wua437" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Punch 2.png" id="10_h0nhn"]
+[ext_resource type="Texture2D" uid="uid://glfgrf0kv6on" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Punch 3.png" id="11_icsra"]
+[ext_resource type="Texture2D" uid="uid://cvyx2cjdo8s2a" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Punch 4.png" id="12_douex"]
+[ext_resource type="Texture2D" uid="uid://byjg54tr3dfxu" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Punch 5.png" id="13_7g6h6"]
+[ext_resource type="Texture2D" uid="uid://c37ayd16agph8" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 1.png" id="14_770lo"]
+[ext_resource type="Texture2D" uid="uid://bgfjf61i03axo" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 2.png" id="15_77pee"]
+[ext_resource type="Texture2D" uid="uid://br2d6xr8qo524" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 3.png" id="16_o8vwp"]
+[ext_resource type="Texture2D" uid="uid://b18vnj2gwc2lg" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 4.png" id="17_otr3f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uv2l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wqbl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xnntw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fcvcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73byw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_boqh5")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cp1f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_56x1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nug41")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bj1nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h0nhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_icsra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_douex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7g6h6")
+}],
+"loop": true,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_770lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_77pee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o8vwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_otr3f")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnnb4"]
+size = Vector2(64, 64)
+
+[node name="DinoBrute" type="CharacterBody2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uv2l5")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hnnb4")
