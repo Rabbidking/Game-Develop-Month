@@ -12,22 +12,23 @@ var items = {
 		"Des": "Doubles the value of all coins!",
 		"Cost": 10,
 		"Type": "Multiplier",
-		"Multiplier Num": 2
-		#"icon" = preload(res filepath to icon)
+		"Multiplier Num": 2,
+		"Icon": preload("res://Assets/Icons/x2.png")
 	},
 	1: {
 		"Name": "4x Multiplier",
 		"Des": "Quadruples the value of all coins! It stacks!",
 		"Cost": 100,
 		"Type": "Multiplier",
-		"Multiplier Num": 4
-	},
-	2: {
-		"Name": "Attack Upgrade",
-		"Des": "Adds +1 to your attack!",
-		"Cost": 50,
-		"Type": "Attack"
-	},
+		"Multiplier Num": 4,
+		"Icon": preload("res://Assets/Icons/x4.png")
+	}
+#	2: {
+#		"Name": "Attack Upgrade",
+#		"Des": "Adds +1 to your attack!",
+#		"Cost": 50,
+#		"Type": "Attack"
+#	},
 #	3: {
 #		"Name": "Health Container",
 #		"Des": "Gives you additional health!"
@@ -42,6 +43,7 @@ var inventory = {
 		"Cost": 10,
 		"Type": "Multiplier",
 		"Multiplier Num": 2,
+		"Icon": preload("res://Assets/Icons/x2.png"),
 		"Count": 1
 	},
 }

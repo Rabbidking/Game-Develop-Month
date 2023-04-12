@@ -7,13 +7,11 @@
 radius = 22.3607
 
 [node name="Coin" type="Area2D"]
-process_mode = 3
 collision_layer = 2
 script = ExtResource("1_u2c7h")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-process_mode = 3
 modulate = Color(1, 1, 0, 1)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_dv050")

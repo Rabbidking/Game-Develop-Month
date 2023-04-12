@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dvbg65h2l8c2v" path="res://icon.svg" id="1_3gmnn"]
 [ext_resource type="Script" path="res://Scripts/shopkeep.gd" id="1_jd5lh"]
-[ext_resource type="PackedScene" uid="uid://bo1fsqp4c043x" path="res://Scenes/UI/Shop.tscn" id="3_82sax"]
+[ext_resource type="PackedScene" uid="uid://dm4qnetifwoxk" path="res://Scenes/UI/Shop.tscn" id="3_82sax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh25"]
 

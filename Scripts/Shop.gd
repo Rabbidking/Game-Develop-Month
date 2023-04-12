@@ -3,6 +3,9 @@ extends CanvasLayer
 var currItem = 0
 var select = 0
 
+func _ready():
+	switchItem(0)
+
 func _on_close_pressed():
 	get_node("Anim").play("TransOut")
 	get_tree().paused = false
@@ -15,9 +18,22 @@ func switchItem(select):
 			currItem = select
 			#print(Game.items[currItem])
 			#get_node("Control/AnimSprite").play(Game.items[currItem]["Name"])
+			get_node("Control/Item").texture = Game.items[currItem]["Icon"]
 			get_node("Control/Name").text = Game.items[currItem]["Name"]
 			get_node("Control/Des").text = Game.items[currItem]["Des"]
 			get_node("Control/Des").text += "\nCost: " + str(Game.items[currItem]["Cost"])
+			
+			# Check if we've reached the end of the inventory
+			if currItem == Game.items.size() - 1:
+				get_node("Control/Next").disabled = true
+			else:
+				get_node("Control/Next").disabled = false
+				
+			# Check if we've reached the beginning of the inventory
+			if currItem == 0:
+				get_node("Control/Prev").disabled = true
+			else:
+				get_node("Control/Prev").disabled = false
 
 func _on_next_pressed():
 	switchItem(currItem + 1)
@@ -37,6 +53,8 @@ func _on_buy_pressed():
 					# We don't wanna buy multipliers more than once
 					hasItem = true
 					Game.coin_multipliers.append(Game.inventory[currItem]["Multiplier Num"])
+					get_node("Control/Buy").disabled = true
+					print(Game.coin_multipliers)
 					break
 				# We already have this item, add +1 to count
 				#Game.inventory[i]["Count"] += 1 #add to count
