@@ -1,16 +1,16 @@
 [gd_scene load_steps=15 format=3 uid="uid://dm2wferv1am2t"]
 
-[ext_resource type="Texture2D" uid="uid://cdfy5yp40osww" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 1.png" id="1_gl1fy"]
+[ext_resource type="Texture2D" uid="uid://cq4tbihv6xuev" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 1.png" id="1_gl1fy"]
 [ext_resource type="Script" path="res://Scripts/Enemies/slime.gd" id="1_tact6"]
-[ext_resource type="Texture2D" uid="uid://b2t4a5sc6tf71" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 1.png" id="2_1hrat"]
-[ext_resource type="Texture2D" uid="uid://borobjet84vgx" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 2.png" id="2_bb3yf"]
-[ext_resource type="Texture2D" uid="uid://dfu6t5bfwpcd3" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 3.png" id="3_kd7cn"]
-[ext_resource type="Texture2D" uid="uid://bkskcbckeoayi" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 2.png" id="3_r2r06"]
-[ext_resource type="Texture2D" uid="uid://p3w0uu4ur2j3" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 3.png" id="4_f36ii"]
-[ext_resource type="Texture2D" uid="uid://dm5nmnogs7dkx" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 4.png" id="4_lwe31"]
-[ext_resource type="Texture2D" uid="uid://rlucmfq53xjs" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 5.png" id="5_t1bsl"]
-[ext_resource type="Texture2D" uid="uid://dnhmnakfum11d" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 4.png" id="5_x7ila"]
-[ext_resource type="Texture2D" uid="uid://m557w1kwc2a2" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 6.png" id="6_r5hsj"]
+[ext_resource type="Texture2D" uid="uid://erdn12r61el8" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 1.png" id="2_1hrat"]
+[ext_resource type="Texture2D" uid="uid://7s0j2cqgor1m" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 2.png" id="2_bb3yf"]
+[ext_resource type="Texture2D" uid="uid://bsxa47haefs3i" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 3.png" id="3_kd7cn"]
+[ext_resource type="Texture2D" uid="uid://df1ixmjcmfdrw" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 2.png" id="3_r2r06"]
+[ext_resource type="Texture2D" uid="uid://dncij23n2bjeg" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 3.png" id="4_f36ii"]
+[ext_resource type="Texture2D" uid="uid://dlpimkmdd2kv8" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 4.png" id="4_lwe31"]
+[ext_resource type="Texture2D" uid="uid://2s6eytbdakii" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 5.png" id="5_t1bsl"]
+[ext_resource type="Texture2D" uid="uid://h4b1m5bw3xnx" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Death 4.png" id="5_x7ila"]
+[ext_resource type="Texture2D" uid="uid://cq3a3mkko7qua" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 6.png" id="6_r5hsj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3b08d"]
 radius = 16.0
@@ -71,11 +71,13 @@ position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_3b08d")
 
 [node name="AnimatedSprite2D_Alive" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 sprite_frames = SubResource("SpriteFrames_po8xt")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="AnimatedSprite2D_Death" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 visible = false
 sprite_frames = SubResource("SpriteFrames_smkgs")
 animation = &"Death"

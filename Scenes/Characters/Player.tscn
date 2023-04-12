@@ -2,23 +2,23 @@
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_r040e"]
 [ext_resource type="Texture2D" uid="uid://dvbg65h2l8c2v" path="res://icon.svg" id="2_7vdvc"]
-[ext_resource type="Texture2D" uid="uid://cbrckxkf3714a" path="res://Sprites/Character Sprites/Player/Player Smack 1.png" id="3_dncnx"]
-[ext_resource type="Texture2D" uid="uid://c1nt22bqxf6qw" path="res://Sprites/Character Sprites/Player/Player Jump 1.png" id="4_agmx2"]
-[ext_resource type="Texture2D" uid="uid://bhq4t5h6ivu86" path="res://Sprites/Character Sprites/Player/Player Jump 2.png" id="5_io5oi"]
-[ext_resource type="Texture2D" uid="uid://bdwpevgqycmyg" path="res://Sprites/Character Sprites/Player/Player Jump 3.png" id="6_wva6p"]
-[ext_resource type="Texture2D" uid="uid://cx4sx3r2afr0" path="res://Sprites/Character Sprites/Player/Player Smack 2.png" id="7_6nk3o"]
-[ext_resource type="Texture2D" uid="uid://qv2cwtblsmuo" path="res://Sprites/Character Sprites/Player/Player Smack 3.png" id="8_2chmj"]
-[ext_resource type="Texture2D" uid="uid://7bndgbhdcibg" path="res://Sprites/Character Sprites/Player/Player Smack 4.png" id="9_gowym"]
-[ext_resource type="Texture2D" uid="uid://c4p7lrqekatc8" path="res://Sprites/Character Sprites/Player/Player Toss 1.png" id="10_i5sib"]
-[ext_resource type="Texture2D" uid="uid://dc1tjr72wpf7q" path="res://Sprites/Character Sprites/Player/Player Toss 2.png" id="11_51x5h"]
-[ext_resource type="Texture2D" uid="uid://b6c0kgu0bmsc8" path="res://Sprites/Character Sprites/Player/Player Toss 3.png" id="12_l0xe5"]
-[ext_resource type="Texture2D" uid="uid://d34wn6sw0mrb3" path="res://Sprites/Character Sprites/Player/Player Walk 1.png" id="13_g5ltd"]
-[ext_resource type="Texture2D" uid="uid://brub2q1dhysf6" path="res://Sprites/Character Sprites/Player/Player Walk 2.png" id="14_rivoe"]
-[ext_resource type="Texture2D" uid="uid://da4h1jjiah5y1" path="res://Sprites/Character Sprites/Player/Player Walk 3.png" id="15_sq45y"]
-[ext_resource type="Texture2D" uid="uid://c5e2eym3uhgpb" path="res://Sprites/Character Sprites/Player/Player Walk 4.png" id="16_rowro"]
-[ext_resource type="Texture2D" uid="uid://cccfk1i6dayim" path="res://Sprites/Character Sprites/Player/Player Walk 5.png" id="17_eo0u4"]
-[ext_resource type="Texture2D" uid="uid://cg84pbvycibiv" path="res://Sprites/Character Sprites/Player/Player Walk 6.png" id="18_4w3ws"]
-[ext_resource type="Texture2D" uid="uid://bhpuaxprq5q0m" path="res://Sprites/Character Sprites/Player/Player Walk 7.png" id="19_aur34"]
+[ext_resource type="Texture2D" uid="uid://cyxtvg62uwj00" path="res://Sprites/Character Sprites/Player/Player Smack 1.png" id="3_dncnx"]
+[ext_resource type="Texture2D" uid="uid://xcnq4dg1qrb1" path="res://Sprites/Character Sprites/Player/Player Jump 1.png" id="4_agmx2"]
+[ext_resource type="Texture2D" uid="uid://dr5m3npbbwjpp" path="res://Sprites/Character Sprites/Player/Player Jump 2.png" id="5_io5oi"]
+[ext_resource type="Texture2D" uid="uid://dwam4mtrof8cs" path="res://Sprites/Character Sprites/Player/Player Jump 3.png" id="6_wva6p"]
+[ext_resource type="Texture2D" uid="uid://rnsus8alq4xv" path="res://Sprites/Character Sprites/Player/Player Smack 2.png" id="7_6nk3o"]
+[ext_resource type="Texture2D" uid="uid://8xdn0apydjpf" path="res://Sprites/Character Sprites/Player/Player Smack 3.png" id="8_2chmj"]
+[ext_resource type="Texture2D" uid="uid://lo4mynorixuu" path="res://Sprites/Character Sprites/Player/Player Smack 4.png" id="9_gowym"]
+[ext_resource type="Texture2D" uid="uid://cwsf6seg4l8pl" path="res://Sprites/Character Sprites/Player/Player Toss 1.png" id="10_i5sib"]
+[ext_resource type="Texture2D" uid="uid://bdu18k20qc1sk" path="res://Sprites/Character Sprites/Player/Player Toss 2.png" id="11_51x5h"]
+[ext_resource type="Texture2D" uid="uid://bywamv3gs44tx" path="res://Sprites/Character Sprites/Player/Player Toss 3.png" id="12_l0xe5"]
+[ext_resource type="Texture2D" uid="uid://b7hhm2qml88dj" path="res://Sprites/Character Sprites/Player/Player Walk 1.png" id="13_g5ltd"]
+[ext_resource type="Texture2D" uid="uid://dsdqoxxmduaft" path="res://Sprites/Character Sprites/Player/Player Walk 2.png" id="14_rivoe"]
+[ext_resource type="Texture2D" uid="uid://kqr448a3f7sr" path="res://Sprites/Character Sprites/Player/Player Walk 3.png" id="15_sq45y"]
+[ext_resource type="Texture2D" uid="uid://dcldygg8axpsj" path="res://Sprites/Character Sprites/Player/Player Walk 4.png" id="16_rowro"]
+[ext_resource type="Texture2D" uid="uid://cnhtbq21xxdqg" path="res://Sprites/Character Sprites/Player/Player Walk 5.png" id="17_eo0u4"]
+[ext_resource type="Texture2D" uid="uid://1mujj22x0stu" path="res://Sprites/Character Sprites/Player/Player Walk 6.png" id="18_4w3ws"]
+[ext_resource type="Texture2D" uid="uid://b3pe8d0ro1wne" path="res://Sprites/Character Sprites/Player/Player Walk 7.png" id="19_aur34"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s2cak"]
 animations = [{
@@ -123,10 +123,12 @@ script = ExtResource("1_r040e")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
 visible = false
 texture = ExtResource("2_7vdvc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_s2cak")
 animation = &"Walk"

@@ -62,7 +62,7 @@ func _physics_process(delta):
 		smack()
 
 func add_coin():
-	coins += 1
+	Game.coins += 1
 	print("Num coins: " + str(coins))
 	print("Speed: " + str(SPEED))
 	print("Jump Height: " + str(JUMP_VELOCITY))

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctr41k87yka3m"]
+[gd_scene load_steps=7 format=3 uid="uid://ctr41k87yka3m"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="1_mlrhm"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="2_5w26j"]
 [ext_resource type="PackedScene" uid="uid://dm2wferv1am2t" path="res://Scenes/Enemies/slime.tscn" id="3_hn7fs"]
+[ext_resource type="PackedScene" uid="uid://dvgsg4hw8fq80" path="res://Scenes/Characters/shopkeep.tscn" id="4_bstft"]
+[ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="5_qgqsq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgc2"]
 size = Vector2(1104.5, 40)
@@ -50,3 +52,8 @@ position = Vector2(687, 564)
 
 [node name="Slime" parent="." instance=ExtResource("3_hn7fs")]
 position = Vector2(615, 589)
+
+[node name="Shopkeep" parent="." instance=ExtResource("4_bstft")]
+position = Vector2(1124, 437)
+
+[node name="UI" parent="." instance=ExtResource("5_qgqsq")]
