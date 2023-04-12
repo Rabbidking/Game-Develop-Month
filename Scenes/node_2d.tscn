@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctr41k87yka3m"]
+[gd_scene load_steps=8 format=3 uid="uid://ctr41k87yka3m"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="1_mlrhm"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="2_5w26j"]
@@ -7,9 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="5_qgqsq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgc2"]
-size = Vector2(1104.5, 40)
+size = Vector2(2393.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w30qr"]
+size = Vector2(1100, 40)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Shopkeep" parent="." instance=ExtResource("4_bstft")]
+position = Vector2(1724, 542)
 
 [node name="Player" parent="." instance=ExtResource("1_mlrhm")]
 position = Vector2(106, 540)
@@ -20,11 +26,11 @@ metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
 offset_left = 62.0
-offset_right = 1164.0
+offset_right = 2453.0
 offset_bottom = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(612.75, 20)
+position = Vector2(1257.25, 20)
 shape = SubResource("RectangleShape2D_ekgc2")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -38,8 +44,8 @@ offset_right = 1164.0
 offset_bottom = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(612.75, 20)
-shape = SubResource("RectangleShape2D_ekgc2")
+position = Vector2(615, 20)
+shape = SubResource("RectangleShape2D_w30qr")
 
 [node name="Coin" parent="." instance=ExtResource("2_5w26j")]
 position = Vector2(1047, 455)
@@ -52,8 +58,5 @@ position = Vector2(687, 564)
 
 [node name="Slime" parent="." instance=ExtResource("3_hn7fs")]
 position = Vector2(615, 589)
-
-[node name="Shopkeep" parent="." instance=ExtResource("4_bstft")]
-position = Vector2(1124, 437)
 
 [node name="UI" parent="." instance=ExtResource("5_qgqsq")]

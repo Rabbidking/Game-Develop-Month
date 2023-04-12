@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var coins = 0
 var SPEED = 400.0
 var JUMP_VELOCITY = -500.0
 #var jump_max = 2
@@ -63,7 +62,7 @@ func _physics_process(delta):
 
 func add_coin():
 	Game.coins += 1
-	print("Num coins: " + str(coins))
+	print("Num coins: " + str(Game.coins))
 	print("Speed: " + str(SPEED))
 	print("Jump Height: " + str(JUMP_VELOCITY))
 #	if coins >= 10:
@@ -76,12 +75,12 @@ func add_coin():
 func throw_coin():
 	$AnimatedSprite2D.play("Toss")
 	# default is Z
-	if coins <= 0:
-		coins = 0
+	if Game.coins <= 0:
+		Game.coins = 0
 		return
 	else:
-		coins -= 1
-	print("Num coins: " + str(coins))
+		Game.coins -= 1
+	print("Num coins: " + str(Game.coins))
 	
 func smack():
 	$AnimatedSprite2D.play("Smack")

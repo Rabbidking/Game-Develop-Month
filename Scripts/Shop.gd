@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var currItem = 0
-var select = 0
+#var select = 0
 
 func _ready():
 	switchItem(0)
