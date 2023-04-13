@@ -73,7 +73,6 @@ offset_left = 64.0
 offset_top = 4.0
 offset_right = 512.0
 offset_bottom = 268.0
-metadata/_edit_lock_ = true
 
 [node name="Close" type="Button" parent="."]
 offset_left = 448.0
@@ -117,6 +116,7 @@ offset_left = 360.0
 offset_top = 76.0
 offset_right = 378.0
 offset_bottom = 107.0
+focus_mode = 0
 text = ">"
 
 [node name="Prev" type="Button" parent="Control"]
@@ -125,6 +125,7 @@ offset_left = 208.0
 offset_top = 76.0
 offset_right = 226.0
 offset_bottom = 107.0
+focus_mode = 0
 text = "<"
 
 [node name="Buy" type="Button" parent="Control"]
@@ -133,6 +134,7 @@ offset_left = 216.0
 offset_top = 220.0
 offset_right = 360.0
 offset_bottom = 267.0
+focus_mode = 0
 text = "Purchase"
 
 [node name="Item" type="Sprite2D" parent="Control"]
