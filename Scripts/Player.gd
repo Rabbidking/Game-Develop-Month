@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var SPEED = 400.0
 var JUMP_VELOCITY = -500.0
+var coin_manager = preload("res://Scripts/CoinManager.gd")
+var damage_multiplier = 1
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -95,3 +97,14 @@ func _on_hit_box_body_entered(body):
 		print("Hello")
 		if body.has_method("hurt"):
 			body.hurt()
+
+func _on_hit(boss):
+	# Create an instance of the CoinManager script
+	var cm = coin_manager.new()
+	
+	var damage = cm.calculate_damage() * damage_multiplier
+	boss.take_damage(damage)
+
+	# Subtract coins based on how much damage was done
+	var coins_to_subtract = damage / 10  # For example, subtract 1 coin for every 10 damage dealt
+	cm.subtract_coins(coins_to_subtract)
