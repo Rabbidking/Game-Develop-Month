@@ -3,6 +3,9 @@ extends Area2D
 @onready var anim = $AnimatedSprite2D
 signal coin_collected
 
+func _process(delta):
+	anim.play("default")
+
 func _on_body_entered(body):
 	if body.name == "Player":
 		
