@@ -1,22 +1,60 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvgsg4hw8fq80"]
+[gd_scene load_steps=12 format=3 uid="uid://dvgsg4hw8fq80"]
 
-[ext_resource type="Texture2D" uid="uid://dvbg65h2l8c2v" path="res://icon.svg" id="1_3gmnn"]
 [ext_resource type="Script" path="res://Scripts/shopkeep.gd" id="1_jd5lh"]
+[ext_resource type="Texture2D" uid="uid://bapl5k871ectf" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 1.png" id="2_miikr"]
+[ext_resource type="Texture2D" uid="uid://b16q1j7ynf2mh" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 2.png" id="3_0ntgh"]
 [ext_resource type="PackedScene" uid="uid://dm4qnetifwoxk" path="res://Scenes/UI/Shop.tscn" id="3_82sax"]
+[ext_resource type="Texture2D" uid="uid://diglb3a3pd48p" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 3.png" id="4_k65bo"]
+[ext_resource type="Texture2D" uid="uid://bkr5likxqe4j6" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 4.png" id="5_q1anb"]
+[ext_resource type="Texture2D" uid="uid://cegbg0nirlai3" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 5.png" id="6_ukve3"]
+[ext_resource type="Texture2D" uid="uid://dsh3ixqshy7a6" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 6.png" id="7_q28jt"]
+[ext_resource type="Texture2D" uid="uid://b0wt2pa5tkc44" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 7.png" id="8_ntsof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh25"]
+size = Vector2(106, 127)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mro25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_miikr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0ntgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k65bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q1anb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ukve3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q28jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ntsof")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Shopkeep" type="Area2D"]
 script = ExtResource("1_jd5lh")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0.5)
 shape = SubResource("RectangleShape2D_koh25")
 
-[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
-modulate = Color(1, 0, 1, 1)
-texture = ExtResource("1_3gmnn")
+sprite_frames = SubResource("SpriteFrames_mro25")
+autoplay = "default"
+frame_progress = 0.00223264
 
 [node name="Shop" parent="." instance=ExtResource("3_82sax")]
 

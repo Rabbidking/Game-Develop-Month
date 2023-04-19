@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 var currItem = 0
-#var select = 0
 
 func _ready():
 	switchItem(0)
@@ -9,6 +8,7 @@ func _ready():
 func _on_close_pressed():
 	get_node("Anim").play("TransOut")
 	get_tree().paused = false
+	switchItem(0)
 
 
 func switchItem(select):
@@ -48,23 +48,31 @@ func _on_buy_pressed():
 	if Game.coins > Game.items[currItem]["Cost"]:
 		for i in Game.inventory:
 			if Game.inventory[i]["Name"] == Game.items[currItem]["Name"]:
-				#check item ID to prevent buying multiple
-				if Game.inventory[currItem]["Type"] == "Multiplier":
-					# We don't wanna buy multipliers more than once
+				# Check item ID to prevent buying multiple
+				if Game.inventory[i]["Count"] >= 1:
+					# We already have this item, disable the purchase button
 					hasItem = true
-					Game.coin_multipliers.append(Game.inventory[currItem]["Multiplier Num"])
 					get_node("Control/Buy").disabled = true
-					print(Game.coin_multipliers)
 					break
-				# We already have this item, add +1 to count
-				#Game.inventory[i]["Count"] += 1 #add to count
-				#hasItem = true
+				# We don't wanna buy multipliers more than once
+				if Game.inventory[i]["Type"] == "Multiplier":
+					hasItem = true
+					Game.coin_multipliers.append(Game.inventory[i]["Multiplier Num"])
+					break
+				# Add +1 to count if we already have the item but it's not a multiplier
+				Game.inventory[i]["Count"] += 1
+				hasItem = true
 				
-		#if hasItem == false or Game.inventory[currItem]["Type"] != "Multiplier":
-		if hasItem:
+		if not hasItem:
 			var tempDict = Game.items[currItem]
 			tempDict["Count"] = 1
 			Game.inventory[Game.inventory.size()] = tempDict
-			#Game.coins -= Game.items[currItem]["Cost"]
+			if Game.items[currItem]["Type"] == "Multiplier":
+				Game.coin_multipliers.append(Game.items[currItem]["Multiplier Num"])
 		Game.coins -= Game.items[currItem]["Cost"]
-	print(Game.inventory)
+		
+		if hasItem:
+			# If we already have the item, disable the purchase button
+			get_node("Control/Buy").disabled = true
+	#print(Game.inventory)
+	print(Game.coin_multipliers)

@@ -3,9 +3,6 @@ extends Area2D
 @onready var anim = $AnimatedSprite2D
 signal coin_collected
 
-func _process(delta):
-	anim.play("default")
-
 func _on_body_entered(body):
 	if body.name == "Player":
 		
@@ -24,6 +21,7 @@ func _on_body_entered(body):
 		var tween = create_tween()
 		tween.tween_property(self, "position", position + Vector2(0, -90), 0.5)
 		tween.tween_property(self, "modulate:a", 0.0, 0.5)
+		
 		#ADD COINS TO PLAYER BEFORE CALLING QUEUE FREE
 		body.add_coin()
 		tween.tween_callback(self.queue_free)

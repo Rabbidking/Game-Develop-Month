@@ -1,10 +1,10 @@
 extends Node
 
 var playerHP = 10
-#var coin_multipliers = [1, 2, 4]
-var coin_multipliers = [1]
+var coin_multipliers = []
 #var coins = 0
 var coins = 1000
+var base_coin_value = 1
 
 var items = {
 	0: {
@@ -27,8 +27,9 @@ var items = {
 #		"Name": "Attack Upgrade",
 #		"Des": "Adds +1 to your attack!",
 #		"Cost": 50,
-#		"Type": "Attack"
-#	},
+#		"Type": "Attack",
+#		"Icon": preload("res://icon.svg")
+#	}
 #	3: {
 #		"Name": "Health Container",
 #		"Des": "Gives you additional health!"

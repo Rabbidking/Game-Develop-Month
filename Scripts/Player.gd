@@ -65,16 +65,24 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("throw_coin"):
-		throw_coin()
+#	if Input.is_action_just_pressed("throw_coin"):
+#		throw_coin()
 	if Input.is_action_just_pressed("smack"):
 		smack()
+		
+func calculate_coin_value():
+	var final_coin_value = Game.base_coin_value
+	for multiplier in Game.coin_multipliers:
+		final_coin_value *= multiplier
+	return final_coin_value
 
 func add_coin():
-	Game.coins += 1
-	print("Num coins: " + str(Game.coins))
-	print("Speed: " + str(SPEED))
-	print("Jump Height: " + str(JUMP_VELOCITY))
+	var coin_value = calculate_coin_value()
+	Game.coins += coin_value
+	#print(coin_value)
+	#print("Num coins: " + str(Game.coins))
+	#print("Speed: " + str(SPEED))
+	#print("Jump Height: " + str(JUMP_VELOCITY))
 #	if coins >= 10:
 #		SPEED -= 100
 #		JUMP_VELOCITY += 100
@@ -82,16 +90,16 @@ func add_coin():
 #			SPEED = 200
 #			JUMP_VELOCITY = 100
 
-func throw_coin():
-	attacking = true
-	$AnimatedSprite2D.play("Toss")
-	# default is Z
-	if Game.coins <= 0:
-		Game.coins = 0
-		return
-	else:
-		Game.coins -= 1
-	print("Num coins: " + str(Game.coins))
+#func throw_coin():
+#	attacking = true
+#	$AnimatedSprite2D.play("Toss")
+#	# default is Z
+#	if Game.coins <= 0:
+#		Game.coins = 0
+#		return
+#	else:
+#		Game.coins -= 1
+#	print("Num coins: " + str(Game.coins))
 	
 func smack():
 	attacking = true
