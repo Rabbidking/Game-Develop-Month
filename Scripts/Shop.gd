@@ -45,11 +45,13 @@ func _on_prev_pressed():
 
 func _on_buy_pressed():
 	var hasItem = false
-	if Game.coins > Game.items[currItem]["Cost"]:
+	var itemDict = Game.items[currItem]
+	
+	if Game.coins > itemDict["Cost"]:
 		for i in Game.inventory:
-			if Game.inventory[i]["Name"] == Game.items[currItem]["Name"]:
+			if Game.inventory[i]["Name"] == itemDict["Name"]:
 				# Check item ID to prevent buying multiple
-				if Game.inventory[i]["Count"] >= 1:
+				if Game.inventory[i]["Count"] > 0 and Game.inventory[i]["BuyOnce"]:
 					# We already have this item, disable the purchase button
 					hasItem = true
 					get_node("Control/Buy").disabled = true
@@ -67,12 +69,13 @@ func _on_buy_pressed():
 			var tempDict = Game.items[currItem]
 			tempDict["Count"] = 1
 			Game.inventory[Game.inventory.size()] = tempDict
-			if Game.items[currItem]["Type"] == "Multiplier":
+			if itemDict["Type"] == "Multiplier":
 				Game.coin_multipliers.append(Game.items[currItem]["Multiplier Num"])
 		Game.coins -= Game.items[currItem]["Cost"]
 		
-		if hasItem:
+		if hasItem and Game.inventory[currItem]["BuyOnce"] == true:
 			# If we already have the item, disable the purchase button
+			print("Nope")
 			get_node("Control/Buy").disabled = true
 	#print(Game.inventory)
 	print(Game.coin_multipliers)

@@ -13,6 +13,7 @@ var items = {
 		"Cost": 10,
 		"Type": "Multiplier",
 		"Multiplier Num": 2,
+		"BuyOnce": true,
 		"Icon": preload("res://Assets/Icons/x2.png")
 	},
 	1: {
@@ -20,16 +21,18 @@ var items = {
 		"Des": "Quadruples the value of all coins! It stacks!",
 		"Cost": 100,
 		"Type": "Multiplier",
+		"BuyOnce": true,
 		"Multiplier Num": 4,
 		"Icon": preload("res://Assets/Icons/x4.png")
+	},
+	2: {
+		"Name": "Attack Upgrade",
+		"Des": "Adds +1 to your attack!",
+		"Cost": 50,
+		"Type": "Attack",
+		"Buy Once": false,
+		"Icon": preload("res://icon.svg")
 	}
-#	2: {
-#		"Name": "Attack Upgrade",
-#		"Des": "Adds +1 to your attack!",
-#		"Cost": 50,
-#		"Type": "Attack",
-#		"Icon": preload("res://icon.svg")
-#	}
 #	3: {
 #		"Name": "Health Container",
 #		"Des": "Gives you additional health!"
@@ -38,13 +41,13 @@ var items = {
 }
 
 var inventory = {
-	0: {
-		"Name": "2x Multiplier",
-		"Des": "Doubles the value of all coins!",
-		"Cost": 10,
-		"Type": "Multiplier",
-		"Multiplier Num": 2,
-		"Icon": preload("res://Assets/Icons/x2.png"),
-		"Count": 1
-	},
+#	0: {
+#		"Name": "2x Multiplier",
+#		"Des": "Doubles the value of all coins!",
+#		"Cost": 10,
+#		"Type": "Multiplier",
+#		"Multiplier Num": 2,
+#		"Icon": preload("res://Assets/Icons/x2.png"),
+#		"Count": 1
+#	},
 }
