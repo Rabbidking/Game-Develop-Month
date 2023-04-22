@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctr41k87yka3m"]
+[gd_scene load_steps=9 format=3 uid="uid://ctr41k87yka3m"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="1_mlrhm"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="2_5w26j"]
 [ext_resource type="PackedScene" uid="uid://dm2wferv1am2t" path="res://Scenes/Enemies/slime.tscn" id="3_hn7fs"]
 [ext_resource type="PackedScene" uid="uid://dvgsg4hw8fq80" path="res://Scenes/Characters/shopkeep.tscn" id="4_bstft"]
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="5_qgqsq"]
+[ext_resource type="PackedScene" uid="uid://cld8nqeluhskp" path="res://Scenes/Objects/level_exit.tscn" id="6_8rdxi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgc2"]
 size = Vector2(2393.5, 40)
@@ -60,3 +61,12 @@ position = Vector2(687, 564)
 position = Vector2(615, 589)
 
 [node name="UI" parent="." instance=ExtResource("5_qgqsq")]
+
+[node name="Slime2" parent="." instance=ExtResource("3_hn7fs")]
+position = Vector2(1267, 590)
+
+[node name="Slime3" parent="." instance=ExtResource("3_hn7fs")]
+position = Vector2(1461, 589)
+
+[node name="LevelExit" parent="." instance=ExtResource("6_8rdxi")]
+position = Vector2(2406, 585)

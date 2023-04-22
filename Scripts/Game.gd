@@ -3,8 +3,9 @@ extends Node
 var playerHP = 10
 var coin_multipliers = []
 #var coins = 0
-var coins = 1000
+var coins = 49
 var base_coin_value = 1
+var walletMax = 50
 
 var items = {
 	0: {
@@ -32,12 +33,21 @@ var items = {
 		"Type": "Attack",
 		"Buy Once": false,
 		"Icon": preload("res://icon.svg")
+	},
+	3: {
+		"Name": "Wallet Upgrade 1",
+		"Des": "Lets you hold more money!",
+		"Cost": 50,
+		"Buy Once": true,
+		"Wallet": 150
+	},
+	4: {
+		"Name": "Wallet Upgrade 2",
+		"Des": "Lets you hold even more money!",
+		"Cost": 200,
+		"Buy Once": true,
+		"Wallet": 400
 	}
-#	3: {
-#		"Name": "Health Container",
-#		"Des": "Gives you additional health!"
-#		"Cost": 100
-#	}
 }
 
 var inventory = {

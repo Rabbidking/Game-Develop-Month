@@ -79,10 +79,7 @@ func calculate_coin_value():
 func add_coin():
 	var coin_value = calculate_coin_value()
 	Game.coins += coin_value
-	#print(coin_value)
-	#print("Num coins: " + str(Game.coins))
-	#print("Speed: " + str(SPEED))
-	#print("Jump Height: " + str(JUMP_VELOCITY))
+	
 #	if coins >= 10:
 #		SPEED -= 100
 #		JUMP_VELOCITY += 100
