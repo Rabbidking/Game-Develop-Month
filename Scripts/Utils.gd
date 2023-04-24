@@ -32,6 +32,7 @@ func loadGame():
 			if current_line:
 				Game.playerHP = current_line["playerHP"]
 				Game.coins = current_line["coins"]
+				Boss.boss_current_health = current_line["boss_current_health"]
 	#Godot 4 no longers requires file.close()
 	
 func get_time():
