@@ -1,24 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://cb30r1baciypu"]
+[gd_scene load_steps=2 format=3 uid="uid://cb30r1baciypu"]
 
-[ext_resource type="Script" path="res://Scripts/HP.gd" id="1_3seyd"]
-[ext_resource type="Script" path="res://Scripts/coin_UI.gd" id="2_htjyr"]
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_x8kbq"]
 
 [node name="UI" type="CanvasLayer"]
 process_mode = 3
+script = ExtResource("1_x8kbq")
 
 [node name="HP" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
 text = "HP"
-script = ExtResource("1_3seyd")
 
 [node name="Coins" type="Label" parent="."]
 offset_left = 153.0
-offset_right = 217.0
+offset_right = 254.0
 offset_bottom = 37.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
 text = "Coins"
-script = ExtResource("2_htjyr")
+
+[node name="Speedrun" type="Label" parent="."]
+offset_left = 1064.0
+offset_right = 1151.0
+offset_bottom = 26.0
+text = "00:00:00"
+horizontal_alignment = 1
+
+[node name="SpeedrunTimer" type="Timer" parent="Speedrun"]
+
+[node name="BossHP" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 307.0
+offset_right = 504.0
+offset_bottom = 27.0
+show_percentage = false
+
+[node name="BossRegenTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[connection signal="timeout" from="BossRegenTimer" to="." method="_on_boss_regen_timer_timeout"]

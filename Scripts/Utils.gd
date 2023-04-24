@@ -2,6 +2,8 @@ extends Node
 
 #const SAVE_PATH = "users://savegame.bin" #Normally we'd save in Users
 const SAVE_PATH = "res://savegame.bin"
+@onready var game_start_time = Time.get_ticks_msec()
+var speedrun_on = false
 
 func saveGame():
 	#temp file to write inside it to save
@@ -28,3 +30,25 @@ func loadGame():
 				Game.playerHP = current_line["playerHP"]
 				Game.coins = current_line["coins"]
 	#Godot 4 no longers requires file.close()
+	
+func get_time():
+	#speedrun timer stuff
+	if speedrun_on:
+		var current_time = Time.get_ticks_msec() - game_start_time
+		var minutes = current_time / 1000 / 60
+		var seconds = current_time / 1000 % 60
+		var msec = current_time % 1000 / 10
+		
+		if minutes < 10:
+			minutes = "0" + str(minutes)
+				
+		if seconds < 10:
+			seconds = "0" + str(seconds)
+			
+		if msec < 10:
+			if msec == 0:
+				msec = "00"
+			else:
+				msec = "0" + str(msec)
+		
+		return str(minutes) + ":" + str(seconds) + ":" + str(msec)

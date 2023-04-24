@@ -63,6 +63,7 @@ script = ExtResource("1_ri586")
 [node name="Buttons" type="ItemList" parent="."]
 offset_right = 88.0
 offset_bottom = 181.0
+focus_mode = 0
 
 [node name="CastleButton" type="Button" parent="Buttons"]
 layout_mode = 0
@@ -94,6 +95,7 @@ offset_left = 17.0
 offset_top = 146.0
 offset_right = 67.0
 offset_bottom = 177.0
+focus_mode = 0
 text = "Close"
 
 [node name="Anim" type="AnimationPlayer" parent="."]

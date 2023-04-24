@@ -21,6 +21,7 @@ SceneTransition="*res://Scenes/scene_transition.tscn"
 Game="*res://Scripts/Game.gd"
 Utils="*res://Scripts/Utils.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Boss="*res://Scripts/Enemies/boss.gd"
 
 [editor_plugins]
 

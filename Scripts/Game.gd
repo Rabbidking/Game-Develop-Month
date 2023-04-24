@@ -1,9 +1,9 @@
 extends Node
 
 var playerHP = 10
-var coin_multipliers = []
+var coin_multipliers = [2, 4]
 #var coins = 0
-var coins = 49
+var coins = 40
 var base_coin_value = 1
 var walletMax = 50
 
@@ -51,13 +51,13 @@ var items = {
 }
 
 var inventory = {
-#	0: {
-#		"Name": "2x Multiplier",
-#		"Des": "Doubles the value of all coins!",
-#		"Cost": 10,
-#		"Type": "Multiplier",
-#		"Multiplier Num": 2,
-#		"Icon": preload("res://Assets/Icons/x2.png"),
-#		"Count": 1
-#	},
+	0: {
+		"Name": "2x Multiplier",
+		"Des": "Doubles the value of all coins!",
+		"Cost": 10,
+		"Type": "Multiplier",
+		"Multiplier Num": 2,
+		"Icon": preload("res://Assets/Icons/x2.png"),
+		"Count": 1
+	},
 }

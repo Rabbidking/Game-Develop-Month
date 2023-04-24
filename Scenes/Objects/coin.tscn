@@ -1,41 +1,78 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvweuwm70dfls"]
+[gd_scene load_steps=18 format=3 uid="uid://cvweuwm70dfls"]
 
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_u2c7h"]
-[ext_resource type="Texture2D" uid="uid://bv375m157mj8g" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_1.png" id="2_mrsin"]
-[ext_resource type="Texture2D" uid="uid://37trfapwy0vo" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_2.png" id="3_tlvnb"]
-[ext_resource type="Texture2D" uid="uid://bmlyx4oi3piim" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_3.png" id="4_f0226"]
-[ext_resource type="Texture2D" uid="uid://dqhvoa3hs7bf6" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_4.png" id="5_dkljl"]
-[ext_resource type="Texture2D" uid="uid://cmfvr7l0dsct3" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_5.png" id="6_336mf"]
-[ext_resource type="Texture2D" uid="uid://b7nuq4fosexmn" path="res://Sprites/Visual Effects/VE_Coin/VE_Coin_6.png" id="7_b2uyg"]
+[ext_resource type="Texture2D" uid="uid://l50jp7iqt2b8" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_1.png" id="2_73erj"]
+[ext_resource type="Texture2D" uid="uid://bx2o7hrq04lwj" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_2.png" id="3_0clki"]
+[ext_resource type="Texture2D" uid="uid://b35d3dg7vju51" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_3.png" id="4_lpxfb"]
+[ext_resource type="Texture2D" uid="uid://byuoi21uvqc44" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_4.png" id="5_sgbh8"]
+[ext_resource type="Texture2D" uid="uid://dvou5ahjdclfd" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_5.png" id="6_0oa2q"]
+[ext_resource type="Texture2D" uid="uid://1btwqc47slml" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_6.png" id="7_hq72i"]
+[ext_resource type="Texture2D" uid="uid://dg5loqq6bt875" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_1.png" id="8_w6e34"]
+[ext_resource type="Texture2D" uid="uid://dq1vmfktt35yp" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_2.png" id="9_rnvy7"]
+[ext_resource type="Texture2D" uid="uid://bxvppcbptempv" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_3.png" id="10_4pa2f"]
+[ext_resource type="Texture2D" uid="uid://x584o363mygy" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_4.png" id="11_jq7ac"]
+[ext_resource type="Texture2D" uid="uid://cyav4uckqwddi" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_5.png" id="12_m4540"]
+[ext_resource type="Texture2D" uid="uid://1aqxnsrlao4t" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_6.png" id="13_vpr4h"]
+[ext_resource type="Texture2D" uid="uid://7mx2hpmaddbh" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_7.png" id="14_uui1h"]
+[ext_resource type="Texture2D" uid="uid://dqjj0wiram7w0" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_8.png" id="15_1iunp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hvhsj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_mrsin")
+"texture": ExtResource("2_73erj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_tlvnb")
+"texture": ExtResource("3_0clki")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_f0226")
+"texture": ExtResource("4_lpxfb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_dkljl")
+"texture": ExtResource("5_sgbh8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_336mf")
+"texture": ExtResource("6_0oa2q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_b2uyg")
+"texture": ExtResource("7_hq72i")
 }],
 "loop": true,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_w6e34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rnvy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4pa2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jq7ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m4540")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vpr4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uui1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1iunp")
+}],
+"loop": false,
+"name": &"sparkle",
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_08kgr"]
-radius = 16.0
+radius = 13.35
 
 [node name="Coin" type="Area2D"]
 process_mode = 3
@@ -47,8 +84,10 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
 sprite_frames = SubResource("SpriteFrames_hvhsj")
+animation = &"sparkle"
 autoplay = "default"
-frame_progress = 0.396033
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_08kgr")

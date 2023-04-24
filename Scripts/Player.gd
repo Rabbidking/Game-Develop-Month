@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 400.0
-var JUMP_VELOCITY = -500.0
+var JUMP_VELOCITY = -550.0
 var coin_manager = preload("res://Scripts/CoinManager.gd")
 var damage_multiplier = 1
 var attacking = false
@@ -79,13 +79,14 @@ func calculate_coin_value():
 func add_coin():
 	var coin_value = calculate_coin_value()
 	Game.coins += coin_value
+	print(str(Game.coins))
 	
-#	if coins >= 10:
-#		SPEED -= 100
-#		JUMP_VELOCITY += 100
-#		if SPEED <= 200 or JUMP_VELOCITY >= -100:
-#			SPEED = 200
-#			JUMP_VELOCITY = 100
+	if Game.coins > Game.walletMax:
+		SPEED -= 200
+		JUMP_VELOCITY += 100
+		#if SPEED <= 200 or JUMP_VELOCITY >= -100:
+		#	SPEED = 200
+		#	JUMP_VELOCITY = 100
 
 #func throw_coin():
 #	attacking = true

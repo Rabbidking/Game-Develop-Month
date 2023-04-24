@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b0wt2pa5tkc44" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 7.png" id="8_ntsof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh25"]
-size = Vector2(106, 127)
+size = Vector2(52, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mro25"]
 animations = [{
@@ -47,7 +47,7 @@ script = ExtResource("1_jd5lh")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 0.5)
+position = Vector2(1, 34)
 shape = SubResource("RectangleShape2D_koh25")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
