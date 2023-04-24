@@ -1,7 +1,7 @@
 extends Node
 
 var playerHP = 10
-var coin_multipliers = [2, 4]
+var coin_multipliers = [1]
 #var coins = 0
 var coins = 40
 var base_coin_value = 1
