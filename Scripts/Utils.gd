@@ -15,6 +15,7 @@ func saveGame():
 	var data: Dictionary = {
 		"playerHP": Game.playerHP,
 		"coins": Game.coins,
+		"boss_current_health": Boss.boss_current_health
 	}
 	var jstr = JSON.stringify(data)
 	
