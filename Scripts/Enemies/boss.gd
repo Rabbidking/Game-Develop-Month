@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @onready var anim = $AnimatedSprite2D
 
 const SPEED = 300.0
@@ -14,7 +15,6 @@ var boss_current_health = 10
 var regen_amount = 5
 #var regen_interval = 1.0
 signal boss_killed
-
 
 func _physics_process(delta):
 	# Add the gravity.
