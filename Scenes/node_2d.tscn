@@ -84,3 +84,5 @@ position = Vector2(2406, 585)
 position = Vector2(2484, 0)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("9_pkeyi")]
+
+[connection signal="boss_killed" from="Boss" to="UI" method="_on_boss_boss_killed"]
