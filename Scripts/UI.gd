@@ -5,12 +5,12 @@ extends CanvasLayer
 @onready var speedrun = get_node("Speedrun")
 #const BOSS = preload("res://Scenes/Characters/Enemies/boss.tscn")
 
-var timer = null
+#var timer = null
 
 func _ready():
 	if Utils.timer_on:
 		Utils.get_time()
-	timer = $Speedrun/SpeedrunTimer
+	#timer = $Speedrun/SpeedrunTimer
 	Boss.boss_killed.connect(_stop_timer)
 	
 	if Utils.speedrun_on == false:
@@ -28,9 +28,9 @@ func _process(_delta):
 		coin.modulate = Color(1,0,0)
 	if Utils.speedrun_on:
 		speedrun.text = Utils.get_time()
-		
-	#if Utils.timer_on == false:
-	#	print("Time up!")
+	
+#	if Utils.timer_on == false:
+#		print("Time up!")
 		
 	update_boss_health()
 
@@ -53,5 +53,8 @@ func _on_boss_regen_timer_timeout():
 func _stop_timer():
 	Utils.game_end_time = Utils.get_time()
 	Utils.timer_on = false
-	speedrun.modulate(Color(0, 1, 0))
-	speedrun.text = Utils.game_end_time
+	speedrun.self_modulate = Color(0,1,0,1)
+	#speedrun.text = Utils.game_end_time
+
+func _on_boss_boss_killed():
+	_stop_timer()

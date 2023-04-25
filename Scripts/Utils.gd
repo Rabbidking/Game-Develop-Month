@@ -1,7 +1,15 @@
 extends Node
 
+@onready var game_start_time = 0
+var game_end_time = 0
 #const SAVE_PATH = "users://savegame.bin" #Normally we'd save in Users
 const SAVE_PATH = "res://savegame.bin"
+var speedrun_on = false
+var timer_on = false
+var elapsed_time = 0
+var minutes = elapsed_time / 1000 / 60
+var seconds = elapsed_time / 1000 % 60
+var msec = elapsed_time % 1000 / 10
 
 func saveGame():
 	#temp file to write inside it to save
@@ -11,6 +19,7 @@ func saveGame():
 	var data: Dictionary = {
 		"playerHP": Game.playerHP,
 		"coins": Game.coins,
+		"boss_current_health": Boss.boss_current_health
 	}
 	var jstr = JSON.stringify(data)
 	
@@ -27,4 +36,32 @@ func loadGame():
 			if current_line:
 				Game.playerHP = current_line["playerHP"]
 				Game.coins = current_line["coins"]
+				Boss.boss_current_health = current_line["boss_current_health"]
 	#Godot 4 no longers requires file.close()
+	
+func get_time():
+	if timer_on == true:
+		elapsed_time = Time.get_ticks_msec() - game_start_time
+		minutes = elapsed_time / 1000 / 60
+		seconds = elapsed_time / 1000 % 60
+		msec = elapsed_time % 1000 / 10
+			
+		if minutes < 10:
+			minutes = "0" + str(minutes)
+					
+		if seconds < 10:
+			seconds = "0" + str(seconds)
+				
+		if msec < 10:
+			if msec == 0:
+				msec = "00"
+			else:
+				msec = "0" + str(msec)
+				
+			
+		return str(minutes) + ":" + str(seconds) + ":" + str(msec)
+	else:
+		return str(minutes) + ":" + str(seconds) + ":" + str(msec)
+	
+	
+
