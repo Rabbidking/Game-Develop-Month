@@ -3,6 +3,7 @@ extends Node
 @onready var drop_down_menu: OptionButton = $CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/ResolutionButton
 @onready var main: Control = $CanvasLayer/Main
 @onready var settings: Control = $CanvasLayer/Settings
+@onready var speedrun: CheckButton = $CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CheckButton
 
 @export var _bus = AudioServer.get_bus_index("Master")
 
@@ -66,3 +67,12 @@ func _on_volume_slider_value_changed(value):
 		AudioServer.set_bus_mute(_bus, true)
 	else:
 		AudioServer.set_bus_mute(_bus, false)
+
+
+func _on_check_button_toggled(button_pressed):
+	if button_pressed:
+		Utils.speedrun_on = true
+		speedrun.text = "ON"
+	else:
+		Utils.speedrun_on = false
+		speedrun.text = "OFF"

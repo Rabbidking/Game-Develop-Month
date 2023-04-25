@@ -4,7 +4,7 @@ extends Node
 var game_end_time = 0
 #const SAVE_PATH = "users://savegame.bin" #Normally we'd save in Users
 const SAVE_PATH = "res://savegame.bin"
-var speedrun_on = true
+var speedrun_on = false
 var timer_on = false
 
 func saveGame():

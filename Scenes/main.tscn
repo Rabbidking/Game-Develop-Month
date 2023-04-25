@@ -8,6 +8,7 @@ script = ExtResource("1_tsm1p")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Main" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,7 +71,6 @@ size_flags_vertical = 3
 text = "Quit"
 
 [node name="Settings" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -156,7 +156,7 @@ vertical_alignment = 1
 [node name="CheckButton" type="CheckButton" parent="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "On"
+text = "OFF"
 
 [node name="SettingsBack" type="Button" parent="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -174,4 +174,5 @@ autoplay = true
 [connection signal="mouse_exited" from="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_mouse_exited"]
 [connection signal="value_changed" from="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="item_selected" from="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]
+[connection signal="toggled" from="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/SettingsBack" to="." method="_on_settings_back_pressed"]
