@@ -70,6 +70,20 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("smack"):
 		smack()
 		
+	if Game.playerHP <= 0:
+		Game.playerHP = 0
+		die()
+		
+func die():
+	var coins_to_lose = floor(Game.coins * 0.1)
+	Game.coins -= coins_to_lose
+	#Either start player at a node called LevelStart
+	#var level_start = get_node("/root/Game/LevelStart")
+	#position = level_start.position
+	#OR reload the entire scene
+	#get_tree().reload_current_scene()
+	
+		
 func calculate_coin_value():
 	var final_coin_value = Game.base_coin_value
 	for multiplier in Game.coin_multipliers:

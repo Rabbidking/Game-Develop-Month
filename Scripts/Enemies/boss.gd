@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-#const UI = preload("res://Scripts/UI.gd")
+const UI = preload("res://Scripts/UI.gd")
 #var ui_stop_timer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
