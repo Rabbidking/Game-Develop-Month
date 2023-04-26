@@ -81,7 +81,7 @@ func add_coin():
 	Game.coins += coin_value
 	print(str(Game.coins))
 	
-	if Game.coins > Game.walletMax:
+	if Game.coins >= Game.walletMax:
 		SPEED -= 200
 		JUMP_VELOCITY += 100
 		#if SPEED <= 200 or JUMP_VELOCITY >= -100:

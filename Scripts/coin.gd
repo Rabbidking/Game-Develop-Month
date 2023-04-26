@@ -5,7 +5,7 @@ signal coin_collected
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		if Game.coins <= Game.walletMax:
+		if Game.coins < Game.walletMax:
 			#send custom signal to HUD
 			coin_collected.emit()
 			
