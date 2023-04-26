@@ -12,7 +12,7 @@ var items = {
 		"Name": "2x Multiplier",
 		"Des": "Doubles the value of all coins!",
 		"Cost": 10,
-		"Type": "MultiplierX2",
+		"Type": "Multiplier",
 		"Multiplier Num": 2,
 		"BuyOnce": true,
 		"Icon": preload("res://Assets/Icons/x2.png")
@@ -21,7 +21,7 @@ var items = {
 		"Name": "4x Multiplier",
 		"Des": "Quadruples the value of all coins! It stacks!",
 		"Cost": 100,
-		"Type": "MultiplierX4",
+		"Type": "Multiplier",
 		"BuyOnce": true,
 		"Multiplier Num": 4,
 		"Icon": preload("res://Assets/Icons/x4.png")
@@ -31,22 +31,24 @@ var items = {
 		"Des": "Adds +1 to your attack!",
 		"Cost": 50,
 		"Type": "Attack",
-		"Buy Once": false,
-		"Icon": preload("res://icon.svg")
+		"BuyOnce": false,
+		#"Icon": preload("res://icon.svg")
 	},
 	3: {
 		"Name": "Wallet Upgrade 1",
 		"Des": "Lets you hold more money!",
 		"Cost": 50,
-		"Buy Once": true,
-		"Wallet": 150
+		"Type": "Wallet",
+		"BuyOnce": true,
+		"Wallet Val": 150
 	},
 	4: {
 		"Name": "Wallet Upgrade 2",
 		"Des": "Lets you hold even more money!",
 		"Cost": 200,
-		"Buy Once": true,
-		"Wallet": 400
+		"Type": "Wallet",
+		"BuyOnce": true,
+		"Wallet Val": 400
 	}
 }
 

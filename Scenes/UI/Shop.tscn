@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dm4qnetifwoxk"]
+[gd_scene load_steps=6 format=3 uid="uid://dm4qnetifwoxk"]
 
 [ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_3cyfx"]
 
@@ -53,9 +53,6 @@ _data = {
 "TransIn": SubResource("Animation_lv6l8"),
 "TransOut": SubResource("Animation_5efe4")
 }
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g1xdl"]
-load_path = "res://.godot/imported/x2.png-0f6e594fa71265a8c38923b0738058f1.ctex"
 
 [node name="Shop" type="CanvasLayer"]
 process_mode = 3
@@ -140,7 +137,6 @@ text = "Purchase"
 [node name="Item" type="Sprite2D" parent="Control"]
 position = Vector2(288, 100)
 scale = Vector2(2.5, 2.5)
-texture = SubResource("CompressedTexture2D_g1xdl")
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/Next" to="." method="_on_next_pressed"]

@@ -25,7 +25,9 @@ func _process(_delta):
 	hp.text = "HP: " + str(Game.playerHP)
 	coin.text = "Coins: " + str(Game.coins) + "/" + str(Game.walletMax)
 	if Game.coins >= Game.walletMax:
-		coin.modulate = Color(1,0,0)
+		coin.self_modulate = Color(1,0,0,1)
+		if Game.coins > Game.walletMax:
+			coin.self_modulate = Color(0,0,0,1)
 	if Utils.speedrun_on:
 		speedrun.text = Utils.get_time()
 	
