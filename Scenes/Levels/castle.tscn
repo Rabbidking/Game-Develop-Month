@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://xdj6geo37c3x"]
+[gd_scene load_steps=3 format=3 uid="uid://xdj6geo37c3x"]
+
+[ext_resource type="PackedScene" uid="uid://bno7vlni6qb6v" path="res://TileMaps/CastleFloor.tscn" id="1_vlo3e"]
+[ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="2_4mpk7"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_vlo3e")]
+layer_0/tile_data = PackedInt32Array(458753, 18, 0, 524289, 18, 0, 458754, 18, 0, 524290, 18, 0, 458755, 18, 0, 524291, 18, 0, 458756, 18, 0, 524292, 18, 0, 458757, 18, 0, 524293, 18, 0, 458758, 18, 0, 524294, 18, 0, 458759, 18, 0, 524295, 18, 0, 458760, 18, 0, 524296, 18, 0, 458761, 18, 0, 524297, 18, 0, 458762, 18, 0, 524298, 18, 0, 458763, 18, 0, 524299, 18, 0, 458764, 18, 0, 524300, 18, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_4mpk7")]
+position = Vector2(300, 359)
