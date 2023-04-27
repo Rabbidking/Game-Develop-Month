@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjr20a87uqjrh"]
+[gd_scene load_steps=10 format=3 uid="uid://cjr20a87uqjrh"]
 
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_124vn"]
 [ext_resource type="Texture2D" uid="uid://bi004w4se6hut" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Death 1.png" id="1_ist4p"]
 [ext_resource type="Texture2D" uid="uid://babdan0x3p8ha" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Death 2.png" id="2_ghor5"]
 [ext_resource type="Texture2D" uid="uid://dm5p5p83kruo5" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Hop 1.png" id="3_g0qvv"]
@@ -18,7 +19,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_ghor5")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 5.0
 }, {
@@ -41,6 +42,8 @@ animations = [{
 }]
 
 [node name="Chick" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_124vn")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -48,4 +51,6 @@ shape = SubResource("CapsuleShape2D_2egjy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s63wp")
-animation = &"die"
+animation = &"hop"
+autoplay = "hop"
+frame_progress = 0.328188

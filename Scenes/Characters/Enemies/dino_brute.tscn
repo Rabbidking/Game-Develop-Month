@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://bbso357r141vk"]
+[gd_scene load_steps=21 format=3 uid="uid://bbso357r141vk"]
 
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_mwl6w"]
 [ext_resource type="Texture2D" uid="uid://b6qttpqct8lmf" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 1.png" id="1_wqbl4"]
 [ext_resource type="Texture2D" uid="uid://dcm0s08d0ukri" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 2.png" id="2_xnntw"]
 [ext_resource type="Texture2D" uid="uid://cbhlic6i0uy7f" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 3.png" id="3_fcvcf"]
@@ -36,7 +37,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_boqh5")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 5.0
 }, {
@@ -70,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_7g6h6")
 }],
-"loop": true,
+"loop": false,
 "name": &"punch",
 "speed": 5.0
 }, {
@@ -96,11 +97,15 @@ animations = [{
 size = Vector2(64, 64)
 
 [node name="DinoBrute" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_mwl6w")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uv2l5")
 animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.164855
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hnnb4")

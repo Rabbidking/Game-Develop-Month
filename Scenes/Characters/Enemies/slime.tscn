@@ -70,5 +70,5 @@ shape = SubResource("CapsuleShape2D_3b08d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_po8xt")
-animation = &"die"
+animation = &"Idle"
 autoplay = "Idle"

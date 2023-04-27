@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ey2aogsdwxgm"]
+[gd_scene load_steps=8 format=3 uid="uid://ey2aogsdwxgm"]
 
+[ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_nv71b"]
 [ext_resource type="Texture2D" uid="uid://dhj8j22vnv6br" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 1.png" id="1_qpm2x"]
 [ext_resource type="Texture2D" uid="uid://243jhvct6ibo" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 2.png" id="2_gocjx"]
 [ext_resource type="Texture2D" uid="uid://b0kgf62363cf6" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Death 1.png" id="3_4pauq"]
@@ -25,7 +26,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_v325g")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 5.0
 }]
@@ -33,11 +34,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lrlvh"]
 
 [node name="Fly" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_nv71b")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cqoiv")
-frame_progress = 0.589977
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lrlvh")
