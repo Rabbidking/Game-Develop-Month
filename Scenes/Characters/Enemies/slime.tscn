@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cfelg8ctaafsq"]
+[gd_scene load_steps=14 format=3 uid="uid://cfelg8ctaafsq"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_b8gas"]
 [ext_resource type="Texture2D" uid="uid://cq4tbihv6xuev" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 1.png" id="1_gl1fy"]
@@ -54,28 +54,8 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_x7ila")
 }],
-"loop": true,
-"name": &"die",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_smkgs"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_1hrat")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_r2r06")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_f36ii")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_x7ila")
-}],
 "loop": false,
-"name": &"Death",
+"name": &"die",
 "speed": 5.0
 }]
 
@@ -87,17 +67,8 @@ script = ExtResource("1_b8gas")
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_3b08d")
 
-[node name="AnimatedSprite2D_Alive" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_po8xt")
 animation = &"die"
 autoplay = "Idle"
-
-[node name="AnimatedSprite2D_Death" type="AnimatedSprite2D" parent="."]
-process_mode = 3
-visible = false
-sprite_frames = SubResource("SpriteFrames_smkgs")
-animation = &"Death"
-speed_scale = 3.0
-
-[connection signal="animation_finished" from="AnimatedSprite2D_Death" to="." method="_on_animated_sprite_2d_death_animation_finished"]
