@@ -5,6 +5,7 @@ var hasItem = false
 var itemDict = Game.items[currItem]
 
 func _ready():
+	
 	hasItem = false
 	switchItem(0)
 	checkItems()

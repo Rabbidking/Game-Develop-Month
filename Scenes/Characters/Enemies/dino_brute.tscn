@@ -94,18 +94,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnnb4"]
-size = Vector2(64, 64)
+size = Vector2(84, 97)
 
 [node name="DinoBrute" type="CharacterBody2D"]
+position = Vector2(141, 100)
 collision_layer = 2
 script = ExtResource("1_mwl6w")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_uv2l5")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.164855
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 16.5)
 shape = SubResource("RectangleShape2D_hnnb4")

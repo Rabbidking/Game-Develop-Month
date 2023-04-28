@@ -61,9 +61,11 @@ transform = Transform2D(1, 0, 0, 1, 0, -300)
 script = ExtResource("1_ri586")
 
 [node name="Buttons" type="ItemList" parent="."]
-offset_right = 88.0
+offset_left = 505.0
+offset_right = 593.0
 offset_bottom = 181.0
 focus_mode = 0
+metadata/_edit_group_ = true
 
 [node name="CastleButton" type="Button" parent="Buttons"]
 layout_mode = 0
