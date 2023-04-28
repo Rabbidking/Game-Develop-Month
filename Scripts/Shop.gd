@@ -3,6 +3,8 @@ extends CanvasLayer
 var currItem = 0
 var hasItem = false
 var itemDict = Game.items[currItem]
+@onready var buySound = $shopSFX/buyNoise
+@onready var buyFailed = $shopSFX/buyFailed
 
 func _ready():
 	
@@ -56,6 +58,10 @@ func _on_buy_pressed():
 	print(currItem)
 	itemDict = Game.items[currItem]
 	print(itemDict)
+	
+	if Game.coins < itemDict["Cost"]:
+		buyFailed.play()
+	
 	if Game.coins >= itemDict["Cost"]:
 		if currItem not in Game.inventory:
 			Game.inventory[currItem] = itemDict
@@ -70,7 +76,10 @@ func _on_buy_pressed():
 			print("2")
 			Game.walletMax = Game.walletMax + Game.items[currItem]["Wallet Val"]
 		Game.coins -= Game.items[currItem]["Cost"]
+		buySound.play()
+		
 	print(Game.coin_multipliers)
+	
 	checkItems()
 
 func checkItems():

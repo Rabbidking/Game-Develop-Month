@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://bjou37nfxb6f7"]
+
+[ext_resource type="Texture2D" uid="uid://cxk5bfa0pmqet" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_1.png" id="1_fjg4a"]
+[ext_resource type="Texture2D" uid="uid://cpak7f42qh1tg" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_2.png" id="2_ohfn7"]
+[ext_resource type="Texture2D" uid="uid://b3b5nsb45tpue" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_3.png" id="3_pka37"]
+[ext_resource type="Texture2D" uid="uid://c7a7s3vii4vwf" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_4.png" id="4_1r84c"]
+[ext_resource type="Texture2D" uid="uid://c4e11w4ioge6h" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_5.png" id="5_4sedl"]
+[ext_resource type="Texture2D" uid="uid://w3nhyy308t3y" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_6.png" id="6_tg7l6"]
+[ext_resource type="Texture2D" uid="uid://bbbb1uptth2qp" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_7.png" id="7_f0nko"]
+[ext_resource type="Texture2D" uid="uid://d677pxaaiwhs" path="res://Sprites/Visual Effects/VE_Poof/VE_Poof_8.png" id="8_71qan"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxox2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fjg4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ohfn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pka37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1r84c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4sedl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tg7l6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f0nko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_71qan")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Poof" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_mxox2")

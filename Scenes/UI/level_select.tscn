@@ -61,9 +61,10 @@ transform = Transform2D(1, 0, 0, 1, 0, -300)
 script = ExtResource("1_ri586")
 
 [node name="Buttons" type="ItemList" parent="."]
-offset_left = 505.0
-offset_right = 593.0
-offset_bottom = 181.0
+offset_left = 497.0
+offset_top = 115.0
+offset_right = 585.0
+offset_bottom = 296.0
 focus_mode = 0
 metadata/_edit_group_ = true
 
@@ -105,4 +106,6 @@ libraries = {
 "": SubResource("AnimationLibrary_28jlt")
 }
 
+[connection signal="pressed" from="Buttons/CastleButton" to="." method="_on_castle_button_pressed"]
+[connection signal="pressed" from="Buttons/FieldButton" to="." method="_on_field_button_pressed"]
 [connection signal="pressed" from="Buttons/CloseButton" to="." method="_on_close_button_pressed"]

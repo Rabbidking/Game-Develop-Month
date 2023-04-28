@@ -4,6 +4,7 @@ extends Node
 @onready var main: Control = $CanvasLayer/Main
 @onready var settings: Control = $CanvasLayer/Settings
 @onready var speedrun: CheckButton = $CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CheckButton
+@onready var music = $AudioStreamPlayer2D
 
 @export var _bus = AudioServer.get_bus_index("Master")
 
@@ -11,6 +12,7 @@ func _ready() -> void:
 	add_items()
 	main.visible = true
 	settings.visible = false
+	music.play()
 	
 	
 #Button pressed functions

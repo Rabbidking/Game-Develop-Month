@@ -11,6 +11,9 @@ var jumping = false
 #const SPEED = 300.0
 #const JUMP_VELOCITY = -400.0
 
+@onready var bagSwing = $PlayerSFX/bagSwing
+@onready var bagHit = $PlayerSFX/bagHit
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -115,6 +118,7 @@ func add_coin():
 	
 func smack():
 	attacking = true
+	bagSwing.play()
 	$AnimatedSprite2D.play("Smack")
 	$HitBox/CollisionShape2D.disabled = false
 
@@ -126,17 +130,23 @@ func _on_animated_sprite_2d_animation_finished():
 
 func _on_hit_box_body_entered(body):
 	if body.get_collision_layer_value(2):
-		print("Hello")
+		#print("Hello")
 		if body.has_method("hurt"):
+			#cue up hitspark
+			var hitspark = load("res://Scenes/HitSpark.tscn").instantiate()
+			body.add_child(hitspark)
+			#play sound
+			bagHit.play()
 			body.hurt()
+			
 
-func _on_hit(boss):
-	# Create an instance of the CoinManager script
-	var cm = coin_manager.new()
-	
-	var damage = cm.calculate_damage() * damage_multiplier
-	boss.take_damage(damage)
-
-	# Subtract coins based on how much damage was done
-	var coins_to_subtract = damage / 10  # For example, subtract 1 coin for every 10 damage dealt
-	cm.subtract_coins(coins_to_subtract)
+#func _on_hit(boss):
+#	# Create an instance of the CoinManager script
+#	var cm = coin_manager.new()
+#
+#	var damage = cm.calculate_damage() * damage_multiplier
+#	boss.take_damage(damage)
+#
+#	# Subtract coins based on how much damage was done
+#	var coins_to_subtract = damage / 10  # For example, subtract 1 coin for every 10 damage dealt
+#	cm.subtract_coins(coins_to_subtract)

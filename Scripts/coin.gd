@@ -9,6 +9,7 @@ func _on_body_entered(body):
 			#send custom signal to HUD
 			coin_collected.emit()
 			
+			
 			#Animation logic if we have animation frames for the coin disappearing
 			body.add_coin()
 			anim.play("sparkle")
