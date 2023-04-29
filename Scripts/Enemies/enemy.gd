@@ -41,6 +41,7 @@ func die():
 	await anim.animation_finished
 	anim.visible = false
 	self.add_child(poof)
+	poof.global_position = global_position + Vector2(0, -98)
 	poof.play("default")
 	await poof.animation_finished
 	queue_free()
