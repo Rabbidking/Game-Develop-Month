@@ -168,7 +168,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_me43v"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 5
+physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_x3mmv")
 
@@ -214,7 +214,7 @@ sources/0 = SubResource("TileSetAtlasSource_nx1gw")
 
 [node name="Fields" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 offset_right = 2875.0
 offset_bottom = 810.0
 texture = ExtResource("1_p5r10")
@@ -239,21 +239,21 @@ format = 2
 tile_set = SubResource("TileSet_j7umo")
 format = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="BGObjects" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BgObjectShrubA" type="Sprite2D" parent="Control"]
+[node name="BgObjectShrubA" type="Sprite2D" parent="BGObjects"]
 position = Vector2(230, 544)
 texture = ExtResource("5_be650")
 
-[node name="BgObjectTreeA" type="Sprite2D" parent="Control"]
+[node name="BgObjectTreeA" type="Sprite2D" parent="BGObjects"]
 position = Vector2(410, 321)
 texture = ExtResource("6_qtk8j")
 
-[node name="ObjectTreeB" type="Sprite2D" parent="Control"]
+[node name="ObjectTreeB" type="Sprite2D" parent="BGObjects"]
 position = Vector2(547, 321)
 texture = ExtResource("7_ljj8j")
 
