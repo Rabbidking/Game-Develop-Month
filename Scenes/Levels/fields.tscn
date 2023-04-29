@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://kem02kkmruqw"]
+[gd_scene load_steps=14 format=3 uid="uid://kem02kkmruqw"]
 
 [ext_resource type="Texture2D" uid="uid://cia40pysbi6th" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV2.png" id="1_p5r10"]
 [ext_resource type="Texture2D" uid="uid://cdn86l47es7dr" path="res://TileMaps/Tileset_Floor.png" id="2_o5h85"]
+[ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="3_1ij7b"]
+[ext_resource type="Texture2D" uid="uid://4h4ld1m87y4s" path="res://TileMaps/Tileset_Bush.png" id="4_v6qxb"]
+[ext_resource type="Texture2D" uid="uid://b32pqv8k8ichs" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_A.png" id="5_be650"]
+[ext_resource type="Texture2D" uid="uid://cqaalh81p8t7k" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_A.png" id="6_qtk8j"]
+[ext_resource type="Texture2D" uid="uid://yytlg75ydok5" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_B.png" id="7_ljj8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3mmv"]
 texture = ExtResource("2_o5h85")
@@ -166,6 +171,46 @@ physics_layer_0/collision_layer = 5
 physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_x3mmv")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
+texture = ExtResource("3_1ij7b")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ru5x6"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_gtwnb")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nx1gw"]
+texture = ExtResource("4_v6qxb")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_j7umo"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_nx1gw")
+
 [node name="Fields" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -174,7 +219,33 @@ offset_bottom = 810.0
 texture = ExtResource("1_p5r10")
 stretch_mode = 1
 
-[node name="FieldFloor" type="TileMap" parent="."]
+[node name="TileMaps" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FieldFloor" type="TileMap" parent="TileMaps"]
 tile_set = SubResource("TileSet_me43v")
 format = 2
 layer_0/tile_data = PackedInt32Array(589824, 0, 6, 589825, 65536, 6, 589826, 65536, 6, 589827, 65536, 6, 589828, 65536, 6, 589829, 65536, 6, 589830, 65536, 6, 589831, 65536, 6, 589832, 65536, 6, 589833, 65536, 6, 524298, 0, 6, 524299, 65536, 6, 524300, 65536, 6, 524301, 65536, 6, 524302, 65536, 6, 524303, 65536, 6, 524304, 65536, 6, 524305, 65536, 6, 524306, 65536, 6, 524307, 65536, 6, 524308, 65536, 6, 524309, 65536, 6, 524310, 65536, 6, 524311, 65536, 6, 458776, 65536, 6, 458777, 65536, 6, 458778, 65536, 6, 458779, 65536, 6, 458780, 65536, 6, 458781, 65536, 6, 458782, 65536, 6, 589834, 327680, 6, 655360, 262144, 2, 655361, 327680, 6, 655362, 327680, 6, 655363, 327680, 6, 655364, 327680, 6, 655365, 327680, 6, 655366, 327680, 6, 655367, 327680, 6, 655368, 327680, 6, 655369, 327680, 6, 655370, 327680, 6, 720896, 524288, 6, 720897, 589824, 6, 720898, 589824, 6, 720899, 589824, 6, 720900, 589824, 6, 720901, 589824, 6, 720902, 589824, 6, 720903, 589824, 6, 720904, 589824, 6, 720905, 589824, 6, 720906, 589824, 6, 786432, 524288, 8, 786433, 589824, 8, 786434, 589824, 8, 786435, 589824, 8, 786436, 589824, 8, 786437, 589824, 8, 786438, 589824, 8, 786439, 589824, 8, 786440, 589824, 8, 786441, 589824, 8, 786442, 589824, 8, 786443, 589824, 8, 786444, 589824, 8, 786445, 589824, 8, 786446, 589824, 8, 786447, 589824, 8, 786448, 589824, 8, 786449, 589824, 8, 786450, 589824, 8, 786451, 589824, 8, 786452, 589824, 8, 720907, 589824, 6, 720908, 589824, 6, 720909, 589824, 6, 720910, 589824, 6, 720911, 589824, 6, 720912, 589824, 6, 720913, 589824, 6, 720914, 589824, 6, 720915, 589824, 6, 720916, 589824, 6)
+
+[node name="BGBushes" type="TileMap" parent="TileMaps"]
+tile_set = SubResource("TileSet_ru5x6")
+format = 2
+
+[node name="Bushes" type="TileMap" parent="TileMaps"]
+tile_set = SubResource("TileSet_j7umo")
+format = 2
+
+[node name="BgObjectShrubA" type="Sprite2D" parent="."]
+position = Vector2(230, 544)
+texture = ExtResource("5_be650")
+
+[node name="BgObjectTreeA" type="Sprite2D" parent="."]
+position = Vector2(410, 321)
+texture = ExtResource("6_qtk8j")
+
+[node name="ObjectTreeB" type="Sprite2D" parent="."]
+position = Vector2(547, 321)
+texture = ExtResource("7_ljj8j")

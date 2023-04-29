@@ -52,9 +52,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4ya2"]
-size = Vector2(112, 88)
+size = Vector2(100.5, 65.5)
 
 [node name="Rockpillar" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_y50ai")
 metadata/_edit_group_ = true
@@ -64,5 +65,5 @@ sprite_frames = SubResource("SpriteFrames_hyx5a")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(0.25, 28.25)
 shape = SubResource("RectangleShape2D_i4ya2")

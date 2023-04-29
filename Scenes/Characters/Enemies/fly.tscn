@@ -34,6 +34,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lrlvh"]
 
 [node name="Fly" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_nv71b")
 metadata/_edit_group_ = true

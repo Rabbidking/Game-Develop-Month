@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 
 @onready var anim = $AnimatedSprite2D
+@onready var colBox = $CollisionShape2D
 @onready var poof = load("res://Scenes/poof.tscn").instantiate()
 #const JUMP_VELOCITY = -400.0
 
@@ -24,6 +25,7 @@ func hurt():
 		die()
 
 func die():
+	colBox.disabled = true
 	anim.play("die")
 	await anim.animation_finished
 	anim.visible = false

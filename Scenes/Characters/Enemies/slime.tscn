@@ -60,6 +60,7 @@ animations = [{
 }]
 
 [node name="Slime" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_b8gas")
 

@@ -42,4 +42,5 @@ animations = [{
 }]
 
 [node name="Poof" type="AnimatedSprite2D"]
+position = Vector2(0, -53)
 sprite_frames = SubResource("SpriteFrames_mxox2")

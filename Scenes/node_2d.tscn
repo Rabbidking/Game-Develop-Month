@@ -29,7 +29,7 @@ position = Vector2(2101, 395)
 position = Vector2(1724, 480)
 
 [node name="Player" parent="." instance=ExtResource("1_mlrhm")]
-position = Vector2(106, 540)
+position = Vector2(106, 544)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-15, 605)
@@ -69,15 +69,15 @@ position = Vector2(839, 564)
 position = Vector2(687, 564)
 
 [node name="Slime" parent="." instance=ExtResource("3_hn7fs")]
-position = Vector2(615, 589)
+position = Vector2(615, 573)
 
 [node name="UI" parent="." instance=ExtResource("5_qgqsq")]
 
 [node name="Slime2" parent="." instance=ExtResource("3_hn7fs")]
-position = Vector2(1267, 590)
+position = Vector2(1267, 574)
 
 [node name="Slime3" parent="." instance=ExtResource("3_hn7fs")]
-position = Vector2(1461, 589)
+position = Vector2(1461, 573)
 
 [node name="InvisibleBounds" parent="." instance=ExtResource("7_b3lil")]
 

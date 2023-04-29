@@ -1,12 +1,19 @@
-[gd_scene load_steps=24 format=3 uid="uid://cg30x40n0c7pl"]
+[gd_scene load_steps=31 format=3 uid="uid://cg30x40n0c7pl"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_r040e"]
+[ext_resource type="Texture2D" uid="uid://bdr2ml5okwqnm" path="res://Sprites/Character Sprites/Player/Player Defeated 1.png" id="2_fjxno"]
+[ext_resource type="Texture2D" uid="uid://romirv552vpk" path="res://Sprites/Character Sprites/Player/Player Defeated 2.png" id="3_275k0"]
 [ext_resource type="Texture2D" uid="uid://cyxtvg62uwj00" path="res://Sprites/Character Sprites/Player/Player Smack 1.png" id="3_dncnx"]
 [ext_resource type="Texture2D" uid="uid://xcnq4dg1qrb1" path="res://Sprites/Character Sprites/Player/Player Jump 1.png" id="4_agmx2"]
+[ext_resource type="Texture2D" uid="uid://hlsldfiivu7i" path="res://Sprites/Character Sprites/Player/Player Defeated 3.png" id="4_b3es5"]
+[ext_resource type="Texture2D" uid="uid://bbxh26uj3eger" path="res://Sprites/Character Sprites/Player/Player Defeated 4.png" id="5_anwni"]
 [ext_resource type="Texture2D" uid="uid://dr5m3npbbwjpp" path="res://Sprites/Character Sprites/Player/Player Jump 2.png" id="5_io5oi"]
+[ext_resource type="Texture2D" uid="uid://dpxf4qll3vaim" path="res://Sprites/Character Sprites/Player/Player Defeated 5.png" id="6_tfqvy"]
 [ext_resource type="Texture2D" uid="uid://dwam4mtrof8cs" path="res://Sprites/Character Sprites/Player/Player Jump 3.png" id="6_wva6p"]
 [ext_resource type="Texture2D" uid="uid://rnsus8alq4xv" path="res://Sprites/Character Sprites/Player/Player Smack 2.png" id="7_6nk3o"]
 [ext_resource type="Texture2D" uid="uid://8xdn0apydjpf" path="res://Sprites/Character Sprites/Player/Player Smack 3.png" id="8_2chmj"]
+[ext_resource type="Texture2D" uid="uid://bq2kxskui8lp2" path="res://Sprites/Character Sprites/Player/Player Hurt 1.png" id="8_8eg6f"]
+[ext_resource type="Texture2D" uid="uid://dg0owpfq72gbk" path="res://Sprites/Character Sprites/Player/Player Hurt 2.png" id="9_br5fr"]
 [ext_resource type="Texture2D" uid="uid://lo4mynorixuu" path="res://Sprites/Character Sprites/Player/Player Smack 4.png" id="9_gowym"]
 [ext_resource type="Texture2D" uid="uid://cwsf6seg4l8pl" path="res://Sprites/Character Sprites/Player/Player Toss 1.png" id="10_i5sib"]
 [ext_resource type="Texture2D" uid="uid://bdu18k20qc1sk" path="res://Sprites/Character Sprites/Player/Player Toss 2.png" id="11_51x5h"]
@@ -25,6 +32,26 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_fjxno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_275k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b3es5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_anwni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tfqvy")
+}],
+"loop": false,
+"name": &"Defeated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_wva6p")
 }],
 "loop": true,
@@ -33,9 +60,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dncnx")
+"texture": ExtResource("8_8eg6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_br5fr")
 }],
 "loop": false,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dncnx")
+}],
+"loop": true,
 "name": &"Idle",
 "speed": 5.0
 }, {
@@ -106,32 +144,32 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("19_aur34")
 }],
-"loop": true,
+"loop": false,
 "name": &"Walk",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmwuu"]
-radius = 31.0
-height = 100.0
+radius = 18.0
+height = 57.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2ij"]
 size = Vector2(58, 123)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(679, 184)
+scale = Vector2(2, 2)
 collision_mask = 29
 script = ExtResource("1_r040e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_s2cak")
-animation = &"Idle"
+animation = &"Walk"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(-0.5, 4)
 shape = SubResource("CapsuleShape2D_vmwuu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -143,7 +181,7 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="HitBox" type="Area2D" parent="."]
-position = Vector2(72, -41)
+position = Vector2(51, -41)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

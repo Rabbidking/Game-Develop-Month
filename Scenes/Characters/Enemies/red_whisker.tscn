@@ -86,9 +86,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ux3ss"]
-size = Vector2(64, 48)
+size = Vector2(53, 34)
 
 [node name="Red Whisker" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_layer = 2
 script = ExtResource("1_7ykfq")
 metadata/_edit_group_ = true
@@ -99,5 +100,5 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(1, 11)
 shape = SubResource("RectangleShape2D_ux3ss")
