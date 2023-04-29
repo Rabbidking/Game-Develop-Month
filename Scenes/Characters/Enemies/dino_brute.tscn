@@ -122,16 +122,15 @@ _data = {
 [node name="DinoBrute" type="CharacterBody2D"]
 position = Vector2(141, 100)
 scale = Vector2(2, 2)
-collision_layer = 2
+collision_layer = 4
+collision_mask = 9
 script = ExtResource("1_pc1c4")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uv2l5")
-animation = &"punch"
+animation = &"idle"
 autoplay = "idle"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 9)
@@ -150,6 +149,9 @@ target_position = Vector2(-35, 0)
 
 [node name="Detect_Range" type="RayCast2D" parent="."]
 target_position = Vector2(-100, 0)
+
+[node name="Detect_Range2" type="RayCast2D" parent="."]
+target_position = Vector2(100, 0)
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 3.0
