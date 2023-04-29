@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfegsm3p2xsb4"
-path="res://.godot/imported/Tile_CastleWall_Middle_D.png-a7843f7923562461c16b69f4cb04ae43.ctex"
+uid="uid://bitckkul7aive"
+path="res://.godot/imported/Tileset_CastleWall.png-1b234d8886c1f953aa80c1163b978431.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background Sprites/Tile_CastleWall/Tile_CastleWall_Middle_D.png"
-dest_files=["res://.godot/imported/Tile_CastleWall_Middle_D.png-a7843f7923562461c16b69f4cb04ae43.ctex"]
+source_file="res://TileMaps/Tileset_CastleWall.png"
+dest_files=["res://.godot/imported/Tileset_CastleWall.png-1b234d8886c1f953aa80c1163b978431.ctex"]
 
 [params]
 

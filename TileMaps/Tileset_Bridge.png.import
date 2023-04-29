@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ujd7tn2twcyn"
-path="res://.godot/imported/Tile_CastleFloor_MiddleEdgeLeft_C.png-755390c6155cc8506e7a6ac53d1251a6.ctex"
+uid="uid://ixb3mfd0n7jt"
+path="res://.godot/imported/Tileset_Bridge.png-4c568d0808f9d09618ab5ba9fc3924dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background Sprites/Tile_CastleFloor/Tile_CastleFloor_MiddleEdgeLeft_C.png"
-dest_files=["res://.godot/imported/Tile_CastleFloor_MiddleEdgeLeft_C.png-755390c6155cc8506e7a6ac53d1251a6.ctex"]
+source_file="res://TileMaps/Tileset_Bridge.png"
+dest_files=["res://.godot/imported/Tileset_Bridge.png-4c568d0808f9d09618ab5ba9fc3924dd.ctex"]
 
 [params]
 

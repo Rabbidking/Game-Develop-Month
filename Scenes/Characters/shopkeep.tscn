@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_koh25")
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_mro25")
 autoplay = "default"
-frame_progress = 0.00223264
+frame_progress = 0.965683
 
 [node name="Shop" parent="." instance=ExtResource("3_82sax")]
 
