@@ -6,6 +6,7 @@ var coin_manager = preload("res://Scripts/CoinManager.gd")
 var damage_multiplier = 1
 var attacking = false
 var jumping = false
+var iframe = false
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -62,6 +63,10 @@ func _physics_process(delta):
 		$HitBox/CollisionShape2D.position = Vector2(-139, 41)
 	elif velocity.y > 0 and not is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Falling")
+	if not is_on_floor() and velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	if not is_on_floor() and velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
 #	elif Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_right") and is_on_floor():
 	elif velocity.x == 0 and velocity.y == 0 and is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Idle")
@@ -73,9 +78,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("smack"):
 		smack()
 		
-	if Game.playerHP <= 0:
-		Game.playerHP = 0
-		die()
+#	if Game.playerHP <= 0:
+#		Game.playerHP = 0
+#		die()
 		
 func die():
 	var coins_to_lose = floor(Game.coins * 0.1)
@@ -150,3 +155,15 @@ func _on_hit_box_body_entered(body):
 #	# Subtract coins based on how much damage was done
 #	var coins_to_subtract = damage / 10  # For example, subtract 1 coin for every 10 damage dealt
 #	cm.subtract_coins(coins_to_subtract)
+
+func hurt():
+	if iframe == false:
+		Game.playerHP -= 1
+		iframe = true
+		$IFrame.start()
+		$Player_Animation.play("IFrame")
+		if Game.playerHP <= 0:
+			die()
+
+func _on_i_frame_timeout():
+	iframe = false
