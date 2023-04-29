@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://kem02kkmruqw"]
+[gd_scene load_steps=15 format=3 uid="uid://kem02kkmruqw"]
 
 [ext_resource type="Texture2D" uid="uid://cia40pysbi6th" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV2.png" id="1_p5r10"]
 [ext_resource type="Texture2D" uid="uid://cdn86l47es7dr" path="res://TileMaps/Tileset_Floor.png" id="2_o5h85"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b32pqv8k8ichs" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_A.png" id="5_be650"]
 [ext_resource type="Texture2D" uid="uid://cqaalh81p8t7k" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_A.png" id="6_qtk8j"]
 [ext_resource type="Texture2D" uid="uid://yytlg75ydok5" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_B.png" id="7_ljj8j"]
+[ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="8_sspbw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3mmv"]
 texture = ExtResource("2_o5h85")
@@ -238,14 +239,23 @@ format = 2
 tile_set = SubResource("TileSet_j7umo")
 format = 2
 
-[node name="BgObjectShrubA" type="Sprite2D" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BgObjectShrubA" type="Sprite2D" parent="Control"]
 position = Vector2(230, 544)
 texture = ExtResource("5_be650")
 
-[node name="BgObjectTreeA" type="Sprite2D" parent="."]
+[node name="BgObjectTreeA" type="Sprite2D" parent="Control"]
 position = Vector2(410, 321)
 texture = ExtResource("6_qtk8j")
 
-[node name="ObjectTreeB" type="Sprite2D" parent="."]
+[node name="ObjectTreeB" type="Sprite2D" parent="Control"]
 position = Vector2(547, 321)
 texture = ExtResource("7_ljj8j")
+
+[node name="Player" parent="." instance=ExtResource("8_sspbw")]
+position = Vector2(99, 512)

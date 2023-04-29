@@ -154,7 +154,7 @@ radius = 18.0
 height = 57.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2ij"]
-size = Vector2(58, 123)
+size = Vector2(43.75, 68.5)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(679, 184)
@@ -165,7 +165,9 @@ script = ExtResource("1_r040e")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_s2cak")
-animation = &"Walk"
+animation = &"Smack"
+frame = 3
+frame_progress = 1.0
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -185,7 +187,7 @@ position = Vector2(51, -41)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-4, 41)
+position = Vector2(-22.375, 37.25)
 shape = SubResource("RectangleShape2D_pf2ij")
 disabled = true
 
