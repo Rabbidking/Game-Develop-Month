@@ -20,16 +20,36 @@ func _physics_process(delta):
 		anim.play("punch")
 		$Hit_Animation.play("Hit")
 		hit_cooldown = true
-	if attacking == false:
-		anim.play("idle")
+		$Detect_Range.enabled = false
+		$Detect_Range2.enabled = false
+		$Cooldown.start()
 
+	if $Detect_Range.is_colliding() and attacking == false:
+		anim.play("walk")
+		print("walk")
+		$AnimatedSprite2D.flip_h = false
+		$Hit_Box/Hit_Box_Collision.position = Vector2(-10, 20.25)
+		$Hit_Range.target_position = Vector2(-35, 0)
+		velocity.x -= 2
+	
+	if $Detect_Range2.is_colliding() and attacking == false:
+		anim.play("walk")
+		$AnimatedSprite2D.flip_h = true
+		$Hit_Box/Hit_Box_Collision.position = Vector2(10, 20.25)
+		$Hit_Range.target_position = Vector2(35, 0)
+		velocity.x += 2
+	
+	
+	if not $Detect_Range.is_colliding() and not $Detect_Range2.is_colliding() and attacking == false and not $Hit_Range.is_colliding():
+		$AnimatedSprite2D.play("idle")
+		
 	move_and_slide()
 
 
 func _on_animated_sprite_2d_animation_finished():
+	$AnimatedSprite2D.play("idle")
 	attacking = false
-	anim.play("idle")
-	$Cooldown.start()
+
 
 
 func _on_hit_box_body_entered(body):
@@ -39,4 +59,6 @@ func _on_hit_box_body_entered(body):
 
 
 func _on_cooldown_timeout():
+	$Detect_Range.enabled = true
+	$Detect_Range2.enabled = true
 	hit_cooldown = false
