@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://kem02kkmruqw"]
 
-[ext_resource type="Texture2D" uid="uid://cia40pysbi6th" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV2.png" id="1_p5r10"]
+[ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_kqw8d"]
 [ext_resource type="Texture2D" uid="uid://cdn86l47es7dr" path="res://TileMaps/Tileset_Floor.png" id="2_o5h85"]
 [ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="3_1ij7b"]
 [ext_resource type="Texture2D" uid="uid://4h4ld1m87y4s" path="res://TileMaps/Tileset_Bush.png" id="4_v6qxb"]
@@ -213,31 +213,41 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_nx1gw")
 
 [node name="Fields" type="Node2D"]
+position = Vector2(0, -2297)
 
 [node name="BG" type="TextureRect" parent="."]
-offset_right = 2875.0
-offset_bottom = 810.0
-texture = ExtResource("1_p5r10")
+offset_left = 2.0
+offset_top = 834.0
+offset_right = 5044.0
+offset_bottom = 3264.0
+texture = ExtResource("1_kqw8d")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="TileMaps" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -11.0
+offset_top = 1590.0
+offset_right = 29.0
+offset_bottom = 1630.0
 
 [node name="FieldFloor" type="TileMap" parent="TileMaps"]
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_me43v")
 format = 2
 layer_0/tile_data = PackedInt32Array(589824, 0, 6, 589825, 65536, 6, 589826, 65536, 6, 589827, 65536, 6, 589828, 65536, 6, 589829, 65536, 6, 589830, 65536, 6, 589831, 65536, 6, 589832, 65536, 6, 589833, 65536, 6, 524298, 0, 6, 524299, 65536, 6, 524300, 65536, 6, 524301, 65536, 6, 524302, 65536, 6, 524303, 65536, 6, 524304, 65536, 6, 524305, 65536, 6, 524306, 65536, 6, 524307, 65536, 6, 524308, 65536, 6, 524309, 65536, 6, 524310, 65536, 6, 524311, 65536, 6, 458776, 65536, 6, 458777, 65536, 6, 458778, 65536, 6, 458779, 65536, 6, 458780, 65536, 6, 458781, 65536, 6, 458782, 65536, 6, 589834, 327680, 6, 655360, 262144, 2, 655361, 327680, 6, 655362, 327680, 6, 655363, 327680, 6, 655364, 327680, 6, 655365, 327680, 6, 655366, 327680, 6, 655367, 327680, 6, 655368, 327680, 6, 655369, 327680, 6, 655370, 327680, 6, 720896, 524288, 6, 720897, 589824, 6, 720898, 589824, 6, 720899, 589824, 6, 720900, 589824, 6, 720901, 589824, 6, 720902, 589824, 6, 720903, 589824, 6, 720904, 589824, 6, 720905, 589824, 6, 720906, 589824, 6, 786432, 524288, 8, 786433, 589824, 8, 786434, 589824, 8, 786435, 589824, 8, 786436, 589824, 8, 786437, 589824, 8, 786438, 589824, 8, 786439, 589824, 8, 786440, 589824, 8, 786441, 589824, 8, 786442, 589824, 8, 786443, 589824, 8, 786444, 589824, 8, 786445, 589824, 8, 786446, 589824, 8, 786447, 589824, 8, 786448, 589824, 8, 786449, 589824, 8, 786450, 589824, 8, 786451, 589824, 8, 786452, 589824, 8, 720907, 589824, 6, 720908, 589824, 6, 720909, 589824, 6, 720910, 589824, 6, 720911, 589824, 6, 720912, 589824, 6, 720913, 589824, 6, 720914, 589824, 6, 720915, 589824, 6, 720916, 589824, 6)
 
 [node name="BGBushes" type="TileMap" parent="TileMaps"]
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_ru5x6")
 format = 2
 
 [node name="Bushes" type="TileMap" parent="TileMaps"]
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_j7umo")
 format = 2
+layer_0/tile_data = PackedInt32Array(524288, 0, 2, 524289, 65536, 2, 524290, 65536, 2, 524291, 131072, 2)
 
 [node name="BGObjects" type="Control" parent="."]
 layout_mode = 3
@@ -246,16 +256,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BgObjectShrubA" type="Sprite2D" parent="BGObjects"]
-position = Vector2(230, 544)
+position = Vector2(770, 2682)
+scale = Vector2(2, 2)
 texture = ExtResource("5_be650")
 
 [node name="BgObjectTreeA" type="Sprite2D" parent="BGObjects"]
-position = Vector2(410, 321)
+position = Vector2(603, 2233)
+scale = Vector2(2, 2)
 texture = ExtResource("6_qtk8j")
 
 [node name="ObjectTreeB" type="Sprite2D" parent="BGObjects"]
-position = Vector2(547, 321)
+position = Vector2(938, 2238)
+scale = Vector2(2, 2)
 texture = ExtResource("7_ljj8j")
 
 [node name="Player" parent="." instance=ExtResource("8_sspbw")]
-position = Vector2(99, 512)
+position = Vector2(82, 2612)
