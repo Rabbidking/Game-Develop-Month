@@ -1,29 +1,32 @@
-[gd_scene load_steps=33 format=3 uid="uid://cg30x40n0c7pl"]
+[gd_scene load_steps=36 format=3 uid="uid://cg30x40n0c7pl"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_r040e"]
 [ext_resource type="Texture2D" uid="uid://bdr2ml5okwqnm" path="res://Sprites/Character Sprites/Player/Player Defeated 1.png" id="2_fjxno"]
 [ext_resource type="Texture2D" uid="uid://romirv552vpk" path="res://Sprites/Character Sprites/Player/Player Defeated 2.png" id="3_275k0"]
-[ext_resource type="Texture2D" uid="uid://cyxtvg62uwj00" path="res://Sprites/Character Sprites/Player/Player Smack 1.png" id="3_dncnx"]
 [ext_resource type="Texture2D" uid="uid://xcnq4dg1qrb1" path="res://Sprites/Character Sprites/Player/Player Jump 1.png" id="4_agmx2"]
 [ext_resource type="Texture2D" uid="uid://hlsldfiivu7i" path="res://Sprites/Character Sprites/Player/Player Defeated 3.png" id="4_b3es5"]
 [ext_resource type="Texture2D" uid="uid://bbxh26uj3eger" path="res://Sprites/Character Sprites/Player/Player Defeated 4.png" id="5_anwni"]
 [ext_resource type="Texture2D" uid="uid://dr5m3npbbwjpp" path="res://Sprites/Character Sprites/Player/Player Jump 2.png" id="5_io5oi"]
 [ext_resource type="Texture2D" uid="uid://dpxf4qll3vaim" path="res://Sprites/Character Sprites/Player/Player Defeated 5.png" id="6_tfqvy"]
 [ext_resource type="Texture2D" uid="uid://dwam4mtrof8cs" path="res://Sprites/Character Sprites/Player/Player Jump 3.png" id="6_wva6p"]
-[ext_resource type="Texture2D" uid="uid://rnsus8alq4xv" path="res://Sprites/Character Sprites/Player/Player Smack 2.png" id="7_6nk3o"]
-[ext_resource type="Texture2D" uid="uid://8xdn0apydjpf" path="res://Sprites/Character Sprites/Player/Player Smack 3.png" id="8_2chmj"]
 [ext_resource type="Texture2D" uid="uid://bq2kxskui8lp2" path="res://Sprites/Character Sprites/Player/Player Hurt 1.png" id="8_8eg6f"]
 [ext_resource type="Texture2D" uid="uid://dg0owpfq72gbk" path="res://Sprites/Character Sprites/Player/Player Hurt 2.png" id="9_br5fr"]
-[ext_resource type="Texture2D" uid="uid://lo4mynorixuu" path="res://Sprites/Character Sprites/Player/Player Smack 4.png" id="9_gowym"]
 [ext_resource type="Texture2D" uid="uid://cwsf6seg4l8pl" path="res://Sprites/Character Sprites/Player/Player Toss 1.png" id="10_i5sib"]
+[ext_resource type="Texture2D" uid="uid://bugp4vkqj6l03" path="res://Sprites/Character Sprites/Player/Player Still.png" id="10_x78f3"]
 [ext_resource type="Texture2D" uid="uid://bdu18k20qc1sk" path="res://Sprites/Character Sprites/Player/Player Toss 2.png" id="11_51x5h"]
 [ext_resource type="Texture2D" uid="uid://bywamv3gs44tx" path="res://Sprites/Character Sprites/Player/Player Toss 3.png" id="12_l0xe5"]
+[ext_resource type="Texture2D" uid="uid://dj2y5k88pw4rw" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_1.png" id="13_4cv4o"]
 [ext_resource type="Texture2D" uid="uid://b7hhm2qml88dj" path="res://Sprites/Character Sprites/Player/Player Walk 1.png" id="13_g5ltd"]
 [ext_resource type="Texture2D" uid="uid://dsdqoxxmduaft" path="res://Sprites/Character Sprites/Player/Player Walk 2.png" id="14_rivoe"]
+[ext_resource type="Texture2D" uid="uid://c7rn0ffkf52oj" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_2.png" id="14_sbmu5"]
+[ext_resource type="Texture2D" uid="uid://7121bikq3wn" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_3.png" id="15_cml1b"]
 [ext_resource type="Texture2D" uid="uid://kqr448a3f7sr" path="res://Sprites/Character Sprites/Player/Player Walk 3.png" id="15_sq45y"]
+[ext_resource type="Texture2D" uid="uid://dgkp8hlxcjx84" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_4.png" id="16_2rs3f"]
 [ext_resource type="Texture2D" uid="uid://dcldygg8axpsj" path="res://Sprites/Character Sprites/Player/Player Walk 4.png" id="16_rowro"]
+[ext_resource type="Texture2D" uid="uid://borpfk6s7d2p2" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_5.png" id="17_djp2i"]
 [ext_resource type="Texture2D" uid="uid://cnhtbq21xxdqg" path="res://Sprites/Character Sprites/Player/Player Walk 5.png" id="17_eo0u4"]
 [ext_resource type="Texture2D" uid="uid://1mujj22x0stu" path="res://Sprites/Character Sprites/Player/Player Walk 6.png" id="18_4w3ws"]
+[ext_resource type="Texture2D" uid="uid://c1yp8hlf8n1dn" path="res://Sprites/Character Sprites/Player/Player_SmackV2/Player_SmackV2_6.png" id="18_bk64h"]
 [ext_resource type="AudioStream" uid="uid://bgwq0pmr1bq7r" path="res://Assets/Audio/SFX/Whoosh 25.wav" id="19_8j5ii"]
 [ext_resource type="Texture2D" uid="uid://b3pe8d0ro1wne" path="res://Sprites/Character Sprites/Player/Player Walk 7.png" id="19_aur34"]
 [ext_resource type="AudioStream" uid="uid://b4q4v1afa8kke" path="res://Assets/Audio/SFX/Whoosh 3_2.wav" id="20_up1gc"]
@@ -71,7 +74,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dncnx")
+"texture": ExtResource("10_x78f3")
 }],
 "loop": true,
 "name": &"Idle",
@@ -93,16 +96,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dncnx")
+"texture": ExtResource("13_4cv4o")
 }, {
-"duration": 1.0,
-"texture": ExtResource("7_6nk3o")
+"duration": 0.6,
+"texture": ExtResource("14_sbmu5")
 }, {
-"duration": 1.0,
-"texture": ExtResource("8_2chmj")
+"duration": 0.8,
+"texture": ExtResource("15_cml1b")
 }, {
-"duration": 1.0,
-"texture": ExtResource("9_gowym")
+"duration": 0.6,
+"texture": ExtResource("16_2rs3f")
+}, {
+"duration": 0.6,
+"texture": ExtResource("17_djp2i")
+}, {
+"duration": 0.6,
+"texture": ExtResource("18_bk64h")
 }],
 "loop": false,
 "name": &"Smack",
@@ -186,11 +195,11 @@ script = ExtResource("1_r040e")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_s2cak")
-animation = &"Defeated"
+animation = &"Idle"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 4)
+position = Vector2(0, 36.5)
 shape = SubResource("CapsuleShape2D_vmwuu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -206,7 +215,7 @@ position = Vector2(51, -41)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-18.5, 38)
+position = Vector2(-15.5, 70.5)
 shape = SubResource("RectangleShape2D_pf2ij")
 disabled = true
 

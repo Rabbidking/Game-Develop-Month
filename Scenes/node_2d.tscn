@@ -29,7 +29,7 @@ position = Vector2(2101, 395)
 position = Vector2(1724, 480)
 
 [node name="Player" parent="." instance=ExtResource("1_mlrhm")]
-position = Vector2(106, 544)
+position = Vector2(106, 475)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-15, 605)
