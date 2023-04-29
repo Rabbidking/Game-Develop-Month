@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvweuwm70dfls"]
+[gd_scene load_steps=19 format=3 uid="uid://cvweuwm70dfls"]
 
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_u2c7h"]
 [ext_resource type="Texture2D" uid="uid://l50jp7iqt2b8" path="res://Sprites/Visual Effects/VE_CoinV2/VE_CoinV2_1.png" id="2_73erj"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://1aqxnsrlao4t" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_6.png" id="13_vpr4h"]
 [ext_resource type="Texture2D" uid="uid://7mx2hpmaddbh" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_7.png" id="14_uui1h"]
 [ext_resource type="Texture2D" uid="uid://dqjj0wiram7w0" path="res://Sprites/Visual Effects/VE_Sparkle/VE_Sparkle_8.png" id="15_1iunp"]
+[ext_resource type="AudioStream" uid="uid://uj1fl5514iq8" path="res://Assets/Audio/SFX/coins (7).wav" id="16_wfecq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hvhsj"]
 animations = [{
@@ -75,7 +76,6 @@ animations = [{
 radius = 13.35
 
 [node name="Coin" type="Area2D"]
-process_mode = 3
 scale = Vector2(1.5, 1.5)
 collision_layer = 2
 script = ExtResource("1_u2c7h")
@@ -93,5 +93,6 @@ frame_progress = 1.0
 shape = SubResource("CircleShape2D_08kgr")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_wfecq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

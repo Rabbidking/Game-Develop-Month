@@ -17,6 +17,7 @@ func _on_resume_button_pressed():
 
 
 func _on_quit_button_pressed():
+	pause.visible = false
 	SceneTransition.change_scene_to_file("res://Scenes/main.tscn")
 
 

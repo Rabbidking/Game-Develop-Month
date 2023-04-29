@@ -83,6 +83,8 @@ func _physics_process(delta):
 #		die()
 		
 func die():
+	$HitBox/CollisionShape2D.disabled = true
+	$AnimatedSprite2D.play("Defeated")
 	var coins_to_lose = floor(Game.coins * 0.1)
 	Game.coins -= coins_to_lose
 	#Either start player at a node called LevelStart
@@ -158,6 +160,7 @@ func _on_hit_box_body_entered(body):
 
 func hurt():
 	if iframe == false:
+		$AnimatedSprite2D.play("Hurt")
 		Game.playerHP -= 1
 		iframe = true
 		$IFrame.start()
