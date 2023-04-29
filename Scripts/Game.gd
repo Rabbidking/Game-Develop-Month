@@ -15,7 +15,7 @@ var items = {
 		"Type": "Multiplier",
 		"Multiplier Num": 2,
 		"BuyOnce": true,
-		"Icon": preload("res://Assets/Icons/x2.png")
+		"Icon": preload("res://Assets/Icons/X2 Icon.png")
 	},
 	1: {
 		"Name": "4x Multiplier",
@@ -24,32 +24,52 @@ var items = {
 		"Type": "Multiplier",
 		"BuyOnce": true,
 		"Multiplier Num": 4,
-		"Icon": preload("res://Assets/Icons/x4.png")
+		"Icon": preload("res://Assets/Icons/X4 Icon.png")
 	},
+#	2: {
+#		"Name": "Attack Upgrade",
+#		"Des": "Adds +1 to your attack!",
+#		"Cost": 50,
+#		"Type": "Attack",
+#		"BuyOnce": false,
+#		#"Icon": preload("res://icon.svg")
+#	},
 	2: {
-		"Name": "Attack Upgrade",
-		"Des": "Adds +1 to your attack!",
-		"Cost": 50,
-		"Type": "Attack",
-		"BuyOnce": false,
-		#"Icon": preload("res://icon.svg")
-	},
-	3: {
 		"Name": "Wallet Upgrade 1",
 		"Des": "Lets you hold more money!",
 		"Cost": 50,
 		"Type": "Wallet",
 		"BuyOnce": true,
-		"Wallet Val": 150
+		"Wallet Val": 150,
+		"Icon": preload("res://Assets/Icons/Wallet Upgrade 1.png")
 	},
-	4: {
+	3: {
 		"Name": "Wallet Upgrade 2",
 		"Des": "Lets you hold even more money!",
 		"Cost": 200,
 		"Type": "Wallet",
 		"BuyOnce": true,
-		"Wallet Val": 400
-	}
+		"Wallet Val": 400,
+		"Icon": preload("res://Assets/Icons/Wallet Upgrade 2.png")
+	},
+	4: {
+		"Name": "Wallet Upgrade 3",
+		"Des": "Lets you hold a ton more money!",
+		"Cost": 500,
+		"Type": "Wallet",
+		"BuyOnce": true,
+		"Wallet Val": 1000,
+		"Icon": preload("res://Assets/Icons/Wallet Upgrade 3.png")
+	},
+	5: {
+		"Name": "Wallet Upgrade 4",
+		"Des": "Hold INFINITE money! (May not actually hold infinite money, all sales final)",
+		"Cost": 1000,
+		"Type": "Wallet",
+		"BuyOnce": true,
+		"Wallet Val": 9999999999999999,
+		"Icon": preload("res://Assets/Icons/Wallet Upgrade 4.png")
+	},
 }
 
 var inventory = {

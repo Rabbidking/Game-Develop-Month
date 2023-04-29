@@ -5,6 +5,7 @@ var hasItem = false
 var itemDict = Game.items[currItem]
 @onready var buySound = $shopSFX/buyNoise
 @onready var buyFailed = $shopSFX/buyFailed
+@onready var buyButton = $Control/Buy
 
 func _ready():
 	
@@ -25,7 +26,7 @@ func switchItem(select):
 			currItem = select
 			#print(Game.items[currItem])
 			#get_node("Control/AnimSprite").play(Game.items[currItem]["Name"])
-			#get_node("Control/Item").texture = Game.items[currItem]["Icon"]
+			get_node("Control/Item").texture = Game.items[currItem]["Icon"]
 			get_node("Control/Name").text = Game.items[currItem]["Name"]
 			get_node("Control/Des").text = Game.items[currItem]["Des"]
 			get_node("Control/Des").text += "\nCost: " + str(Game.items[currItem]["Cost"])

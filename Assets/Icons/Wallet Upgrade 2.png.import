@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1mdktpddted0"
-path="res://.godot/imported/Object_Sky.png-8f671b286f13ee76754ed131c23b6719.ctex"
+uid="uid://del4w0kvpvjkw"
+path="res://.godot/imported/Wallet Upgrade 2.png-f83394bdb10a252886035418280649ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background Sprites/Object_Sky/Object_Sky.png"
-dest_files=["res://.godot/imported/Object_Sky.png-8f671b286f13ee76754ed131c23b6719.ctex"]
+source_file="res://Assets/Icons/Wallet Upgrade 2.png"
+dest_files=["res://.godot/imported/Wallet Upgrade 2.png-f83394bdb10a252886035418280649ce.ctex"]
 
 [params]
 

@@ -3,14 +3,12 @@ extends CanvasLayer
 @onready var coin = get_node("Coins")
 @onready var hp = get_node("HP")
 @onready var speedrun = get_node("Speedrun")
+@onready var bosshplabel = get_node("BossHPLabel")
 #const BOSS = preload("res://Scenes/Characters/Enemies/boss.tscn")
-
-#var timer = null
 
 func _ready():
 	if Utils.timer_on:
 		Utils.get_time()
-	#timer = $Speedrun/SpeedrunTimer
 	Boss.boss_killed.connect(_stop_timer)
 	
 	if Utils.speedrun_on == false:
@@ -24,15 +22,14 @@ func _process(_delta):
 	#update the player UI
 	hp.text = "HP: " + str(Game.playerHP)
 	coin.text = "Coins: " + str(Game.coins) + "/" + str(Game.walletMax)
-	if Game.coins >= Game.walletMax:
+	bosshplabel.text = "Boss HP: " + str(Boss.boss_current_health) + "/" + str(Boss.boss_max_health)
+	
+	if Game.coins < Game.walletMax:
+		coin.self_modulate = Color(1,1,1,1)
+	elif Game.coins >= Game.walletMax:
 		coin.self_modulate = Color(1,0,0,1)
-		if Game.coins > Game.walletMax:
-			coin.self_modulate = Color(0,0,0,1)
 	if Utils.speedrun_on:
 		speedrun.text = Utils.get_time()
-	
-#	if Utils.timer_on == false:
-#		print("Time up!")
 		
 	update_boss_health()
 

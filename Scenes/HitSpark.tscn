@@ -42,6 +42,7 @@ animations = [{
 }]
 
 [node name="HitSpark" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vk2d6")
 frame = 7
 frame_progress = 1.0

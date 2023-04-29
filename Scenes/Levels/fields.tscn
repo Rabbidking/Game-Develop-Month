@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://kem02kkmruqw"]
 
-[ext_resource type="Texture2D" uid="uid://b1mdktpddted0" path="res://Sprites/Background Sprites/Object_Sky/Object_Sky.png" id="1_onxn7"]
+[ext_resource type="Texture2D" uid="uid://cia40pysbi6th" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV2.png" id="1_p5r10"]
 
 [node name="Fields" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 2875.0
 offset_bottom = 810.0
-texture = ExtResource("1_onxn7")
+texture = ExtResource("1_p5r10")
 stretch_mode = 1

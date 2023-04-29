@@ -43,6 +43,7 @@ animations = [{
 }]
 
 [node name="Shopkeep" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_jd5lh")
 metadata/_edit_group_ = true
 

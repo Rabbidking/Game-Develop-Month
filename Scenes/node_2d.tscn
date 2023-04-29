@@ -26,7 +26,7 @@ position = Vector2(2406, 585)
 position = Vector2(2101, 395)
 
 [node name="Shopkeep" parent="." instance=ExtResource("4_bstft")]
-position = Vector2(1724, 542)
+position = Vector2(1724, 480)
 
 [node name="Player" parent="." instance=ExtResource("1_mlrhm")]
 position = Vector2(106, 540)
