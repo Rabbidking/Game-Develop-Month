@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cfelg8ctaafsq"]
+[gd_scene load_steps=15 format=3 uid="uid://cfelg8ctaafsq"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_b8gas"]
 [ext_resource type="Texture2D" uid="uid://cq4tbihv6xuev" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 1.png" id="1_gl1fy"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cq3a3mkko7qua" path="res://Sprites/Character Sprites/Enemies/Slime/Slime Idle Hop 6.png" id="6_r5hsj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3b08d"]
-radius = 16.0
 height = 32.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_po8xt"]
@@ -59,6 +58,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0542"]
+height = 32.0
+
 [node name="Slime" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_layer = 2
@@ -66,6 +68,7 @@ script = ExtResource("1_b8gas")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3b08d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -73,3 +76,15 @@ process_mode = 3
 sprite_frames = SubResource("SpriteFrames_po8xt")
 animation = &"Idle"
 autoplay = "Idle"
+
+[node name="Floor_Checker" type="RayCast2D" parent="."]
+target_position = Vector2(0, 30)
+
+[node name="Hurt_Box" type="Area2D" parent="."]
+
+[node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
+position = Vector2(0, 6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_r0542")
+
+[connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]
