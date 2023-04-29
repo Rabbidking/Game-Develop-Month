@@ -56,11 +56,11 @@ func _physics_process(delta):
 	if velocity.x > 0 and is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Walk")
 		$AnimatedSprite2D.flip_h = false
-		$HitBox/CollisionShape2D.position = Vector2(-4, 41)
+		$HitBox/CollisionShape2D.position = Vector2(-18.5, 38)
 	elif velocity.x < 0 and is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Walk")
 		$AnimatedSprite2D.flip_h = true
-		$HitBox/CollisionShape2D.position = Vector2(-139, 41)
+		$HitBox/CollisionShape2D.position = Vector2(-83, 38)
 	elif velocity.y > 0 and not is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Falling")
 	if not is_on_floor() and velocity.x > 0:
@@ -134,7 +134,7 @@ func _on_animated_sprite_2d_animation_finished():
 	$HitBox/CollisionShape2D.disabled = true
 
 func _on_hit_box_body_entered(body):
-	if body.get_collision_layer_value(2):
+	if body.get_collision_layer_value(3):
 		#print("Hello")
 		if body.has_method("hurt"):
 			#cue up hitspark
