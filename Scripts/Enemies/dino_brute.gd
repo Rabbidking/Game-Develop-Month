@@ -34,16 +34,16 @@ func _physics_process(delta):
 		if $Detect_Range.is_colliding() and attacking == false:
 			anim.play("walk")
 			$AnimatedSprite2D.flip_h = false
-			$Hit_Box/Hit_Box_Collision.position = Vector2(-10, 20.25)
-			$Hit_Range.target_position = Vector2(-35, 0)
+			$Hit_Box/Hit_Box_Collision.position = Vector2(-13.5, 20.25)
+			$Hit_Range.target_position = Vector2(-25, 0)
 			velocity.x = 0
 			velocity.x -= 1 * speed
 		
 		if $Detect_Range2.is_colliding() and attacking == false:
 			anim.play("walk")
 			$AnimatedSprite2D.flip_h = true
-			$Hit_Box/Hit_Box_Collision.position = Vector2(10, 20.25)
-			$Hit_Range.target_position = Vector2(35, 0)
+			$Hit_Box/Hit_Box_Collision.position = Vector2(13.5, 20.25)
+			$Hit_Range.target_position = Vector2(25, 0)
 			velocity.x = 0
 			velocity.x += 1 * speed
 		
