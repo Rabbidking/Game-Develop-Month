@@ -14,6 +14,10 @@ func _ready() -> void:
 	settings.visible = false
 	music.play()
 	
+func _process(delta):
+	if Utils.speedrun_on == true:
+		$CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Load.disabled = true
+	
 	
 #Button pressed functions
 func _on_quit_pressed():

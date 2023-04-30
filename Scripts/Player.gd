@@ -7,6 +7,7 @@ var damage_multiplier = 1
 var attacking = false
 var jumping = false
 var iframe = false
+var hasPlayedSwingSound = false
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -85,8 +86,10 @@ func _physics_process(delta):
 func die():
 	$HitBox/CollisionShape2D.disabled = true
 	$AnimatedSprite2D.play("Defeated")
+	await $AnimatedSprite2D.animation_finished
 	var coins_to_lose = floor(Game.coins * 0.1)
 	Game.coins -= coins_to_lose
+	get_tree().reload_current_scene()
 	#Either start player at a node called LevelStart
 	#var level_start = get_node("/root/Game/LevelStart")
 	#position = level_start.position
@@ -125,9 +128,13 @@ func add_coin():
 	
 func smack():
 	attacking = true
-	bagSwing.play()
 	$AnimatedSprite2D.play("Smack")
+	if not hasPlayedSwingSound:
+		bagSwing.play()
+		hasPlayedSwingSound = true
+	await $AnimatedSprite2D.animation_finished
 	$HitBox/CollisionShape2D.disabled = false
+	hasPlayedSwingSound = false
 
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.play("Idle")
