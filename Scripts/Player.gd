@@ -7,7 +7,6 @@ var damage_multiplier = 1
 var attacking = false
 var jumping = false
 var iframe = false
-var hasPlayedSwingSound = false
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -57,11 +56,11 @@ func _physics_process(delta):
 	if velocity.x > 0 and is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Walk")
 		$AnimatedSprite2D.flip_h = false
-		$HitBox/CollisionShape2D.position = Vector2(-18.5, 38)
+		$HitBox/CollisionShape2D.position = Vector2(-15.5, 70.5)
 	elif velocity.x < 0 and is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Walk")
 		$AnimatedSprite2D.flip_h = true
-		$HitBox/CollisionShape2D.position = Vector2(-83, 38)
+		$HitBox/CollisionShape2D.position = Vector2(-85.5, 70.5)
 	elif velocity.y > 0 and not is_on_floor() and attacking == false and jumping == false:
 		$AnimatedSprite2D.play("Falling")
 	if not is_on_floor() and velocity.x > 0:
@@ -86,10 +85,8 @@ func _physics_process(delta):
 func die():
 	$HitBox/CollisionShape2D.disabled = true
 	$AnimatedSprite2D.play("Defeated")
-	await $AnimatedSprite2D.animation_finished
 	var coins_to_lose = floor(Game.coins * 0.1)
 	Game.coins -= coins_to_lose
-	get_tree().reload_current_scene()
 	#Either start player at a node called LevelStart
 	#var level_start = get_node("/root/Game/LevelStart")
 	#position = level_start.position
@@ -128,13 +125,9 @@ func add_coin():
 	
 func smack():
 	attacking = true
+	bagSwing.play()
 	$AnimatedSprite2D.play("Smack")
-	if not hasPlayedSwingSound:
-		bagSwing.play()
-		hasPlayedSwingSound = true
-	await $AnimatedSprite2D.animation_finished
 	$HitBox/CollisionShape2D.disabled = false
-	hasPlayedSwingSound = false
 
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.play("Idle")
@@ -165,6 +158,11 @@ func _on_hit_box_body_entered(body):
 #	var coins_to_subtract = damage / 10  # For example, subtract 1 coin for every 10 damage dealt
 #	cm.subtract_coins(coins_to_subtract)
 
+func lose_money():
+	if iframe == false:
+		Game.coins -= 5
+		print(str(Game.coins))
+		
 func hurt():
 	if iframe == false:
 		$AnimatedSprite2D.play("Hurt")
@@ -175,5 +173,7 @@ func hurt():
 		if Game.playerHP <= 0:
 			die()
 
+
 func _on_i_frame_timeout():
 	iframe = false
+	
