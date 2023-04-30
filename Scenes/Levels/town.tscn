@@ -1077,6 +1077,30 @@ position = Vector2(361, 257)
 [node name="Coin70" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(415, 257)
 
+[node name="Coin71" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-7166, 1020)
+
+[node name="Coin72" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-7112, 1020)
+
+[node name="Coin73" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-7053, 1020)
+
+[node name="Coin74" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-6999, 1020)
+
+[node name="Coin75" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-6943, 1020)
+
+[node name="Coin76" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-6889, 1020)
+
+[node name="Coin77" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-6833, 1020)
+
+[node name="Coin78" parent="Coins" instance=ExtResource("31_43cw3")]
+position = Vector2(-6779, 1020)
+
 [node name="Coin62" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(829, -52)
 

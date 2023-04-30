@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ctwqogjrodf3p"]
+[gd_scene load_steps=66 format=3 uid="uid://ctwqogjrodf3p"]
 
 [ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_g1j4l"]
 [ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="2_h2xsu"]
@@ -55,6 +55,10 @@
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="53_02lpc"]
 [ext_resource type="PackedScene" uid="uid://dkal0vu5er4bo" path="res://Scenes/Characters/Enemies/red_whisker.tscn" id="54_rc88j"]
 [ext_resource type="PackedScene" uid="uid://cld8nqeluhskp" path="res://Scenes/Objects/level_exit.tscn" id="55_d2bbn"]
+[ext_resource type="PackedScene" uid="uid://cjr20a87uqjrh" path="res://Scenes/Characters/Enemies/chick.tscn" id="56_j7lch"]
+[ext_resource type="PackedScene" uid="uid://ey2aogsdwxgm" path="res://Scenes/Characters/Enemies/fly.tscn" id="57_2qdcw"]
+[ext_resource type="PackedScene" uid="uid://bbso357r141vk" path="res://Scenes/Characters/Enemies/dino_brute.tscn" id="58_r75xa"]
+[ext_resource type="PackedScene" uid="uid://cfelg8ctaafsq" path="res://Scenes/Characters/Enemies/slime.tscn" id="59_cnei2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
 texture = ExtResource("2_h2xsu")
@@ -1345,6 +1349,45 @@ offset_bottom = 40.0
 
 [node name="Red Whisker" parent="Enemies" instance=ExtResource("54_rc88j")]
 position = Vector2(1035, 2679)
+
+[node name="Red Whisker2" parent="Enemies" instance=ExtResource("54_rc88j")]
+position = Vector2(4390, 2671)
+
+[node name="Red Whisker3" parent="Enemies" instance=ExtResource("54_rc88j")]
+position = Vector2(6988, 2671)
+
+[node name="Chick" parent="Enemies" instance=ExtResource("56_j7lch")]
+position = Vector2(3407, 2583)
+
+[node name="Fly" parent="Enemies" instance=ExtResource("57_2qdcw")]
+position = Vector2(4456, 2393)
+
+[node name="Fly2" parent="Enemies" instance=ExtResource("57_2qdcw")]
+position = Vector2(6235, 2312)
+
+[node name="Fly3" parent="Enemies" instance=ExtResource("57_2qdcw")]
+position = Vector2(7256, 2493)
+
+[node name="Fly4" parent="Enemies" instance=ExtResource("57_2qdcw")]
+position = Vector2(7294, 2154)
+
+[node name="DinoBrute" parent="Enemies" instance=ExtResource("58_r75xa")]
+position = Vector2(7934, 2652)
+
+[node name="DinoBrute2" parent="Enemies" instance=ExtResource("58_r75xa")]
+position = Vector2(8774, 2417)
+
+[node name="DinoBrute3" parent="Enemies" instance=ExtResource("58_r75xa")]
+position = Vector2(9391, 2544)
+
+[node name="Slime" parent="Enemies" instance=ExtResource("59_cnei2")]
+position = Vector2(9907, 2580)
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("59_cnei2")]
+position = Vector2(10023, 2579)
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("59_cnei2")]
+position = Vector2(10144, 2581)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(82, 2612)

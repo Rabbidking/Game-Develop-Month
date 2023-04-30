@@ -2,9 +2,9 @@ extends Node
 
 var playerHP = 3
 var coin_multipliers = [1]
-var coins = 100
+var coins = 0
 var base_coin_value = 1
-var walletMax = 500
+var walletMax = 50
 
 var boss_max_health = 1000000
 var boss_current_health = 1000000
@@ -41,7 +41,7 @@ var items = {
 	3: {
 		"Name": "8x Multiplier",
 		"Des": "Octuples the value of all coins! It's almost like free money!",
-		"Cost": 800,
+		"Cost": 1000,
 		"Type": "Multiplier",
 		"BuyOnce": true,
 		"Multiplier Num": 8,
@@ -50,7 +50,7 @@ var items = {
 	4: {
 		"Name": "10x Multiplier",
 		"Des": "The number of coins you get increases tenfold!",
-		"Cost": 1000,
+		"Cost": 10000,
 		"Type": "Multiplier",
 		"BuyOnce": true,
 		"Multiplier Num": 10,

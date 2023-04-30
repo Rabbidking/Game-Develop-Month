@@ -16,7 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	if direction == 1:
 		anim.flip_h = true
-	$Floor_Checker.position.x = 20 * direction
+	#$Floor_Checker.position.x = 20 * direction
 
 func _physics_process(_delta):
 	if dead == false:

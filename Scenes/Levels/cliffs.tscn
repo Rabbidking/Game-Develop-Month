@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://kem02kkmruqw"]
+[gd_scene load_steps=68 format=3 uid="uid://kem02kkmruqw"]
 
 [ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_xvgmb"]
 [ext_resource type="Texture2D" uid="uid://lef1ip7cgjl1" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_D.png" id="2_2iu6i"]
@@ -58,6 +58,9 @@
 [ext_resource type="PackedScene" uid="uid://cjr20a87uqjrh" path="res://Scenes/Characters/Enemies/chick.tscn" id="55_78fhq"]
 [ext_resource type="PackedScene" uid="uid://bbso357r141vk" path="res://Scenes/Characters/Enemies/dino_brute.tscn" id="56_budqq"]
 [ext_resource type="PackedScene" uid="uid://dkal0vu5er4bo" path="res://Scenes/Characters/Enemies/red_whisker.tscn" id="57_4f17s"]
+[ext_resource type="PackedScene" uid="uid://k1xykyv02jvh" path="res://Scenes/Characters/Enemies/rockpillar.tscn" id="59_d4y3v"]
+[ext_resource type="PackedScene" uid="uid://ey2aogsdwxgm" path="res://Scenes/Characters/Enemies/fly.tscn" id="60_diw66"]
+[ext_resource type="PackedScene" uid="uid://cfelg8ctaafsq" path="res://Scenes/Characters/Enemies/slime.tscn" id="61_4ybgq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
 texture = ExtResource("7_8aysi")
@@ -1248,7 +1251,6 @@ texture = ExtResource("49_cq6wp")
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("49_qioq7")
 autoplay = true
-stream_paused = true
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(66, 2626)
@@ -1308,3 +1310,42 @@ position = Vector2(2717, 2678)
 
 [node name="Red Whisker" parent="Enemies" instance=ExtResource("57_4f17s")]
 position = Vector2(3849, 2673)
+
+[node name="Rockpillar" parent="Enemies" instance=ExtResource("59_d4y3v")]
+position = Vector2(7320, 2095)
+
+[node name="Fly" parent="Enemies" instance=ExtResource("60_diw66")]
+position = Vector2(7321, 2676)
+
+[node name="Fly2" parent="Enemies" instance=ExtResource("60_diw66")]
+position = Vector2(8615, 2681)
+
+[node name="Fly3" parent="Enemies" instance=ExtResource("60_diw66")]
+position = Vector2(5463, 1923)
+
+[node name="Red Whisker2" parent="Enemies" instance=ExtResource("57_4f17s")]
+position = Vector2(6900, 1775)
+
+[node name="DinoBrute2" parent="Enemies" instance=ExtResource("56_budqq")]
+position = Vector2(5573, 2289)
+
+[node name="Chick4" parent="Enemies" instance=ExtResource("55_78fhq")]
+position = Vector2(2273, 2449)
+
+[node name="Slime" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(2477, 2459)
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(3761, 2326)
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(5044, 1942)
+
+[node name="Slime4" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(6447, 1546)
+
+[node name="Slime5" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(7249, 1681)
+
+[node name="Slime6" parent="Enemies" instance=ExtResource("61_4ybgq")]
+position = Vector2(7734, 1684)
