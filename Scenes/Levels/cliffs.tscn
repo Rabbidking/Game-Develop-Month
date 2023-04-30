@@ -1249,8 +1249,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("49_qioq7")
 autoplay = true
+max_distance = 20000.0
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(66, 2626)

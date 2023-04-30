@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://ctwqogjrodf3p"]
+[gd_scene load_steps=67 format=3 uid="uid://ctwqogjrodf3p"]
 
 [ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_g1j4l"]
 [ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="2_h2xsu"]
@@ -59,6 +59,7 @@
 [ext_resource type="PackedScene" uid="uid://ey2aogsdwxgm" path="res://Scenes/Characters/Enemies/fly.tscn" id="57_2qdcw"]
 [ext_resource type="PackedScene" uid="uid://bbso357r141vk" path="res://Scenes/Characters/Enemies/dino_brute.tscn" id="58_r75xa"]
 [ext_resource type="PackedScene" uid="uid://cfelg8ctaafsq" path="res://Scenes/Characters/Enemies/slime.tscn" id="59_cnei2"]
+[ext_resource type="AudioStream" uid="uid://b2eaovnx4xggy" path="res://Assets/Audio/Music/05 - Melody of the Hills Loop.mp3" id="60_81175"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
 texture = ExtResource("2_h2xsu")
@@ -1396,3 +1397,10 @@ limit_left = 0
 limit_right = 10600
 limit_bottom = 700
 limit_smoothed = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("60_81175")
+autoplay = true
+max_distance = 20000.0
+bus = &"Music"

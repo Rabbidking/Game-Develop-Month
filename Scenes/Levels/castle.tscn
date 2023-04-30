@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://xdj6geo37c3x"]
+[gd_scene load_steps=33 format=3 uid="uid://xdj6geo37c3x"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="2_4mpk7"]
 [ext_resource type="Texture2D" uid="uid://bitckkul7aive" path="res://TileMaps/Tileset_CastleWall.png" id="2_mwr8p"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://blg6saf6dugx" path="res://Sprites/Background Sprites/Object_Barrel/Object_Barrel.png" id="15_lrfrs"]
 [ext_resource type="Texture2D" uid="uid://dv76jxf5numsf" path="res://Sprites/Background Sprites/Object_Crate/Object_Crate.png" id="21_ae1gl"]
 [ext_resource type="PackedScene" uid="uid://b7dpkfhxun4kx" path="res://Scenes/Objects/invisible_bounds.tscn" id="21_crjf3"]
+[ext_resource type="AudioStream" uid="uid://o1dogwrk1n36" path="res://Assets/Audio/Music/Action Loop 1_1.wav" id="23_64ue7"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="23_cxwba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dpjqw"]
@@ -1046,6 +1047,11 @@ position = Vector2(-22, -433)
 scale = Vector2(2, 2)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("23_64ue7")
+autoplay = true
+max_distance = 20000.0
+bus = &"Music"
 
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
