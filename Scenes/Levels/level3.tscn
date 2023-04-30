@@ -345,4 +345,4 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player" parent="." instance=ExtResource("4_axqys")]
-position = Vector2(35, 2528)
+position = Vector2(52, 2816)
