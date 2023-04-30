@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://xdj6geo37c3x"]
+[gd_scene load_steps=19 format=3 uid="uid://xdj6geo37c3x"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="2_4mpk7"]
 [ext_resource type="Texture2D" uid="uid://bitckkul7aive" path="res://TileMaps/Tileset_CastleWall.png" id="2_mwr8p"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://ixb3mfd0n7jt" path="res://TileMaps/Tileset_Bridge.png" id="4_8pfea"]
 [ext_resource type="Texture2D" uid="uid://bbt1acv7h6c2f" path="res://Sprites/Background Sprites/Object_Chandelier/Object_Chandelier.png" id="4_sn448"]
 [ext_resource type="Texture2D" uid="uid://dh8j32efwceal" path="res://Sprites/Background Sprites/Object_Banner/Object_BannerV2.png" id="5_oo2yd"]
-[ext_resource type="PackedScene" uid="uid://dxrorg1km34ay" path="res://Scenes/UI/pause_menu.tscn" id="9_engdg"]
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="10_ko6g5"]
 [ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="11_c3r1e"]
 
@@ -496,19 +495,6 @@ texture = ExtResource("5_oo2yd")
 [node name="LevelExit" parent="." instance=ExtResource("3_t5c64")]
 position = Vector2(2195, 584)
 
-[node name="Player" parent="." instance=ExtResource("2_4mpk7")]
-position = Vector2(5077, 467)
-
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Pause" parent="UI" instance=ExtResource("9_engdg")]
-
-[node name="UI" parent="UI" instance=ExtResource("10_ko6g5")]
-
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -547,3 +533,8 @@ position = Vector2(3435, 556)
 
 [node name="Coin11" parent="Coins" instance=ExtResource("11_c3r1e")]
 position = Vector2(3365, 552)
+
+[node name="UI" parent="." instance=ExtResource("10_ko6g5")]
+
+[node name="Player" parent="." instance=ExtResource("2_4mpk7")]
+position = Vector2(5059, 464)

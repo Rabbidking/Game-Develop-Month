@@ -4,14 +4,14 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-const UI = preload("res://Scripts/UI.gd")
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var boss_max_health = 1000000
-var boss_current_health = 500000
-var regen_amount = 10000
+#var boss_max_health = 1000000
+#var boss_current_health = 500000
+#var regen_amount = 10000
 #var regen_interval = 1.0
 signal boss_killed
 
@@ -23,10 +23,11 @@ func _physics_process(delta):
 func hurt():
 	var hitspark = $HitSpark
 	hitspark.play("default")
-	boss_current_health -= Game.coins
+	Game.boss_current_health -= Game.coins
+	Game.coins = 0
 	
-	if boss_current_health <= 0:
-		boss_current_health = 0
+	if Game.boss_current_health <= 0:
+		Game.boss_current_health = 0
 		#stop the speedrun timer here
 		Utils.timer_on = false
 		boss_killed.emit()

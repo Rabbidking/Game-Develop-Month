@@ -7,6 +7,10 @@ var coins = 0
 var base_coin_value = 1
 var walletMax = 200
 
+var boss_max_health = 1000000
+var boss_current_health = 10
+var regen_amount = 10000
+
 var items = {
 	0: {
 		"Name": "2x Multiplier",

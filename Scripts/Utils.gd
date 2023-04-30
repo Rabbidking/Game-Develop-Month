@@ -19,7 +19,7 @@ func saveGame():
 	var data: Dictionary = {
 		"playerHP": Game.playerHP,
 		"coins": Game.coins,
-		"boss_current_health": Boss.boss_current_health
+		"boss_current_health": Game.boss_current_health
 	}
 	var jstr = JSON.stringify(data)
 	
@@ -36,7 +36,7 @@ func loadGame():
 			if current_line:
 				Game.playerHP = current_line["playerHP"]
 				Game.coins = current_line["coins"]
-				Boss.boss_current_health = current_line["boss_current_health"]
+				Game.boss_current_health = current_line["boss_current_health"]
 	#Godot 4 no longers requires file.close()
 	
 func get_time():
