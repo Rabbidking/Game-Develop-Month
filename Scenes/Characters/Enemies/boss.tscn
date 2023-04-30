@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://djo664g4w0y71"]
+[gd_scene load_steps=54 format=3 uid="uid://djo664g4w0y71"]
 
 [ext_resource type="Texture2D" uid="uid://d0ttpb7b6whsi" path="res://Sprites/Character Sprites/Boss/Boss Chomp 1.png" id="1_bynqd"]
 [ext_resource type="Script" path="res://Scripts/Enemies/boss.gd" id="1_ue3sv"]
@@ -214,10 +214,12 @@ size = Vector2(398.5, 330)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qg1e7"]
 size = Vector2(105, 81)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4kse"]
+size = Vector2(1310, 480)
+
 [sub_resource type="Animation" id="Animation_b4r2v"]
 resource_name = "Hit"
 length = 1.2
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -243,7 +245,7 @@ script = ExtResource("1_ue3sv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ginbk")
-animation = &"Stomp"
+animation = &"Chomp"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -258,6 +260,13 @@ position = Vector2(-130, 175)
 shape = SubResource("RectangleShape2D_qg1e7")
 disabled = true
 
+[node name="Range_Detect" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Range_Detect_Collision" type="CollisionShape2D" parent="Range_Detect"]
+position = Vector2(21, -26)
+shape = SubResource("RectangleShape2D_r4kse")
+
 [node name="Hit_Animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ny31q")
@@ -268,6 +277,9 @@ position = Vector2(-130, 175)
 target_position = Vector2(-60, 0)
 
 [node name="Cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Shoot_Timer" type="Timer" parent="."]
 wait_time = 3.0
 
 [node name="SFX" type="Control" parent="."]
@@ -288,4 +300,7 @@ stream = ExtResource("47_udc04")
 bus = &"SFX"
 
 [connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]
+[connection signal="body_entered" from="Range_Detect" to="." method="_on_range_detect_body_entered"]
+[connection signal="body_exited" from="Range_Detect" to="." method="_on_range_detect_body_exited"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Shoot_Timer" to="." method="_on_shoot_timer_timeout"]
