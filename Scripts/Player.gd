@@ -8,6 +8,8 @@ var attacking = false
 var jumping = false
 var iframe = false
 var hasPlayedSwingSound = false
+var coyote_time = 0.1
+var can_jump = false
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -40,7 +42,18 @@ func _physics_process(delta):
 #			velocity.y = JUMP_VELOCITY
 #			jump_count += 1
 	
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and attacking == false:
+#	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and attacking == false:
+#		jumping = true
+#		$AnimatedSprite2D.stop()
+#		$AnimatedSprite2D.play("Jump")
+#		velocity.y = JUMP_VELOCITY
+
+	if is_on_floor() and can_jump == false:
+		can_jump = true
+	elif can_jump == true and $Coyote.is_stopped():
+		$Coyote.start(coyote_time)
+
+	if Input.is_action_just_pressed("ui_accept") and can_jump and attacking == false:
 		jumping = true
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.play("Jump")
@@ -182,3 +195,7 @@ func hurt():
 func _on_i_frame_timeout():
 	iframe = false
 	
+
+
+func _on_coyote_timeout():
+	can_jump = false

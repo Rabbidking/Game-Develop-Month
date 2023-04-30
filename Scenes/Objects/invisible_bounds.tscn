@@ -4,6 +4,7 @@
 size = Vector2(20, 945)
 
 [node name="InvisibleBounds" type="StaticBody2D"]
+collision_layer = 8
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

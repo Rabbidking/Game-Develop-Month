@@ -3,7 +3,7 @@ extends Node
 var playerHP = 10
 var coin_multipliers = []
 #var coins = 0
-var coins = 190
+var coins = 0
 var base_coin_value = 1
 var walletMax = 200
 
