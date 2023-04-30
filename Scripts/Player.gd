@@ -92,6 +92,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("smack"):
 		smack()
 		
+		
 #	if Game.playerHP <= 0:
 #		Game.playerHP = 0
 #		die()
@@ -143,7 +144,7 @@ func smack():
 	if not hasPlayedSwingSound:
 		bagSwing.play()
 		hasPlayedSwingSound = true
-	await $AnimatedSprite2D.animation_finished
+	#await $AnimatedSprite2D.animation_finished
 	$HitBox/CollisionShape2D.disabled = false
 	hasPlayedSwingSound = false
 
@@ -152,6 +153,7 @@ func _on_animated_sprite_2d_animation_finished():
 	jumping = false
 	attacking = false
 	$HitBox/CollisionShape2D.disabled = true
+	print("attack")
 
 func _on_hit_box_body_entered(body):
 	if body.get_collision_layer_value(3):
