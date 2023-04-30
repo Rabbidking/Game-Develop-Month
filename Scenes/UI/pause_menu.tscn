@@ -54,6 +54,7 @@ layout_mode = 2
 text = "Load"
 
 [node name="OptionsButton" type="Button" parent="PauseMenu/Panel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Options"
 
@@ -62,6 +63,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Settings" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

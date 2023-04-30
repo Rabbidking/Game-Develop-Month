@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpq5xk53editb"
+path="res://.godot/imported/Large Creature 10 - Long 1.wav-50444fc44ff15f627c74fd41c0c8739e.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Large Creature 10 - Long 1.wav"
+dest_files=["res://.godot/imported/Large Creature 10 - Long 1.wav-50444fc44ff15f627c74fd41c0c8739e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

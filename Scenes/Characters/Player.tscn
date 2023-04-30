@@ -196,6 +196,7 @@ script = ExtResource("1_r040e")
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_s2cak")
 animation = &"Idle"
+autoplay = "Idle"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

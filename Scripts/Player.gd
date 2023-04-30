@@ -7,6 +7,7 @@ var damage_multiplier = 1
 var attacking = false
 var jumping = false
 var iframe = false
+var hasPlayedSwingSound = false
 #var jump_max = 2
 #var jump_count = 0
 #const SPEED = 300.0
@@ -125,9 +126,13 @@ func add_coin():
 	
 func smack():
 	attacking = true
-	bagSwing.play()
 	$AnimatedSprite2D.play("Smack")
+	if not hasPlayedSwingSound:
+		bagSwing.play()
+		hasPlayedSwingSound = true
+	await $AnimatedSprite2D.animation_finished
 	$HitBox/CollisionShape2D.disabled = false
+	hasPlayedSwingSound = false
 
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.play("Idle")
