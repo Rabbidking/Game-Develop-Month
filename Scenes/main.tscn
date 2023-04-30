@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dws7y5nat17wk"]
+[gd_scene load_steps=5 format=3 uid="uid://dws7y5nat17wk"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_tsm1p"]
+[ext_resource type="Texture2D" uid="uid://cic74chg8ul5q" path="res://Assets/Icons/Title Graphic.png" id="2_b7lul"]
 [ext_resource type="AudioStream" uid="uid://bkor1ehogr3ou" path="res://Assets/Audio/Music/02 - Battle of the Creek.mp3" id="2_ef3js"]
+[ext_resource type="Texture2D" uid="uid://1r87pec3fqg2" path="res://Assets/Castle_Test.png" id="4_io78k"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_tsm1p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleGraphic" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(583, 102)
+texture = ExtResource("2_b7lul")
 
 [node name="Main" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -39,14 +45,6 @@ theme_override_constants/margin_bottom = 16
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
-
-[node name="Label" type="Label" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "Coin Crusade"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Play" type="Button" parent="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -199,6 +197,11 @@ text = "Back to Main Menu
 stream = ExtResource("2_ef3js")
 autoplay = true
 bus = &"Music"
+
+[node name="CastleTest" type="Sprite2D" parent="."]
+position = Vector2(568, 321)
+scale = Vector2(0.58615, 0.58615)
+texture = ExtResource("4_io78k")
 
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Main/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]

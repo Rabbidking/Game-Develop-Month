@@ -15,11 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var hit_cooldown = false
 var dead = false
 var in_range = false
-#var boss_max_health = 1000000
-#var boss_current_health = 500000
-#var regen_amount = 10000
-#var regen_interval = 1.0
-#signal boss_killed
+
 
 func _physics_process(delta):
 	if dead == false:

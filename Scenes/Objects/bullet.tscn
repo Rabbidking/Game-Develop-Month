@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgrdi7hvr1tqu"]
+[gd_scene load_steps=9 format=3 uid="uid://beaxesqhuxoma"]
 
 [ext_resource type="Texture2D" uid="uid://iot3w2qaaouf" path="res://Sprites/Visual Effects/VE_Bullet/EnemyBulletD_1.png" id="1_eqmcv"]
 [ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_ocyq1"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=68 format=3 uid="uid://kem02kkmruqw"]
 
-[ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_xvgmb"]
+[ext_resource type="Texture2D" uid="uid://cqqxac5ns6dd8" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV4.png" id="1_umx1b"]
 [ext_resource type="Texture2D" uid="uid://lef1ip7cgjl1" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_D.png" id="2_2iu6i"]
 [ext_resource type="Texture2D" uid="uid://dmad3sb2oyf2a" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_C.png" id="3_k8ixy"]
 [ext_resource type="Texture2D" uid="uid://ddd0y1ppg56jh" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_B.png" id="4_geli1"]
@@ -261,15 +261,16 @@ offset_left = 2.0
 offset_top = 566.0
 offset_right = 10741.0
 offset_bottom = 2996.0
-texture = ExtResource("1_xvgmb")
+texture = ExtResource("1_umx1b")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="BGObjects" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 549.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 589.0
 
 [node name="BgObjectTreeD2" type="Sprite2D" parent="BGObjects"]
 position = Vector2(5570, 1960)
@@ -437,9 +438,9 @@ texture = ExtResource("15_dtsjc")
 layout_mode = 3
 anchors_preset = 0
 offset_left = -11.0
-offset_top = 1590.0
+offset_top = 2139.0
 offset_right = 29.0
-offset_bottom = 1630.0
+offset_bottom = 2179.0
 
 [node name="Bushes" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
@@ -463,13 +464,14 @@ format = 2
 layer_0/tile_data = PackedInt32Array(589824, 65536, 0, 589825, 65536, 6, 589826, 65536, 4, 589827, 65536, 2, 589828, 65536, 6, 589829, 65536, 2, 589830, 65536, 0, 589831, 65536, 4, 589832, 65536, 6, 589833, 65536, 4, 524298, 0, 0, 524299, 65536, 4, 524300, 65536, 0, 524301, 65536, 4, 524302, 131072, 0, 589834, 327680, 6, 655360, 589824, 6, 655361, 589824, 4, 655362, 589824, 6, 655363, 589824, 0, 655364, 589824, 6, 655365, 589824, 2, 655366, 589824, 4, 655367, 589824, 4, 655368, 589824, 2, 655369, 589824, 0, 655370, 589824, 2, 589835, 327680, 4, 655371, 589824, 0, 655372, 589824, 6, 655373, 589824, 4, 589837, 327680, 6, 589836, 327680, 6, 589838, 327680, 0, 655374, 589824, 6, 589839, 65536, 0, 589840, 65536, 4, 458769, 0, 0, 589841, 327680, 0, 589842, 327680, 6, 655378, 589824, 2, 655377, 589824, 0, 655375, 589824, 0, 655376, 589824, 4, 458770, 65536, 4, 458771, 65536, 2, 458772, 65536, 4, 458773, 65536, 4, 458774, 65536, 6, 458775, 131072, 0, 393242, 0, 6, 589843, 327680, 2, 589844, 327680, 4, 589845, 327680, 2, 589846, 327680, 2, 589847, 393216, 4, 524311, 393216, 2, 655383, 655360, 4, 655382, 589824, 0, 655381, 589824, 4, 655380, 589824, 4, 655379, 589824, 2, 458778, 262144, 2, 524314, 262144, 4, 589850, 262144, 6, 655386, 524288, 6, 655387, 589824, 2, 655388, 589824, 4, 655389, 589824, 2, 655390, 589824, 4, 655391, 589824, 4, 655392, 589824, 6, 524315, 393216, 6, 589851, 327680, 6, 393243, 65536, 0, 393244, 65536, 0, 393245, 65536, 0, 393246, 65536, 0, 393247, 131072, 0, 589852, 65536, 6, 589853, 65536, 0, 589854, 65536, 2, 589855, 65536, 2, 589856, 65536, 4, 458779, 393216, 4, 524321, 0, 2, 458786, 0, 0, 458787, 65536, 0, 458788, 65536, 4, 458789, 65536, 6, 458790, 65536, 2, 524322, 327680, 0, 524323, 327680, 2, 524324, 327680, 4, 524325, 327680, 4, 524326, 327680, 2, 589857, 327680, 0, 589858, 327680, 6, 589859, 327680, 4, 589860, 327680, 2, 589861, 327680, 6, 589862, 327680, 2, 655393, 589824, 2, 655394, 589824, 2, 655395, 589824, 4, 655396, 589824, 0, 655397, 589824, 4, 655398, 589824, 4, 458791, 131072, 0, 655399, 655360, 2, 524327, 393216, 0, 589863, 393216, 4, 393257, 0, 0, 393258, 65536, 0, 393259, 65536, 0, 327724, 0, 0, 393260, 327680, 2, 65583, 65536, 0, 65584, 65536, 6, 65585, 65536, 4, 131118, 327680, 4, 196654, 262144, 4, 262190, 262144, 6, 262191, 327680, 4, 196655, 327680, 2, 131119, 327680, 2, 131120, 327680, 6, 131121, 327680, 2, 196657, 327680, 4, 196656, 327680, 6, 262192, 327680, 2, 262193, 327680, 2, 327728, 327680, 0, 327727, 327680, 6, 327726, 327680, 6, 327725, 65536, 0, 393261, 327680, 0, 393262, 327680, 6, 393263, 327680, 4, 327729, 327680, 2, 393265, 327680, 0, 393264, 327680, 2, 458797, 327680, 6, 458796, 327680, 2, 458795, 327680, 0, 458794, 327680, 4, 524330, 327680, 4, 589866, 327680, 0, 655402, 589824, 4, 655403, 589824, 4, 589867, 327680, 6, 524331, 327680, 0, 524332, 327680, 4, 524333, 327680, 6, 524334, 327680, 2, 458798, 327680, 4, 458799, 327680, 2, 458800, 327680, 2, 458801, 327680, 2, 524337, 327680, 0, 589873, 327680, 2, 655409, 589824, 4, 655408, 589824, 2, 655407, 589824, 2, 655406, 589824, 4, 655405, 589824, 4, 655404, 589824, 2, 589868, 327680, 6, 589869, 327680, 6, 589870, 327680, 2, 589871, 327680, 2, 589872, 327680, 4, 524336, 327680, 0, 524335, 327680, 4, 458793, 262144, 6, 524329, 262144, 4, 589865, 262144, 4, 655401, 524288, 6, 524310, 262144, 0, 50, 0, 0, 51, 65536, 2, 52, 131072, 0, 65591, 0, 0, 65592, 65536, 0, 65593, 65536, 4, 131126, 65536, 0, 131125, 65536, 4, 65588, 393216, 0, 65587, 327680, 0, 65586, 327680, 2, 131122, 327680, 4, 131123, 327680, 0, 131124, 327680, 6, 131127, 327680, 0, 131128, 327680, 2, 131129, 327680, 2, 131130, 327680, 2, 131131, 327680, 2, 131132, 327680, 6, 65594, 65536, 6, 65595, 65536, 0, 65596, 131072, 4, 196658, 393216, 6, 262194, 393216, 6, 327730, 393216, 6, 393267, 393216, 6, 458804, 393216, 2, 524341, 393216, 0, 589878, 327680, 0, 393270, 262144, 0, 393271, 327680, 2, 393272, 327680, 6, 393273, 327680, 2, 393274, 327680, 4, 393275, 327680, 6, 393276, 327680, 6, 393277, 327680, 6, 393278, 65536, 4, 393279, 327680, 0, 327743, 0, 0, 262205, 131072, 0, 196671, 0, 4, 131133, 131072, 4, 196672, 65536, 4, 196673, 131072, 4, 262208, 262144, 2, 393280, 327680, 0, 327744, 327680, 6, 327745, 393216, 4, 393281, 393216, 0, 262209, 393216, 2, 655410, 589824, 6, 655411, 589824, 0, 655412, 589824, 6, 655413, 589824, 6, 655414, 589824, 0, 655415, 589824, 4, 655416, 589824, 2, 655417, 589824, 4, 655418, 589824, 0, 655419, 589824, 4, 655420, 589824, 2, 655421, 589824, 2, 655422, 589824, 6, 655423, 589824, 2, 655424, 589824, 2, 655425, 655360, 0, 589889, 393216, 0, 589888, 327680, 6, 589887, 327680, 0, 589886, 327680, 2, 589885, 327680, 6, 589884, 327680, 2, 589883, 327680, 0, 589882, 327680, 4, 589881, 327680, 6, 589880, 327680, 0, 589879, 327680, 6, 589877, 327680, 0, 589876, 327680, 4, 524340, 327680, 4, 524339, 327680, 2, 458803, 327680, 6, 458802, 327680, 2, 393266, 327680, 2, 524338, 327680, 2, 589874, 327680, 2, 589875, 327680, 2, 262204, 0, 0, 262211, 0, 0, 262212, 65536, 0, 262213, 131072, 0, 327748, 327680, 4, 393284, 327680, 2, 327747, 262144, 6, 393283, 262144, 6, 327749, 393216, 2, 393285, 393216, 4, 589891, 262144, 4, 589892, 327680, 2, 589893, 393216, 2, 655427, 524288, 6, 655429, 655360, 6, 655428, 589824, 6, 524360, 0, 0, 589896, 262144, 0, 655432, 524288, 4, 655433, 589824, 2, 655434, 589824, 0, 655435, 589824, 6, 655436, 589824, 4, 655437, 589824, 6, 655438, 589824, 0, 655439, 589824, 0, 655440, 589824, 2, 655441, 589824, 4, 655442, 589824, 2, 655443, 589824, 6, 589897, 327680, 4, 589898, 327680, 6, 589899, 327680, 0, 589900, 327680, 0, 589901, 327680, 6, 589902, 327680, 6, 589903, 327680, 4, 589904, 327680, 0, 589905, 327680, 4, 589906, 327680, 6, 589907, 327680, 2, 524361, 65536, 2, 524362, 65536, 0, 524363, 65536, 4, 524364, 65536, 6, 524365, 65536, 0, 524366, 65536, 4, 524367, 65536, 0, 524368, 65536, 6, 524369, 65536, 2, 524370, 65536, 0, 524371, 65536, 2, 262185, 327680, 4, 262183, 262144, 6, 262184, 327680, 6, 131116, 0, 4, 65582, 0, 2, 131117, 65536, 4, 262186, 131072, 4, 196649, 131072, 4, 196648, 65536, 2, 196647, 0, 6)
 
 [node name="LevelExit" parent="." instance=ExtResource("54_qhkf0")]
-position = Vector2(10522, 2594)
+position = Vector2(10522, 3143)
 
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 549.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 589.0
 
 [node name="Coin" parent="Coins" instance=ExtResource("18_cvby6")]
 position = Vector2(1699, 2551)
@@ -760,348 +762,348 @@ position = Vector2(6537, 2296)
 position = Vector2(6570, 2222)
 
 [node name="TileFenceEdgeRight" type="Sprite2D" parent="."]
-position = Vector2(10159, 2547)
+position = Vector2(10159, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("19_58mdu")
 
 [node name="TileFenceEdgeLeft" type="Sprite2D" parent="."]
-position = Vector2(9647, 2547)
+position = Vector2(9647, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("20_ystso")
 
 [node name="TileFenceMiddle" type="Sprite2D" parent="."]
-position = Vector2(9775, 2547)
+position = Vector2(9775, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("21_viahh")
 
 [node name="TileFenceMiddle3" type="Sprite2D" parent="."]
-position = Vector2(10031, 2547)
+position = Vector2(10031, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("21_viahh")
 
 [node name="TileFenceMiddle2" type="Sprite2D" parent="."]
-position = Vector2(9903, 2547)
+position = Vector2(9903, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("21_viahh")
 
 [node name="ObjectCrate" type="Sprite2D" parent="."]
-position = Vector2(9830, 2485)
+position = Vector2(9830, 3034)
 scale = Vector2(2, 2)
 texture = ExtResource("22_glewr")
 
 [node name="ObjectBoxB" type="Sprite2D" parent="."]
-position = Vector2(10076, 2547)
+position = Vector2(10076, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("24_6h1im")
 
 [node name="ObjectBoxA" type="Sprite2D" parent="."]
-position = Vector2(10081, 2461)
+position = Vector2(10081, 3010)
 scale = Vector2(2, 2)
 texture = ExtResource("25_wdtps")
 
 [node name="ObjectBarrel" type="Sprite2D" parent="."]
-position = Vector2(10184, 2547)
+position = Vector2(10184, 3096)
 scale = Vector2(2, 2)
 texture = ExtResource("26_47ug5")
 
 [node name="ObjectFoliageA" type="Sprite2D" parent="."]
-position = Vector2(9291, 2579)
+position = Vector2(9291, 3128)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA2" type="Sprite2D" parent="."]
-position = Vector2(8687, 2067)
+position = Vector2(8687, 2616)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA3" type="Sprite2D" parent="."]
-position = Vector2(7595, 1683)
+position = Vector2(7595, 2232)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA4" type="Sprite2D" parent="."]
-position = Vector2(7225, 1682)
+position = Vector2(7225, 2231)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA5" type="Sprite2D" parent="."]
-position = Vector2(5789, 1810)
+position = Vector2(5789, 2359)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA6" type="Sprite2D" parent="."]
-position = Vector2(4842, 2452)
+position = Vector2(4842, 3001)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA7" type="Sprite2D" parent="."]
-position = Vector2(3812, 2324)
+position = Vector2(3812, 2873)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA8" type="Sprite2D" parent="."]
-position = Vector2(2410, 2451)
+position = Vector2(2410, 3000)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageA9" type="Sprite2D" parent="."]
-position = Vector2(1364, 2579)
+position = Vector2(1364, 3128)
 scale = Vector2(2, 2)
 texture = ExtResource("27_h6euy")
 
 [node name="ObjectFoliageC" type="Sprite2D" parent="."]
-position = Vector2(8195, 2100)
+position = Vector2(8195, 2649)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC3" type="Sprite2D" parent="."]
-position = Vector2(7152, 1960)
+position = Vector2(7152, 2509)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC24" type="Sprite2D" parent="."]
-position = Vector2(6741, 2607)
+position = Vector2(6741, 3156)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC5" type="Sprite2D" parent="."]
-position = Vector2(6399, 1710)
+position = Vector2(6399, 2259)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC8" type="Sprite2D" parent="."]
-position = Vector2(5896, 1865)
+position = Vector2(5896, 2414)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC12" type="Sprite2D" parent="."]
-position = Vector2(5366, 2481)
+position = Vector2(5366, 3030)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC14" type="Sprite2D" parent="."]
-position = Vector2(4359, 2616)
+position = Vector2(4359, 3165)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC15" type="Sprite2D" parent="."]
-position = Vector2(3408, 2545)
+position = Vector2(3408, 3094)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC17" type="Sprite2D" parent="."]
-position = Vector2(2176, 2761)
+position = Vector2(2176, 3310)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC19" type="Sprite2D" parent="."]
-position = Vector2(1294, 2749)
+position = Vector2(1294, 3298)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC20" type="Sprite2D" parent="."]
-position = Vector2(511, 2790)
+position = Vector2(511, 3339)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC11" type="Sprite2D" parent="."]
-position = Vector2(6059, 2099)
+position = Vector2(6059, 2648)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC9" type="Sprite2D" parent="."]
-position = Vector2(5898, 2234)
+position = Vector2(5898, 2783)
 scale = Vector2(2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC2" type="Sprite2D" parent="."]
-position = Vector2(7676, 2198)
+position = Vector2(7676, 2747)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC22" type="Sprite2D" parent="."]
-position = Vector2(6882, 2746)
+position = Vector2(6882, 3295)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC21" type="Sprite2D" parent="."]
-position = Vector2(8820, 2304)
+position = Vector2(8820, 2853)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC4" type="Sprite2D" parent="."]
-position = Vector2(7413, 1839)
+position = Vector2(7413, 2388)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC23" type="Sprite2D" parent="."]
-position = Vector2(6501, 2359)
+position = Vector2(6501, 2908)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC6" type="Sprite2D" parent="."]
-position = Vector2(6752, 1853)
+position = Vector2(6752, 2402)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC7" type="Sprite2D" parent="."]
-position = Vector2(6144, 1843)
+position = Vector2(6144, 2392)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC10" type="Sprite2D" parent="."]
-position = Vector2(5345, 2078)
+position = Vector2(5345, 2627)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC13" type="Sprite2D" parent="."]
-position = Vector2(4719, 2538)
+position = Vector2(4719, 3087)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC16" type="Sprite2D" parent="."]
-position = Vector2(2927, 2529)
+position = Vector2(2927, 3078)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageC18" type="Sprite2D" parent="."]
-position = Vector2(1776, 2655)
+position = Vector2(1776, 3204)
 scale = Vector2(-2, 2)
 texture = ExtResource("28_jex1k")
 
 [node name="ObjectFoliageD" type="Sprite2D" parent="."]
-position = Vector2(953, 2676)
+position = Vector2(953, 3225)
 scale = Vector2(2, 2)
 texture = ExtResource("29_3wl5u")
 
 [node name="ObjectFoliageD2" type="Sprite2D" parent="."]
-position = Vector2(3618, 2292)
+position = Vector2(3618, 2841)
 scale = Vector2(2, 2)
 texture = ExtResource("29_3wl5u")
 
 [node name="ObjectFoliageD3" type="Sprite2D" parent="."]
-position = Vector2(5021, 1907)
+position = Vector2(5021, 2456)
 scale = Vector2(2, 2)
 texture = ExtResource("29_3wl5u")
 
 [node name="ObjectFoliageD4" type="Sprite2D" parent="."]
-position = Vector2(6690, 1524)
+position = Vector2(6690, 2073)
 scale = Vector2(2, 2)
 texture = ExtResource("29_3wl5u")
 
 [node name="ObjectFoliageD5" type="Sprite2D" parent="."]
-position = Vector2(8356, 1907)
+position = Vector2(8356, 2456)
 scale = Vector2(2, 2)
 texture = ExtResource("29_3wl5u")
 
 [node name="ObjectFoliageB" type="Sprite2D" parent="."]
-position = Vector2(2858, 2452)
+position = Vector2(2858, 3001)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB2" type="Sprite2D" parent="."]
-position = Vector2(1913, 2708)
+position = Vector2(1913, 3257)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB4" type="Sprite2D" parent="."]
-position = Vector2(5615, 2324)
+position = Vector2(5615, 2873)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB5" type="Sprite2D" parent="."]
-position = Vector2(5921, 1684)
+position = Vector2(5921, 2233)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB6" type="Sprite2D" parent="."]
-position = Vector2(6442, 1556)
+position = Vector2(6442, 2105)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB7" type="Sprite2D" parent="."]
-position = Vector2(7022, 1812)
+position = Vector2(7022, 2361)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB8" type="Sprite2D" parent="."]
-position = Vector2(8122, 1939)
+position = Vector2(8122, 2488)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectFoliageB3" type="Sprite2D" parent="."]
-position = Vector2(438, 2708)
+position = Vector2(438, 3257)
 scale = Vector2(2, 2)
 texture = ExtResource("30_3r5hm")
 
 [node name="ObjectMushroomsA" type="Sprite2D" parent="."]
-position = Vector2(715, 2708)
+position = Vector2(715, 3257)
 scale = Vector2(2, 2)
 texture = ExtResource("31_2dn68")
 
 [node name="ObjectMushroomsA2" type="Sprite2D" parent="."]
-position = Vector2(5691, 2196)
+position = Vector2(5691, 2745)
 scale = Vector2(2, 2)
 texture = ExtResource("31_2dn68")
 
 [node name="ObjectMushroomsC" type="Sprite2D" parent="."]
-position = Vector2(1764, 2581)
+position = Vector2(1764, 3130)
 scale = Vector2(2, 2)
 texture = ExtResource("32_rl4up")
 
 [node name="ObjectMushroomsC2" type="Sprite2D" parent="."]
-position = Vector2(6977, 2708)
+position = Vector2(6977, 3257)
 scale = Vector2(2, 2)
 texture = ExtResource("32_rl4up")
 
 [node name="ObjectMushroomsD" type="Sprite2D" parent="."]
-position = Vector2(2784, 2709)
+position = Vector2(2784, 3258)
 scale = Vector2(2, 2)
 texture = ExtResource("33_n2on1")
 
 [node name="ObjectMushroomsD2" type="Sprite2D" parent="."]
-position = Vector2(3597, 2708)
+position = Vector2(3597, 3257)
 scale = Vector2(2, 2)
 texture = ExtResource("33_n2on1")
 
 [node name="ObjectRockA" type="Sprite2D" parent="."]
-position = Vector2(5293, 2324)
+position = Vector2(5293, 2873)
 texture = ExtResource("34_gq8xg")
 
 [node name="ObjectRockB" type="Sprite2D" parent="."]
-position = Vector2(5075, 2452)
+position = Vector2(5075, 3001)
 texture = ExtResource("35_14xfs")
 
 [node name="ObjectRockC" type="Sprite2D" parent="."]
-position = Vector2(5827, 2196)
+position = Vector2(5827, 2745)
 texture = ExtResource("36_se1hb")
 
 [node name="ObjectBoulderA" type="Sprite2D" parent="."]
-position = Vector2(7139, 2676)
+position = Vector2(7139, 3225)
 texture = ExtResource("37_ud47l")
 
 [node name="ObjectRockD" type="Sprite2D" parent="."]
-position = Vector2(7205, 2708)
+position = Vector2(7205, 3257)
 texture = ExtResource("38_rde1r")
 
 [node name="ObjectRockA2" type="Sprite2D" parent="."]
-position = Vector2(7462, 2708)
+position = Vector2(7462, 3257)
 texture = ExtResource("34_gq8xg")
 
 [node name="ObjectRockB2" type="Sprite2D" parent="."]
-position = Vector2(9597, 2580)
+position = Vector2(9597, 3129)
 texture = ExtResource("35_14xfs")
 
 [node name="ObjectRockB3" type="Sprite2D" parent="."]
-position = Vector2(3846, 2708)
+position = Vector2(3846, 3257)
 texture = ExtResource("35_14xfs")
 
 [node name="ObjectRockA3" type="Sprite2D" parent="."]
-position = Vector2(2313, 2708)
+position = Vector2(2313, 3257)
 texture = ExtResource("34_gq8xg")
 
 [node name="ObjectShrubA" type="Sprite2D" parent="."]
-position = Vector2(2710, 2419)
+position = Vector2(2710, 2968)
 scale = Vector2(2, 2)
 texture = ExtResource("39_024ec")
 
@@ -1110,7 +1112,7 @@ position = Vector2(1.5, 3)
 texture = ExtResource("40_3dw33")
 
 [node name="ObjectShrubB" type="Sprite2D" parent="."]
-position = Vector2(3446, 2292)
+position = Vector2(3446, 2841)
 scale = Vector2(2, 2)
 texture = ExtResource("41_un5m5")
 
@@ -1119,7 +1121,7 @@ position = Vector2(-1.5, -5)
 texture = ExtResource("42_afw5n")
 
 [node name="ObjectShrubB2" type="Sprite2D" parent="."]
-position = Vector2(6506, 1524)
+position = Vector2(6506, 2073)
 scale = Vector2(2, 2)
 texture = ExtResource("41_un5m5")
 
@@ -1128,7 +1130,7 @@ position = Vector2(-1.5, -5)
 texture = ExtResource("42_afw5n")
 
 [node name="ObjectShrubB3" type="Sprite2D" parent="."]
-position = Vector2(10471, 2546)
+position = Vector2(10471, 3095)
 scale = Vector2(2, 2)
 texture = ExtResource("41_un5m5")
 
@@ -1137,157 +1139,160 @@ position = Vector2(-1.5, -5)
 texture = ExtResource("42_afw5n")
 
 [node name="ObjectBerriesC" type="Sprite2D" parent="."]
-position = Vector2(8707, 1995)
+position = Vector2(8707, 2544)
 scale = Vector2(2, 2)
 texture = ExtResource("43_hwl4d")
 
 [node name="ObjectBerriesC2" type="Sprite2D" parent="."]
-position = Vector2(8767, 1973)
+position = Vector2(8767, 2522)
 scale = Vector2(2, 2)
 texture = ExtResource("43_hwl4d")
 
 [node name="ObjectBerriesC3" type="Sprite2D" parent="."]
-position = Vector2(8830, 1998)
+position = Vector2(8830, 2547)
 scale = Vector2(2, 2)
 texture = ExtResource("43_hwl4d")
 
 [node name="ObjectBoulderD" type="Sprite2D" parent="."]
-position = Vector2(8100, 2676)
+position = Vector2(8100, 3225)
 texture = ExtResource("44_ba44q")
 
 [node name="ObjectRockA4" type="Sprite2D" parent="."]
-position = Vector2(6972, 2324)
+position = Vector2(6972, 2873)
 texture = ExtResource("34_gq8xg")
 
 [node name="ObjectRockC2" type="Sprite2D" parent="."]
-position = Vector2(8702, 2708)
+position = Vector2(8702, 3257)
 texture = ExtResource("36_se1hb")
 
 [node name="ObjectFlowersA" type="Sprite2D" parent="."]
-position = Vector2(4480, 2452)
+position = Vector2(4480, 3001)
 scale = Vector2(2, 2)
 texture = ExtResource("46_akahs")
 
 [node name="ObjectFlowersA2" type="Sprite2D" parent="."]
-position = Vector2(6203, 1683)
+position = Vector2(6203, 2232)
 scale = Vector2(2, 2)
 texture = ExtResource("46_akahs")
 
 [node name="ObjectFlowersA3" type="Sprite2D" parent="."]
-position = Vector2(7806, 1807)
+position = Vector2(7806, 2356)
 scale = Vector2(2, 2)
 texture = ExtResource("46_akahs")
 
 [node name="ObjectFlowersA4" type="Sprite2D" parent="."]
-position = Vector2(8795, 2067)
+position = Vector2(8795, 2616)
 scale = Vector2(2, 2)
 texture = ExtResource("46_akahs")
 
 [node name="ObjectFlowersC" type="Sprite2D" parent="."]
-position = Vector2(9511, 2546)
+position = Vector2(9511, 3095)
 scale = Vector2(2, 2)
 texture = ExtResource("47_vim5b")
 
 [node name="ObjectFlowersC2" type="Sprite2D" parent="."]
-position = Vector2(6886, 1779)
+position = Vector2(6886, 2328)
 scale = Vector2(2, 2)
 texture = ExtResource("47_vim5b")
 
 [node name="ObjectFlowersC3" type="Sprite2D" parent="."]
-position = Vector2(4145, 2671)
+position = Vector2(4145, 3220)
 scale = Vector2(2, 2)
 texture = ExtResource("47_vim5b")
 
 [node name="ObjectFlowersC4" type="Sprite2D" parent="."]
-position = Vector2(290, 2673)
+position = Vector2(290, 3222)
 scale = Vector2(2, 2)
 texture = ExtResource("47_vim5b")
 
 [node name="ObjectFlowersD" type="Sprite2D" parent="."]
-position = Vector2(5128, 1940)
+position = Vector2(5128, 2489)
 scale = Vector2(2, 2)
 texture = ExtResource("48_i4k3s")
 
 [node name="ObjectFlowersD2" type="Sprite2D" parent="."]
-position = Vector2(7345, 1683)
+position = Vector2(7345, 2232)
 scale = Vector2(2, 2)
 texture = ExtResource("48_i4k3s")
 
 [node name="ObjectFlowersB" type="Sprite2D" parent="."]
-position = Vector2(8224, 1939)
+position = Vector2(8224, 2488)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB3" type="Sprite2D" parent="."]
-position = Vector2(5519, 2323)
+position = Vector2(5519, 2872)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB4" type="Sprite2D" parent="."]
-position = Vector2(3672, 2324)
+position = Vector2(3672, 2873)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB5" type="Sprite2D" parent="."]
-position = Vector2(2550, 2451)
+position = Vector2(2550, 3000)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB7" type="Sprite2D" parent="."]
-position = Vector2(1073, 2709)
+position = Vector2(1073, 3258)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB6" type="Sprite2D" parent="."]
-position = Vector2(2021, 2707)
+position = Vector2(2021, 3256)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="ObjectFlowersB2" type="Sprite2D" parent="."]
-position = Vector2(10604, 2579)
+position = Vector2(10604, 3128)
 scale = Vector2(2, 2)
 texture = ExtResource("49_cq6wp")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
+position = Vector2(0, 549)
 stream = ExtResource("49_qioq7")
 autoplay = true
 max_distance = 20000.0
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
-position = Vector2(66, 2626)
+position = Vector2(66, 3175)
 
 [node name="DeathPlane" parent="." instance=ExtResource("52_otbvl")]
+position = Vector2(68, 3684)
 
 [node name="InvisibleBounds" parent="." instance=ExtResource("53_g6amh")]
-position = Vector2(-6, 1969)
+position = Vector2(-6, 2518)
 
 [node name="InvisibleBounds2" parent="." instance=ExtResource("53_g6amh")]
-position = Vector2(10753, 1822)
+position = Vector2(10753, 2371)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 549.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 589.0
 
 [node name="Pause" parent="UI" instance=ExtResource("51_5rfnn")]
 
 [node name="UI" parent="UI" instance=ExtResource("50_kgbpy")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(47, 2609)
+position = Vector2(47, 3158)
 scale = Vector2(2, 2)
 limit_left = 0
 limit_right = 10600
-limit_bottom = 700
+limit_bottom = 1200
 limit_smoothed = true
 
 [node name="Shopkeep" parent="." instance=ExtResource("23_h5tdf")]
-position = Vector2(9940, 2485)
+position = Vector2(9940, 3034)
 
 [node name="Player" parent="." instance=ExtResource("45_bht22")]
-position = Vector2(47, 2609)
+position = Vector2(47, 3158)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -1295,8 +1300,9 @@ remote_path = NodePath("../../Camera2D")
 [node name="Enemies" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 549.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 589.0
 
 [node name="Chick" parent="Enemies" instance=ExtResource("55_78fhq")]
 position = Vector2(963, 2704)

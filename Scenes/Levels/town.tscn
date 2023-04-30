@@ -1,6 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://bjqjq65drevbw"]
+[gd_scene load_steps=53 format=3 uid="uid://bjqjq65drevbw"]
 
-[ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_riwwm"]
+[ext_resource type="Texture2D" uid="uid://cqqxac5ns6dd8" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV4.png" id="1_8asdh"]
 [ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="2_2s7xd"]
 [ext_resource type="Texture2D" uid="uid://dmad3sb2oyf2a" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_C.png" id="3_o3q8l"]
 [ext_resource type="Texture2D" uid="uid://cqaalh81p8t7k" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_A.png" id="4_y0v1c"]
@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://cld8nqeluhskp" path="res://Scenes/Objects/level_exit.tscn" id="41_ensmu"]
 [ext_resource type="PackedScene" uid="uid://dkal0vu5er4bo" path="res://Scenes/Characters/Enemies/red_whisker.tscn" id="42_j022f"]
 [ext_resource type="PackedScene" uid="uid://bbso357r141vk" path="res://Scenes/Characters/Enemies/dino_brute.tscn" id="43_hnl1s"]
+[ext_resource type="AudioStream" uid="uid://d0d0fpo7rromm" path="res://Assets/Audio/Music/08 - Scenic Essense Loop.mp3" id="44_ufd14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
 texture = ExtResource("2_2s7xd")
@@ -541,11 +542,12 @@ offset_left = 4.0
 offset_top = 880.0
 offset_right = 13056.0
 offset_bottom = 3310.0
-texture = ExtResource("1_riwwm")
+texture = ExtResource("1_8asdh")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="BGBushes" type="TileMap" parent="."]
+position = Vector2(0, 551)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_08rrp")
 format = 2
@@ -555,9 +557,9 @@ layer_0/tile_data = PackedInt32Array(1376265, 65536, 4, 1376266, 65536, 0, 13762
 layout_mode = 3
 anchors_preset = 0
 offset_left = 4.0
-offset_top = 880.0
+offset_top = 1431.0
 offset_right = 44.0
-offset_bottom = 920.0
+offset_bottom = 1471.0
 
 [node name="BgObjectShrubC4" type="Sprite2D" parent="BG Background"]
 position = Vector2(2272, 1744)
@@ -647,8 +649,9 @@ texture = ExtResource("12_jqulv")
 [node name="TileMaps" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 551.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 591.0
 
 [node name="Bridge" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
@@ -677,8 +680,9 @@ layer_0/tile_data = PackedInt32Array(524288, 0, 2, 524289, 65536, 2, 524290, 655
 [node name="BG Objects" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 551.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 591.0
 
 [node name="ObjectShrubB" type="Sprite2D" parent="BG Objects"]
 position = Vector2(1642, 2752)
@@ -873,15 +877,15 @@ position = Vector2(9968, 2496)
 texture = ExtResource("30_jmm6s")
 
 [node name="LevelExit" parent="." instance=ExtResource("41_ensmu")]
-position = Vector2(12790, 2543)
+position = Vector2(12790, 3094)
 
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 9025.0
-offset_top = 1595.0
+offset_top = 2146.0
 offset_right = 9065.0
-offset_bottom = 1635.0
+offset_bottom = 2186.0
 
 [node name="Coin" parent="Coins" instance=ExtResource("31_43cw3")]
 
@@ -1105,10 +1109,10 @@ position = Vector2(-6779, 1020)
 position = Vector2(829, -52)
 
 [node name="Shopkeep" parent="." instance=ExtResource("32_16fs8")]
-position = Vector2(6115, 2438)
+position = Vector2(6115, 2989)
 
 [node name="Player" parent="." instance=ExtResource("33_xan4r")]
-position = Vector2(35, 2528)
+position = Vector2(35, 3079)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -1117,9 +1121,9 @@ remote_path = NodePath("../../Camera2D")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1147.0
-offset_top = 2820.0
+offset_top = 3371.0
 offset_right = 1187.0
-offset_bottom = 2860.0
+offset_bottom = 3411.0
 
 [node name="ObjectFoliageC" type="Sprite2D" parent="Foreground"]
 scale = Vector2(2, 2)
@@ -1241,32 +1245,34 @@ scale = Vector2(2, 2)
 texture = ExtResource("35_x21qe")
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
-position = Vector2(66, 2626)
+position = Vector2(66, 3177)
 
 [node name="DeathPlane" parent="." instance=ExtResource("36_f12ld")]
-position = Vector2(68, 3327)
+position = Vector2(68, 3878)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 551.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 591.0
 
 [node name="Pause" parent="UI" instance=ExtResource("37_34khk")]
 
 [node name="UI" parent="UI" instance=ExtResource("38_oeh1n")]
 
 [node name="InvisibleBounds" parent="." instance=ExtResource("39_my1wj")]
-position = Vector2(-6, 1969)
+position = Vector2(-6, 2520)
 
 [node name="InvisibleBounds2" parent="." instance=ExtResource("39_my1wj")]
-position = Vector2(13068, 1772)
+position = Vector2(13068, 2323)
 
 [node name="Enemies" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_top = 551.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 591.0
 
 [node name="Rockpillar" parent="Enemies" instance=ExtResource("40_acg4o")]
 position = Vector2(4358, 2317)
@@ -1278,14 +1284,15 @@ position = Vector2(11725, 2499)
 position = Vector2(12115, 2498)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(35, 2528)
+position = Vector2(35, 3079)
 scale = Vector2(2, 2)
 limit_left = 0
 limit_right = 12900
-limit_bottom = 700
+limit_bottom = 1200
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
+stream = ExtResource("44_ufd14")
 autoplay = true
 max_distance = 20000.0
 bus = &"Music"
