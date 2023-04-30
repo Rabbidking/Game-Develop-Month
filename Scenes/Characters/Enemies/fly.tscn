@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://ey2aogsdwxgm"]
+[gd_scene load_steps=18 format=3 uid="uid://ey2aogsdwxgm"]
 
-[ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_nv71b"]
+[ext_resource type="Script" path="res://Scripts/Enemies/fly.gd" id="1_jo5nn"]
 [ext_resource type="Texture2D" uid="uid://dhj8j22vnv6br" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 1.png" id="1_qpm2x"]
 [ext_resource type="Texture2D" uid="uid://243jhvct6ibo" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Hover 2.png" id="2_gocjx"]
 [ext_resource type="Texture2D" uid="uid://b0kgf62363cf6" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Death 1.png" id="3_4pauq"]
 [ext_resource type="Texture2D" uid="uid://qrl348d63xd1" path="res://Sprites/Character Sprites/Enemies/Fly/Fly Death 2.png" id="4_v325g"]
+[ext_resource type="Texture2D" uid="uid://cw14rtquv3ykw" path="res://Sprites/Visual Effects/VE_HitSpark/VE_HitSpark_4.png" id="9_do42q"]
+[ext_resource type="Texture2D" uid="uid://cuf5k26ulamxe" path="res://Sprites/Visual Effects/VE_HitSpark/VE_HitSpark_5.png" id="10_myvst"]
+[ext_resource type="Texture2D" uid="uid://bv7fm33hmkgt6" path="res://Sprites/Visual Effects/VE_HitSpark/VE_HitSpark_6.png" id="11_0hjxp"]
+[ext_resource type="Texture2D" uid="uid://0daxydjgo6up" path="res://Sprites/Visual Effects/VE_HitSpark/VE_HitSpark_7.png" id="12_xuaew"]
+[ext_resource type="Texture2D" uid="uid://d4fel3wdjrt8c" path="res://Sprites/Visual Effects/VE_HitSpark/VE_HitSpark_8.png" id="13_j7sm6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cqoiv"]
 animations = [{
@@ -25,6 +30,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_v325g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_do42q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_myvst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0hjxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xuaew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j7sm6")
 }],
 "loop": false,
 "name": &"die",
@@ -32,16 +52,176 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lrlvh"]
+radius = 21.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udpf2"]
+radius = 10.5
+
+[sub_resource type="Animation" id="Animation_8l2jl"]
+resource_name = "Attack"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 100)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hurt_Box:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_kni4g"]
+resource_name = "Fly"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hurt_Box:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b7ibf"]
+resource_name = "Patrol"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 0), Vector2(0, 0), Vector2(-100, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 0), Vector2(0, 0), Vector2(-100, 0), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hurt_Box:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 0), Vector2(0, 0), Vector2(-100, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d82nw"]
+_data = {
+"Attack": SubResource("Animation_8l2jl"),
+"Fly": SubResource("Animation_kni4g"),
+"Patrol": SubResource("Animation_b7ibf")
+}
 
 [node name="Fly" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-collision_layer = 2
-script = ExtResource("1_nv71b")
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_jo5nn")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cqoiv")
 autoplay = "default"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lrlvh")
+
+[node name="Hurt_Box" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_udpf2")
+
+[node name="Fly_Animation" type="AnimationPlayer" parent="."]
+autoplay = "Patrol"
+libraries = {
+"": SubResource("AnimationLibrary_d82nw")
+}
+
+[connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]

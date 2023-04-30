@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://djo664g4w0y71"]
+[gd_scene load_steps=51 format=3 uid="uid://djo664g4w0y71"]
 
 [ext_resource type="Texture2D" uid="uid://d0ttpb7b6whsi" path="res://Sprites/Character Sprites/Boss/Boss Chomp 1.png" id="1_bynqd"]
 [ext_resource type="Script" path="res://Scripts/Enemies/boss.gd" id="1_ue3sv"]
@@ -39,6 +39,12 @@
 [ext_resource type="Texture2D" uid="uid://bvjen1un6i6ai" path="res://Sprites/Character Sprites/Boss/Boss Lick 6.png" id="36_ryl1c"]
 [ext_resource type="Texture2D" uid="uid://lvjkiq6cmbiv" path="res://Sprites/Character Sprites/Boss/Boss Lick 7.png" id="37_nslp4"]
 [ext_resource type="Texture2D" uid="uid://c0annwd4j58hn" path="res://Sprites/Character Sprites/Boss/Boss Still.png" id="38_ddh7v"]
+[ext_resource type="Texture2D" uid="uid://due3o2wmagb2a" path="res://Sprites/Character Sprites/Boss/Boss Stomp 1.png" id="39_xfft8"]
+[ext_resource type="Texture2D" uid="uid://dpbd7vvht1uwj" path="res://Sprites/Character Sprites/Boss/Boss Stomp 2.png" id="40_6rgve"]
+[ext_resource type="Texture2D" uid="uid://diymj4hskxdyh" path="res://Sprites/Character Sprites/Boss/Boss Stomp 3.png" id="41_2vm8e"]
+[ext_resource type="Texture2D" uid="uid://db1d63avrj5sm" path="res://Sprites/Character Sprites/Boss/Boss Stomp 4.png" id="42_j23gn"]
+[ext_resource type="Texture2D" uid="uid://dvt6u5pexvjax" path="res://Sprites/Character Sprites/Boss/Boss Stomp 5.png" id="43_mdygc"]
+[ext_resource type="Texture2D" uid="uid://du8r3kkso2jp4" path="res://Sprites/Character Sprites/Boss/Boss Stomp 6.png" id="44_c2bav"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ginbk"]
 animations = [{
@@ -170,6 +176,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("39_xfft8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_6rgve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_2vm8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_j23gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_mdygc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_c2bav")
+}],
+"loop": false,
+"name": &"Stomp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("38_ddh7v")
 }],
 "loop": true,
@@ -178,17 +207,66 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7tvp"]
-size = Vector2(299, 355)
+size = Vector2(398.5, 330)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg1e7"]
+size = Vector2(105, 81)
+
+[sub_resource type="Animation" id="Animation_b4r2v"]
+resource_name = "Hit"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hurt_Box/Hurt_Box_Collision:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny31q"]
+_data = {
+"Hit": SubResource("Animation_b4r2v")
+}
 
 [node name="Boss" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 9
 script = ExtResource("1_ue3sv")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ginbk")
-animation = &"Die"
+animation = &"Chomp"
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 21.5)
+position = Vector2(43.75, 51)
 shape = SubResource("RectangleShape2D_f7tvp")
+
+[node name="Hurt_Box" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
+position = Vector2(-130, 175)
+shape = SubResource("RectangleShape2D_qg1e7")
+disabled = true
+
+[node name="Hit_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ny31q")
+}
+
+[node name="Hit_Range" type="RayCast2D" parent="."]
+position = Vector2(-130, 175)
+target_position = Vector2(-60, 0)
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

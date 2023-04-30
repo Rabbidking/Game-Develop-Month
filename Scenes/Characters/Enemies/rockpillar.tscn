@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://k1xykyv02jvh"]
+[gd_scene load_steps=14 format=3 uid="uid://k1xykyv02jvh"]
 
 [ext_resource type="Texture2D" uid="uid://c6xruenp2o4fi" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Death 1.png" id="1_ihtfr"]
-[ext_resource type="Script" path="res://Scripts/Enemies/enemy.gd" id="1_y50ai"]
+[ext_resource type="Script" path="res://Scripts/Enemies/rockpillar.gd" id="1_yail6"]
 [ext_resource type="Texture2D" uid="uid://c7suh7qn06up" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Death 2.png" id="2_wtjlg"]
 [ext_resource type="Texture2D" uid="uid://bj6b8s04osprm" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Death 3.png" id="3_t4ah8"]
 [ext_resource type="Texture2D" uid="uid://co4m7kct1xqmo" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Death 4.png" id="4_uwa7t"]
@@ -52,18 +52,38 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4ya2"]
-size = Vector2(100.5, 65.5)
+size = Vector2(218, 161.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7g5p"]
+size = Vector2(190, 144)
 
 [node name="Rockpillar" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-collision_layer = 2
-script = ExtResource("1_y50ai")
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_yail6")
+SPEED = 0.1
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_hyx5a")
 animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 28.25)
+position = Vector2(1, 47.875)
 shape = SubResource("RectangleShape2D_i4ya2")
+
+[node name="Floor_Checker" type="RayCast2D" parent="."]
+position = Vector2(-75, 127)
+target_position = Vector2(0, 25)
+collision_mask = 8
+
+[node name="Hurt_Box" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
+position = Vector2(-7.5, 40.5)
+shape = SubResource("RectangleShape2D_l7g5p")
+
+[connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]

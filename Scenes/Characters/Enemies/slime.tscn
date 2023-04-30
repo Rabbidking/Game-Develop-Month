@@ -79,9 +79,10 @@ autoplay = "Idle"
 
 [node name="Floor_Checker" type="RayCast2D" parent="."]
 target_position = Vector2(0, 30)
+collision_mask = 8
 
 [node name="Hurt_Box" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 0
 
 [node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
 position = Vector2(0, 6)
