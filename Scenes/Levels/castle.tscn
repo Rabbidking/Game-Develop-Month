@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://xdj6geo37c3x"]
+[gd_scene load_steps=32 format=3 uid="uid://xdj6geo37c3x"]
 
 [ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="2_4mpk7"]
 [ext_resource type="Texture2D" uid="uid://bitckkul7aive" path="res://TileMaps/Tileset_CastleWall.png" id="2_mwr8p"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://blg6saf6dugx" path="res://Sprites/Background Sprites/Object_Barrel/Object_Barrel.png" id="15_lrfrs"]
 [ext_resource type="Texture2D" uid="uid://dv76jxf5numsf" path="res://Sprites/Background Sprites/Object_Crate/Object_Crate.png" id="21_ae1gl"]
 [ext_resource type="PackedScene" uid="uid://b7dpkfhxun4kx" path="res://Scenes/Objects/invisible_bounds.tscn" id="21_crjf3"]
+[ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="23_cxwba"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dpjqw"]
 texture = ExtResource("2_mwr8p")
@@ -1027,14 +1028,14 @@ offset_bottom = 40.0
 
 [node name="UI" parent="UI" instance=ExtResource("10_ko6g5")]
 
-[node name="Coins" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Boss" parent="." instance=ExtResource("12_h4ht4")]
 position = Vector2(4341, 123)
+
+[node name="Player" parent="." instance=ExtResource("2_4mpk7")]
+position = Vector2(68, 184)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
 
 [node name="InvisibleBounds" parent="." instance=ExtResource("21_crjf3")]
 position = Vector2(7829, -433)
@@ -1044,7 +1045,66 @@ scale = Vector2(2, 2)
 position = Vector2(-22, -433)
 scale = Vector2(2, 2)
 
-[node name="Player" parent="." instance=ExtResource("2_4mpk7")]
-position = Vector2(66, 213)
-
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Coins" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Coin" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(1599, 275)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(2598, 275)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(1655, 275)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(1711, 275)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(3402, 275)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(3458, 275)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(3514, 275)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(6418, 275)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(6474, 275)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(6530, 275)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(5602, 275)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(5658, 275)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(5714, 275)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(2432, 275)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(2488, 275)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("23_cxwba")]
+position = Vector2(2544, 275)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(68, 184)
+scale = Vector2(2, 2)
+limit_left = 0
+limit_right = 7800
+limit_bottom = 700
+limit_smoothed = true

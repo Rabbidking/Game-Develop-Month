@@ -25,6 +25,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			attacking = true
 			anim.play("chomp")
+			$SFX/attack.play()
 			$Hit_Animation.play("Hit")
 			hit_cooldown = true
 			$Detect_Range.enabled = false
@@ -67,7 +68,7 @@ func _on_cooldown_timeout():
 func hurt():
 	var hitspark = $HitSpark
 	hitspark.play("default")
-	
+	$SFX/hit.play()
 	#deal double damage if wallet is maxed out
 	if Game.coins >= Game.walletMax:
 		health -= 20
@@ -85,6 +86,7 @@ func die():
 	#colBox.disabled = true
 	set_deferred(str(colBox.disabled), true)
 	anim.play("die")
+	$SFX/die.play()
 	await anim.animation_finished
 	anim.visible = false
 	self.add_child(poof)

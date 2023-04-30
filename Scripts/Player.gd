@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-var SPEED = 400.0
+var SPEED = 550.0
 var JUMP_VELOCITY = -550.0
 var coin_manager = preload("res://Scripts/CoinManager.gd")
-var damage_multiplier = 1
 var attacking = false
 var jumping = false
 var iframe = false
@@ -31,10 +30,10 @@ func _process(delta):
 func _physics_process(delta):
 	
 	if Game.coins >= Game.walletMax:
-		SPEED = 200
-		JUMP_VELOCITY = -500.0
+		SPEED = 300
+		JUMP_VELOCITY = -480.0
 	else:
-		SPEED = 400
+		SPEED = 600
 		JUMP_VELOCITY = -550.0
 	# Add the gravity.
 	if not is_on_floor():
@@ -116,7 +115,7 @@ func die():
 	$HitBox/CollisionShape2D.disabled = true
 	#$AnimatedSprite2D.play("Defeated")
 	#await $AnimatedSprite2D.animation_finished
-	var coins_to_lose = floor(Game.coins * 0.1)
+	var coins_to_lose = floor(Game.coins * 0.2)
 	Game.coins -= coins_to_lose
 	var level_start = $"../PlayerSpawn"
 	if level_start:
@@ -129,6 +128,7 @@ func die():
 		
 func calculate_coin_value():
 	var final_coin_value = Game.base_coin_value
+	print(str(Game.coin_multipliers))
 	for multiplier in Game.coin_multipliers:
 		final_coin_value *= multiplier
 	return final_coin_value
@@ -136,7 +136,8 @@ func calculate_coin_value():
 func add_coin():
 	var coin_value = calculate_coin_value()
 	Game.coins += coin_value
-	print(str(Game.coins))
+	print(str(coin_value))
+
 	
 		#if SPEED <= 200 or JUMP_VELOCITY >= -100:
 		#	SPEED = 200
@@ -196,7 +197,8 @@ func _on_hit_box_body_entered(body):
 
 func lose_money():
 	if iframe == false:
-		Game.coins -= 5
+		var coins_to_lose = floor(Game.coins * 0.1)
+		Game.coins -= coins_to_lose
 		print(str(Game.coins))
 		
 func hurt():

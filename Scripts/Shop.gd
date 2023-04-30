@@ -92,9 +92,9 @@ func checkItems():
 			hasItem = true
 			get_node("Control/Buy").disabled = true
 		# We don't wanna buy multipliers more than once
-		elif Game.inventory[currItem]["Type"] == "Multiplier" and currItem == 0:
+		if Game.inventory[currItem]["Type"] == "Multiplier" and currItem == 0:
 			hasItem = true
-			Game.coin_multipliers.append(Game.inventory[currItem]["Multiplier Num"])
+			#Game.coin_multipliers.append(Game.inventory[currItem]["Multiplier Num"])
 #		elif Game.inventory[currItem]["Type"] == "MultiplierX4" and currItem == 1:
 #			hasItem = true
 #			Game.coin_multipliers.append(Game.inventory[currItem]["Multiplier Num"])

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgp4t875kjflg"
+path="res://.godot/imported/Cat Scream 02.wav-f83f845ed1a1c52866ce65038a2d7d39.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Cat Scream 02.wav"
+dest_files=["res://.godot/imported/Cat Scream 02.wav-f83f845ed1a1c52866ce65038a2d7d39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

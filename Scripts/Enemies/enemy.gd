@@ -32,7 +32,7 @@ func _physics_process(delta):
 func hurt():
 	var hitspark = $HitSpark
 	hitspark.play("default")
-	
+	$SFX/die.play()
 	#deal double damage if wallet is maxed out
 	if Game.coins >= Game.walletMax:
 		health -= 20

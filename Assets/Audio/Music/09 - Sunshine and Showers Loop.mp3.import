@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkoilmvni4r4h"
+path="res://.godot/imported/09 - Sunshine and Showers Loop.mp3-d9ab65e70886c34ce2ad474b8ec4a93d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/09 - Sunshine and Showers Loop.mp3"
+dest_files=["res://.godot/imported/09 - Sunshine and Showers Loop.mp3-d9ab65e70886c34ce2ad474b8ec4a93d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwr74o80fukjb"
+path="res://.godot/imported/Cat Squeal 02.wav-8bb68ef76ce5e7575cffcead4842d072.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Cat Squeal 02.wav"
+dest_files=["res://.godot/imported/Cat Squeal 02.wav-8bb68ef76ce5e7575cffcead4842d072.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

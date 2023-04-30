@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dkal0vu5er4bo"]
+[gd_scene load_steps=25 format=3 uid="uid://dkal0vu5er4bo"]
 
 [ext_resource type="Texture2D" uid="uid://lndd2vmxo66h" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Chomp 1.png" id="1_3iglb"]
 [ext_resource type="Script" path="res://Scripts/Enemies/red_whisker.gd" id="1_phia7"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://okcbwsc36bba" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 3.png" id="13_4u1ue"]
 [ext_resource type="Texture2D" uid="uid://ddb4eel175pnm" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 4.png" id="14_yv26t"]
 [ext_resource type="Texture2D" uid="uid://p00guunas0bc" path="res://Sprites/Character Sprites/Enemies/Red Whisker/Red Whisker Run 5.png" id="15_12trt"]
+[ext_resource type="AudioStream" uid="uid://cgp4t875kjflg" path="res://Assets/Audio/SFX/Cat Scream 02.wav" id="17_6un5i"]
+[ext_resource type="AudioStream" uid="uid://dhvj3o6guh4d4" path="res://Assets/Audio/SFX/Cat Hiss 01.wav" id="17_hljqt"]
+[ext_resource type="AudioStream" uid="uid://dwr74o80fukjb" path="res://Assets/Audio/SFX/Cat Squeal 02.wav" id="17_or4wt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eg3ak"]
 animations = [{
@@ -160,12 +163,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="hit" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("17_6un5i")
 bus = &"SFX"
 
 [node name="die" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("17_or4wt")
 bus = &"SFX"
 
 [node name="attack" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("17_hljqt")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

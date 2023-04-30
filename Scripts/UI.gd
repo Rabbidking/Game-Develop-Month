@@ -38,6 +38,7 @@ func update_boss_health():
 	boss_healthbar.value = Game.boss_current_health
 	
 	if Game.boss_current_health >= Game.boss_max_health or Game.boss_current_health <= 0:
+		Game.boss_current_health = Game.boss_max_health
 		$BossRegenTimer.stop()
 
 

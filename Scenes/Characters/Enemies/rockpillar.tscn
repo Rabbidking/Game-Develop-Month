@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://k1xykyv02jvh"]
+[gd_scene load_steps=17 format=3 uid="uid://k1xykyv02jvh"]
 
 [ext_resource type="Texture2D" uid="uid://c6xruenp2o4fi" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Death 1.png" id="1_ihtfr"]
 [ext_resource type="Script" path="res://Scripts/Enemies/rockpillar.gd" id="1_yail6"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bo1qd68fpn3qj" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Crawl 2.png" id="7_wuum6"]
 [ext_resource type="Texture2D" uid="uid://bltehi8a35fei" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Crawl 3.png" id="8_06hd5"]
 [ext_resource type="Texture2D" uid="uid://grdfjr82boyl" path="res://Sprites/Character Sprites/Enemies/Rockpillar/Rockpillar Crawl 4.png" id="9_3l2ux"]
+[ext_resource type="AudioStream" uid="uid://b0ex20utl8tfk" path="res://Assets/Audio/SFX/Rock Debris Large 24.wav" id="11_sd6u1"]
+[ext_resource type="AudioStream" uid="uid://b2tlbqjpfrgna" path="res://Assets/Audio/SFX/Growl 1_1.wav" id="12_gwdl3"]
+[ext_resource type="AudioStream" uid="uid://bo7mjte4btgsi" path="res://Assets/Audio/SFX/Earth Punch 3.wav" id="13_8pss1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hyx5a"]
 animations = [{
@@ -85,5 +88,23 @@ collision_layer = 0
 [node name="Hurt_Box_Collision" type="CollisionShape2D" parent="Hurt_Box"]
 position = Vector2(-7.5, 40.5)
 shape = SubResource("RectangleShape2D_l7g5p")
+
+[node name="SFX" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="die" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("11_sd6u1")
+bus = &"SFX"
+
+[node name="hurt" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("12_gwdl3")
+bus = &"SFX"
+
+[node name="attack" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("13_8pss1")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]

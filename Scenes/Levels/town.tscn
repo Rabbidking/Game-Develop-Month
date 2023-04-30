@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bjqjq65drevbw"]
+[gd_scene load_steps=52 format=3 uid="uid://bjqjq65drevbw"]
 
 [ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_riwwm"]
 [ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="2_2s7xd"]
@@ -39,6 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://dxrorg1km34ay" path="res://Scenes/UI/pause_menu.tscn" id="37_34khk"]
 [ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="38_oeh1n"]
 [ext_resource type="PackedScene" uid="uid://b7dpkfhxun4kx" path="res://Scenes/Objects/invisible_bounds.tscn" id="39_my1wj"]
+[ext_resource type="PackedScene" uid="uid://k1xykyv02jvh" path="res://Scenes/Characters/Enemies/rockpillar.tscn" id="40_acg4o"]
+[ext_resource type="PackedScene" uid="uid://cld8nqeluhskp" path="res://Scenes/Objects/level_exit.tscn" id="41_ensmu"]
+[ext_resource type="PackedScene" uid="uid://dkal0vu5er4bo" path="res://Scenes/Characters/Enemies/red_whisker.tscn" id="42_j022f"]
+[ext_resource type="PackedScene" uid="uid://bbso357r141vk" path="res://Scenes/Characters/Enemies/dino_brute.tscn" id="43_hnl1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
 texture = ExtResource("2_2s7xd")
@@ -530,7 +534,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_nx1gw")
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(-4, -2610)
+position = Vector2(0, -2610)
 
 [node name="BG" type="TextureRect" parent="."]
 offset_left = 4.0
@@ -868,6 +872,9 @@ texture = ExtResource("22_ow8h6")
 position = Vector2(9968, 2496)
 texture = ExtResource("30_jmm6s")
 
+[node name="LevelExit" parent="." instance=ExtResource("41_ensmu")]
+position = Vector2(12790, 2543)
+
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1079,6 +1086,9 @@ position = Vector2(6115, 2438)
 [node name="Player" parent="." instance=ExtResource("33_xan4r")]
 position = Vector2(35, 2528)
 
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
 [node name="Foreground" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1227,3 +1237,25 @@ position = Vector2(-6, 1969)
 
 [node name="InvisibleBounds2" parent="." instance=ExtResource("39_my1wj")]
 position = Vector2(13068, 1772)
+
+[node name="Enemies" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rockpillar" parent="Enemies" instance=ExtResource("40_acg4o")]
+position = Vector2(4358, 2317)
+
+[node name="Red Whisker" parent="Enemies" instance=ExtResource("42_j022f")]
+position = Vector2(11725, 2499)
+
+[node name="DinoBrute" parent="Enemies" instance=ExtResource("43_hnl1s")]
+position = Vector2(12115, 2498)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(35, 2528)
+scale = Vector2(2, 2)
+limit_left = 0
+limit_right = 12900
+limit_bottom = 700
