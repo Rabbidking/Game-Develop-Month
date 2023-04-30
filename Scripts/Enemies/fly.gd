@@ -8,7 +8,6 @@ extends CharacterBody2D
 @onready var poof = load("res://Scenes/poof.tscn").instantiate()
 #const JUMP_VELOCITY = -400.0
 @export var direction = -1
-@export var cliff_detect = true
 var dead = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -18,20 +17,16 @@ func _ready():
 	if direction == 1:
 		anim.flip_h = true
 	$Floor_Checker.position.x = 20 * direction
-	$Floor_Checker.enabled = cliff_detect
 
-func _physics_process(delta):
-	if is_on_wall() or not $Floor_Checker.is_colliding() and cliff_detect and is_on_floor():
-		direction = direction * -1
-		anim.flip_h = not anim.flip_h
-		$Floor_Checker.position.x = 15 * direction
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta 
+func _physics_process(_delta):
+	if dead == false:
+		$Fly_Animation.play("Patrol")
+	
+	#move_and_slide()
 
 func hurt():
-	var hitspark = $HitSpark
-	hitspark.play("default")
+#	var hitspark = $HitSpark
+#	hitspark.play("default")
 	
 	#deal double damage if wallet is maxed out
 	if Game.coins >= Game.walletMax:
@@ -40,7 +35,6 @@ func hurt():
 		health -= 10
 		
 	if health <= 0:
-		#$Hurt_Box/Hurt_Box_Collision.disabled = true
 		die()
 
 func die():
@@ -51,10 +45,10 @@ func die():
 	anim.play("die")
 	await anim.animation_finished
 	anim.visible = false
-	self.add_child(poof)
-	poof.global_position = global_position + Vector2(0, -98)
-	poof.play("default")
-	await poof.animation_finished
+#	self.add_child(poof)
+#	poof.global_position = global_position + Vector2(0, -98)
+#	poof.play("default")
+#	await poof.animation_finished
 	queue_free()
 	
 

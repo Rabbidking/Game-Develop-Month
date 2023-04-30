@@ -4,11 +4,11 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-@export var health = 20
+@export var health = 10
 @onready var anim = $AnimatedSprite2D
 @onready var colBox = $CollisionShape2D
 @onready var poof = load("res://Scenes/poof.tscn").instantiate()
-@onready var speed = 50
+@onready var speed = 150
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var attacking = false
@@ -24,7 +24,7 @@ func _physics_process(delta):
 		if $Hit_Range.is_colliding() and hit_cooldown == false:
 			velocity.x = 0
 			attacking = true
-			anim.play("punch")
+			anim.play("chomp")
 			$Hit_Animation.play("Hit")
 			hit_cooldown = true
 			$Detect_Range.enabled = false
@@ -32,17 +32,17 @@ func _physics_process(delta):
 			$Cooldown.start()
 
 		if $Detect_Range.is_colliding() and attacking == false:
-			anim.play("walk")
+			anim.play("run")
 			$AnimatedSprite2D.flip_h = false
-			$Hit_Box/Hit_Box_Collision.position = Vector2(-10, 20.25)
+			$Hurt_Box/Hurt_Box_Collision.position = Vector2(-27.5, 12)
 			$Hit_Range.target_position = Vector2(-35, 0)
 			velocity.x = 0
 			velocity.x -= 1 * speed
 		
 		if $Detect_Range2.is_colliding() and attacking == false:
-			anim.play("walk")
+			anim.play("run")
 			$AnimatedSprite2D.flip_h = true
-			$Hit_Box/Hit_Box_Collision.position = Vector2(10, 20.25)
+			$Hurt_Box/Hurt_Box_Collision.position = Vector2(27.5, 12)
 			$Hit_Range.target_position = Vector2(35, 0)
 			velocity.x = 0
 			velocity.x += 1 * speed
@@ -58,13 +58,6 @@ func _physics_process(delta):
 func _on_animated_sprite_2d_animation_finished():
 	$AnimatedSprite2D.play("idle")
 	attacking = false
-
-
-func _on_hit_box_body_entered(body):
-	if body.get_collision_layer_value(1) and dead == false:
-		if body.has_method("hurt"):
-			body.hurt()
-
 
 func _on_cooldown_timeout():
 	$Detect_Range.enabled = true
@@ -82,7 +75,7 @@ func hurt():
 		health -= 10
 		
 	if health <= 0:
-		set_deferred(str($Hit_Box/Hit_Box_Collision.disabled), true)
+		set_deferred(str($Hurt_Box/Hurt_Box_Collision.disabled), true)
 		$AnimatedSprite2D.stop()
 		dead = true
 		velocity.x = 0
@@ -99,3 +92,12 @@ func die():
 	poof.play("default")
 	await poof.animation_finished
 	queue_free()
+
+
+func _on_hurt_box_body_entered(body):
+	if body.get_collision_layer_value(1) and dead == false:
+		if body.has_method("lose_money"):
+			body.lose_money()
+		if body.has_method("hurt"):
+			body.hurt()
+
