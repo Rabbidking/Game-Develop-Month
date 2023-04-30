@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsdbl276x7qql"
+path="res://.godot/imported/Insect Crush 1.wav-97953191a64fa80927b3de26497be07c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Insect Crush 1.wav"
+dest_files=["res://.godot/imported/Insect Crush 1.wav-97953191a64fa80927b3de26497be07c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

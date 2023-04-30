@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ciuej1871cvjg"
+path="res://.godot/imported/Bird 12_02.wav-fb4fabf7fa052a1d1aa1d388c1c0057f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Bird 12_02.wav"
+dest_files=["res://.godot/imported/Bird 12_02.wav-fb4fabf7fa052a1d1aa1d388c1c0057f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

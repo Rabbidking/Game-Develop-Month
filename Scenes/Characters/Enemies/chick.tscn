@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjr20a87uqjrh"]
+[gd_scene load_steps=12 format=3 uid="uid://cjr20a87uqjrh"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/chick.gd" id="1_0v5wx"]
 [ext_resource type="Texture2D" uid="uid://bi004w4se6hut" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Death 1.png" id="1_ist4p"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://0s4ege2p8de4" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Hop 2.png" id="4_uupi4"]
 [ext_resource type="Texture2D" uid="uid://rwwck4481gyc" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Hop 3.png" id="5_0ckqx"]
 [ext_resource type="Texture2D" uid="uid://d2n4kqpk4h5bk" path="res://Sprites/Character Sprites/Enemies/Chick/Chick Hop 4.png" id="6_jrktb"]
+[ext_resource type="AudioStream" uid="uid://ciuej1871cvjg" path="res://Assets/Audio/SFX/Bird 12_02.wav" id="8_qefkh"]
+[ext_resource type="AudioStream" uid="uid://cl2xt2qmfmhf7" path="res://Assets/Audio/SFX/Bird 12_01.wav" id="9_c2bl4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2egjy"]
 height = 21.0
@@ -62,3 +64,17 @@ autoplay = "hop"
 position = Vector2(-2, 6)
 target_position = Vector2(0, 25)
 collision_mask = 8
+
+[node name="SFX" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hurt" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("8_qefkh")
+bus = &"SFX"
+
+[node name="die" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("9_c2bl4")
+bus = &"SFX"

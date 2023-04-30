@@ -18,24 +18,24 @@ offset_bottom = 37.0
 text = "Coins"
 
 [node name="Speedrun" type="Label" parent="."]
-offset_left = 1064.0
-offset_right = 1151.0
+offset_left = 848.0
+offset_right = 935.0
 offset_bottom = 26.0
 text = "00:00:00"
 horizontal_alignment = 1
 
 [node name="BossHPLabel" type="Label" parent="."]
-offset_left = 307.0
+offset_left = 439.0
 offset_top = 2.0
-offset_right = 504.0
+offset_right = 636.0
 offset_bottom = 28.0
 text = "Boss HP: "
 horizontal_alignment = 1
 
 [node name="BossHP" type="ProgressBar" parent="."]
 modulate = Color(1, 0, 0, 1)
-offset_left = 307.0
-offset_right = 504.0
+offset_left = 439.0
+offset_right = 636.0
 offset_bottom = 27.0
 max_value = 1e+06
 step = 1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://djo664g4w0y71"]
+[gd_scene load_steps=53 format=3 uid="uid://djo664g4w0y71"]
 
 [ext_resource type="Texture2D" uid="uid://d0ttpb7b6whsi" path="res://Sprites/Character Sprites/Boss/Boss Chomp 1.png" id="1_bynqd"]
 [ext_resource type="Script" path="res://Scripts/Enemies/boss.gd" id="1_ue3sv"]
@@ -45,6 +45,8 @@
 [ext_resource type="Texture2D" uid="uid://db1d63avrj5sm" path="res://Sprites/Character Sprites/Boss/Boss Stomp 4.png" id="42_j23gn"]
 [ext_resource type="Texture2D" uid="uid://dvt6u5pexvjax" path="res://Sprites/Character Sprites/Boss/Boss Stomp 5.png" id="43_mdygc"]
 [ext_resource type="Texture2D" uid="uid://du8r3kkso2jp4" path="res://Sprites/Character Sprites/Boss/Boss Stomp 6.png" id="44_c2bav"]
+[ext_resource type="AudioStream" uid="uid://ctoseutifscq2" path="res://Assets/Audio/SFX/Demon 3 - Long 01.wav" id="46_3lwic"]
+[ext_resource type="AudioStream" uid="uid://bdwlu8vopo43d" path="res://Assets/Audio/SFX/Demon 3 - Laugh 01.wav" id="47_udc04"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ginbk"]
 animations = [{
@@ -61,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_cia1n")
 }],
-"loop": true,
+"loop": false,
 "name": &"Chomp",
 "speed": 10.0
 }, {
@@ -170,7 +172,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("37_nslp4")
 }],
-"loop": true,
+"loop": false,
 "name": &"Lick",
 "speed": 10.0
 }, {
@@ -241,7 +243,7 @@ script = ExtResource("1_ue3sv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ginbk")
-animation = &"Chomp"
+animation = &"Stomp"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -267,6 +269,23 @@ target_position = Vector2(-60, 0)
 
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="SFX" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dragonDie" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("46_3lwic")
+bus = &"SFX"
+
+[node name="dragonHurt" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX"
+
+[node name="dragonLaugh" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("47_udc04")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

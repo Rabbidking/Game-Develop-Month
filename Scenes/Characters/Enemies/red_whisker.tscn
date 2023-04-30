@@ -153,6 +153,21 @@ libraries = {
 [node name="Cooldown" type="Timer" parent="."]
 wait_time = 2.0
 
+[node name="SFX" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="hit" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX"
+
+[node name="die" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX"
+
+[node name="attack" type="AudioStreamPlayer2D" parent="SFX"]
+bus = &"SFX"
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hurt_Box" to="." method="_on_hurt_box_body_entered"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

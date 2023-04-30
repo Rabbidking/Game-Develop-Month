@@ -49,6 +49,7 @@ func die():
 	set_deferred(str($Hurt_Box/Hurt_Box_Collision.disabled), true)
 	set_deferred(str(colBox.disabled), true)
 	anim.play("die")
+	$SFX/die.play()
 	await anim.animation_finished
 	anim.visible = false
 	self.add_child(poof)

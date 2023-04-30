@@ -93,4 +93,5 @@ position = Vector2(2543, 0)
 [node name="DinoBrute" parent="." instance=ExtResource("10_aagrr")]
 position = Vector2(450, 541)
 
-[connection signal="boss_killed" from="Boss" to="UI" method="_on_boss_boss_killed"]
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(66, 213)

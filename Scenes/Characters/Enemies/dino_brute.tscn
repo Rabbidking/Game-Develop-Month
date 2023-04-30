@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bbso357r141vk"]
+[gd_scene load_steps=28 format=3 uid="uid://bbso357r141vk"]
 
 [ext_resource type="Script" path="res://Scripts/Enemies/dino_brute.gd" id="1_pc1c4"]
 [ext_resource type="Texture2D" uid="uid://b6qttpqct8lmf" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Death 1.png" id="1_wqbl4"]
@@ -18,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://bgfjf61i03axo" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 2.png" id="15_77pee"]
 [ext_resource type="Texture2D" uid="uid://br2d6xr8qo524" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 3.png" id="16_o8vwp"]
 [ext_resource type="Texture2D" uid="uid://b18vnj2gwc2lg" path="res://Sprites/Character Sprites/Enemies/Dino Brute/Dino Brute Walk 4.png" id="17_otr3f"]
+[ext_resource type="AudioStream" uid="uid://bu1lavswt4fqd" path="res://Assets/Audio/SFX/Punch 1.wav" id="19_wnlex"]
+[ext_resource type="AudioStream" uid="uid://blau23tj3x5tj" path="res://Assets/Audio/SFX/Humanoid Large 4 - Long 1.wav" id="20_8gyud"]
+[ext_resource type="AudioStream" uid="uid://b4jl5m67lauk" path="res://Assets/Audio/SFX/Humanoid Large 4 - Short 6.wav" id="20_ip8st"]
+[ext_resource type="AudioStream" uid="uid://buns2fwrquocf" path="res://Assets/Audio/SFX/Whoosh 1.wav" id="20_snysa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uv2l5"]
 animations = [{
@@ -161,6 +165,28 @@ wait_time = 3.0
 libraries = {
 "": SubResource("AnimationLibrary_bbmv3")
 }
+
+[node name="Sounds" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="punch" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("19_wnlex")
+bus = &"SFX"
+
+[node name="die" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("20_8gyud")
+bus = &"SFX"
+
+[node name="hurt" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("20_ip8st")
+bus = &"SFX"
+
+[node name="punch_whiff" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("20_snysa")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hit_Box" to="." method="_on_hit_box_body_entered"]

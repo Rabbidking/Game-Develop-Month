@@ -6,7 +6,9 @@ extends Node
 @onready var speedrun: CheckButton = $CanvasLayer/Settings/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CheckButton
 @onready var music = $AudioStreamPlayer2D
 
-@export var _bus = AudioServer.get_bus_index("Master")
+@export var master_bus = AudioServer.get_bus_index("Master")
+@export var music_bus = AudioServer.get_bus_index("Music")
+@export var sfx_bus = AudioServer.get_bus_index("SFX")
 
 func _ready() -> void:
 	add_items()
@@ -28,7 +30,7 @@ func _on_play_pressed():
 		Utils.timer_on = true
 		Utils.game_start_time = Time.get_ticks_msec()
 	main.visible = false
-	SceneTransition.change_scene_to_file("res://Scenes/node_2d.tscn")
+	SceneTransition.change_scene_to_file("res://Scenes/Levels/castle.tscn")
 
 func _on_options_pressed():
 	main.visible = false
@@ -66,13 +68,13 @@ func _on_resolution_button_item_selected(index):
 		DisplayServer.window_set_size(Vector2i(1920, 1080))
 
 #Audio stuff
-func _on_volume_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(_bus, linear_to_db(value))
+func _on_master_volume_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(master_bus, linear_to_db(value))
 	
 	if value == 0:
-		AudioServer.set_bus_mute(_bus, true)
+		AudioServer.set_bus_mute(master_bus, true)
 	else:
-		AudioServer.set_bus_mute(_bus, false)
+		AudioServer.set_bus_mute(master_bus, false)
 
 
 func _on_check_button_toggled(button_pressed):
@@ -82,3 +84,21 @@ func _on_check_button_toggled(button_pressed):
 	else:
 		Utils.speedrun_on = false
 		speedrun.text = "OFF"
+
+
+func _on_music_volume_slider_2_value_changed(value):
+	AudioServer.set_bus_volume_db(music_bus, linear_to_db(value))
+	
+	if value == 0:
+		AudioServer.set_bus_mute(music_bus, true)
+	else:
+		AudioServer.set_bus_mute(music_bus, false)
+
+
+func _on_sfx_volume_slider_3_value_changed(value):
+	AudioServer.set_bus_volume_db(sfx_bus, linear_to_db(value))
+	
+	if value == 0:
+		AudioServer.set_bus_mute(sfx_bus, true)
+	else:
+		AudioServer.set_bus_mute(sfx_bus, false)

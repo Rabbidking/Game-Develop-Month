@@ -8,7 +8,7 @@ var attacking = false
 var jumping = false
 var iframe = false
 var hasPlayedSound = false
-var coyote_time = 0.1
+var coyote_time = 0.4
 var can_jump = false
 #var jump_max = 2
 #var jump_count = 0
@@ -17,12 +17,25 @@ var can_jump = false
 
 @onready var bagSwing = $PlayerSFX/bagSwing
 @onready var bagHit = $PlayerSFX/bagHit
+@onready var player_spawn = $"../PlayerSpawn"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _process(delta):
+		
+	if Game.playerHP <= 0:
+		die()
+
 
 func _physics_process(delta):
+	
+	if Game.coins >= Game.walletMax:
+		SPEED = 200
+		JUMP_VELOCITY = -500.0
+	else:
+		SPEED = 400
+		JUMP_VELOCITY = -550.0
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -53,7 +66,7 @@ func _physics_process(delta):
 	elif can_jump == true and $Coyote.is_stopped():
 		$Coyote.start(coyote_time)
 
-	if Input.is_action_just_pressed("ui_accept") and can_jump and attacking == false:
+	if Input.is_action_just_pressed("jump") and can_jump and attacking == false:
 		jumping = true
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.play("Jump")
@@ -98,15 +111,20 @@ func _physics_process(delta):
 #		die()
 		
 func die():
+	$PlayerSFX/die.play()
+	await $PlayerSFX/die.finished
 	$HitBox/CollisionShape2D.disabled = true
-	$AnimatedSprite2D.play("Defeated")
+	#$AnimatedSprite2D.play("Defeated")
+	#await $AnimatedSprite2D.animation_finished
 	var coins_to_lose = floor(Game.coins * 0.1)
 	Game.coins -= coins_to_lose
-	#Either start player at a node called LevelStart
-	#var level_start = get_node("/root/Game/LevelStart")
-	#position = level_start.position
-	#OR reload the entire scene
-	#get_tree().reload_current_scene()
+	var level_start = $"../PlayerSpawn"
+	if level_start:
+		position = level_start.position
+	else:
+		print("Error: LevelStart node not found.")
+	Game.playerHP = 10
+	get_tree().reload_current_scene()
 	
 		
 func calculate_coin_value():
@@ -120,9 +138,6 @@ func add_coin():
 	Game.coins += coin_value
 	print(str(Game.coins))
 	
-	if Game.coins >= Game.walletMax:
-		SPEED -= 200
-		JUMP_VELOCITY += 100
 		#if SPEED <= 200 or JUMP_VELOCITY >= -100:
 		#	SPEED = 200
 		#	JUMP_VELOCITY = 100
@@ -154,7 +169,7 @@ func _on_animated_sprite_2d_animation_finished():
 	jumping = false
 	attacking = false
 	$HitBox/CollisionShape2D.disabled = true
-	print("attack")
+	#print("attack")
 
 func _on_hit_box_body_entered(body):
 	if body.get_collision_layer_value(3):
@@ -185,14 +200,15 @@ func lose_money():
 		print(str(Game.coins))
 		
 func hurt():
+	$AnimatedSprite2D.play("Hurt")
 	if iframe == false:
-		$AnimatedSprite2D.play("Hurt")
+		$PlayerSFX/hit.play()
 		Game.playerHP -= 1
 		iframe = true
 		$IFrame.start()
 		$Player_Animation.play("IFrame")
-		if Game.playerHP <= 0:
-			die()
+		#if Game.playerHP <= 0:
+			#die()
 
 
 func _on_i_frame_timeout():
@@ -202,3 +218,7 @@ func _on_i_frame_timeout():
 
 func _on_coyote_timeout():
 	can_jump = false
+
+
+func _on_death_plane_body_entered(body):
+	die()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cg30x40n0c7pl"]
+[gd_scene load_steps=38 format=3 uid="uid://cg30x40n0c7pl"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_r040e"]
 [ext_resource type="Texture2D" uid="uid://bdr2ml5okwqnm" path="res://Sprites/Character Sprites/Player/Player Defeated 1.png" id="2_fjxno"]
@@ -30,6 +30,8 @@
 [ext_resource type="AudioStream" uid="uid://bgwq0pmr1bq7r" path="res://Assets/Audio/SFX/Whoosh 25.wav" id="19_8j5ii"]
 [ext_resource type="Texture2D" uid="uid://b3pe8d0ro1wne" path="res://Sprites/Character Sprites/Player/Player Walk 7.png" id="19_aur34"]
 [ext_resource type="AudioStream" uid="uid://b4q4v1afa8kke" path="res://Assets/Audio/SFX/Whoosh 3_2.wav" id="20_up1gc"]
+[ext_resource type="AudioStream" uid="uid://c4kfh3hgkul20" path="res://Assets/Audio/SFX/Female 2 - Grunt 05.wav" id="31_tl2y3"]
+[ext_resource type="AudioStream" uid="uid://tvsl5s00ch3" path="res://Assets/Audio/SFX/Female 2 - Scream 04.wav" id="32_gwvdu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s2cak"]
 animations = [{
@@ -195,7 +197,7 @@ script = ExtResource("1_r040e")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_s2cak")
-animation = &"Idle"
+animation = &"Defeated"
 autoplay = "Idle"
 speed_scale = 2.0
 
@@ -205,10 +207,13 @@ shape = SubResource("CapsuleShape2D_vmwuu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.8, 0.8)
+process_callback = 0
 limit_left = 0
+limit_right = 50000
 limit_bottom = 700
 limit_smoothed = true
 editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2(51, -41)
@@ -227,9 +232,19 @@ offset_bottom = 40.0
 
 [node name="bagSwing" type="AudioStreamPlayer2D" parent="PlayerSFX"]
 stream = ExtResource("19_8j5ii")
+bus = &"SFX"
 
 [node name="bagHit" type="AudioStreamPlayer2D" parent="PlayerSFX"]
 stream = ExtResource("20_up1gc")
+bus = &"SFX"
+
+[node name="hit" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("31_tl2y3")
+bus = &"SFX"
+
+[node name="die" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("32_gwvdu")
+bus = &"SFX"
 
 [node name="Player_Animation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../IFrame")

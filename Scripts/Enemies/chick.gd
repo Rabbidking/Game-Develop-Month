@@ -39,6 +39,7 @@ func _physics_process(delta):
 func hurt():
 	var hitspark = $HitSpark
 	hitspark.play("default")
+	$SFX/hurt.play()
 	
 	#deal double damage if wallet is maxed out
 	if Game.coins >= Game.walletMax:
@@ -55,6 +56,7 @@ func die():
 	dead = true
 	set_deferred(str(colBox.disabled), true)
 	anim.play("die")
+	$SFX/die.play()
 	await anim.animation_finished
 	anim.visible = false
 	self.add_child(poof)

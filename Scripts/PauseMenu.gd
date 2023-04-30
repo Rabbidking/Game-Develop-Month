@@ -14,8 +14,7 @@ extends CanvasLayer
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pause.visible = false
-	#settings.visible = false
-	if Input.is_action_pressed("ui_cancel"):
+	if Input.is_action_pressed("pause"):
 		pause.visible = true
 		get_tree().paused = true
 	if Utils.speedrun_on == true:
@@ -33,12 +32,12 @@ func _on_quit_button_pressed():
 	SceneTransition.change_scene_to_file("res://Scenes/main.tscn")
 
 
-func _on_save_button_pressed():
-	Utils.saveGame()
-
-
-func _on_load_button_pressed():
-	Utils.loadGame()
+#func _on_save_button_pressed():
+#	Utils.saveGame()
+#
+#
+#func _on_load_button_pressed():
+#	Utils.loadGame()
 	
 #func _on_options_button_pressed():
 #	pause.visible = false

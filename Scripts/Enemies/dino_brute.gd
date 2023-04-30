@@ -14,6 +14,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var attacking = false
 var hit_cooldown = false
 var dead = false
+var punchPlayed = false
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -25,6 +26,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			attacking = true
 			anim.play("punch")
+			$Sounds/punch_whiff.play()
 			$Hit_Animation.play("Hit")
 			hit_cooldown = true
 			$Detect_Range.enabled = false
@@ -64,14 +66,19 @@ func _on_hit_box_body_entered(body):
 	if body.get_collision_layer_value(1) and dead == false:
 		if body.has_method("hurt"):
 			body.hurt()
+		if punchPlayed == false:
+			$Sounds/punch.play()
+			punchPlayed = true
 
 
 func _on_cooldown_timeout():
 	$Detect_Range.enabled = true
 	$Detect_Range2.enabled = true
 	hit_cooldown = false
+	punchPlayed = false
 
 func hurt():
+	$Sounds/hurt.play()
 	var hitspark = $HitSpark
 	hitspark.play("default")
 	
@@ -92,6 +99,7 @@ func die():
 	#colBox.disabled = true
 	set_deferred(str(colBox.disabled), true)
 	anim.play("die")
+	$Sounds/die.play()
 	await anim.animation_finished
 	anim.visible = false
 	self.add_child(poof)

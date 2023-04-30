@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvgsg4hw8fq80"]
+[gd_scene load_steps=14 format=3 uid="uid://dvgsg4hw8fq80"]
 
 [ext_resource type="Script" path="res://Scripts/shopkeep.gd" id="1_jd5lh"]
 [ext_resource type="Texture2D" uid="uid://bapl5k871ectf" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 1.png" id="2_miikr"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cegbg0nirlai3" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 5.png" id="6_ukve3"]
 [ext_resource type="Texture2D" uid="uid://dsh3ixqshy7a6" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 6.png" id="7_q28jt"]
 [ext_resource type="Texture2D" uid="uid://b0wt2pa5tkc44" path="res://Sprites/Character Sprites/NPCs/Rebecca/Rebecca 7.png" id="8_ntsof"]
+[ext_resource type="AudioStream" uid="uid://dqgca4puimdkh" path="res://Assets/Audio/SFX/Item Purchase (3).wav" id="10_ledcr"]
+[ext_resource type="AudioStream" uid="uid://bnlo2feb3e6wx" path="res://Assets/Audio/SFX/Buzz Error (5).wav" id="11_4vdcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_koh25"]
 size = Vector2(52, 56)
@@ -58,5 +60,20 @@ autoplay = "default"
 frame_progress = 0.965683
 
 [node name="Shop" parent="." instance=ExtResource("3_82sax")]
+
+[node name="shopSFX" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="buyNoise" type="AudioStreamPlayer2D" parent="shopSFX"]
+stream = ExtResource("10_ledcr")
+bus = &"SFX"
+
+[node name="buyFailed" type="AudioStreamPlayer2D" parent="shopSFX"]
+stream = ExtResource("11_4vdcn")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

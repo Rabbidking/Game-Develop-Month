@@ -1,14 +1,15 @@
 extends Area2D
 
 @onready var anim = $AnimatedSprite2D
-signal coin_collected
+#signal coin_collected
+var collected = false
 
 func _on_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" and not collected:
 		if Game.coins < Game.walletMax:
 			#send custom signal to HUD
-			coin_collected.emit()
-			
+			#coin_collected.emit()
+			collected = true
 			$AudioStreamPlayer2D.play()
 			#Animation logic if we have animation frames for the coin disappearing
 			body.add_coin()
@@ -27,3 +28,7 @@ func _on_body_entered(body):
 			#ADD COINS TO PLAYER BEFORE CALLING QUEUE FREE
 			#body.add_coin()
 			#tween.tween_callback(self.queue_free)
+			
+func _process(delta):
+	if collected:
+		$CollisionShape2D.disabled = true

@@ -16,8 +16,20 @@ func _on_close_button_pressed():
 
 
 func _on_castle_button_pressed():
+	$".".visible = false
 	SceneTransition.change_scene_to_file("res://Scenes/Levels/castle.tscn")
 
 
-func _on_field_button_pressed():
-	SceneTransition.change_scene_to_file("res://Scenes/Levels/fields.tscn")
+func _on_cliff_button_pressed():
+	$".".visible = false
+	SceneTransition.change_scene_to_file("res://Scenes/Levels/cliffs.tscn")
+
+
+func _on_town_button_pressed():
+	$".".visible = false
+	SceneTransition.change_scene_to_file("res://Scenes/Levels/town.tscn")
+
+
+func _on_plains_button_pressed():
+	$".".visible = false
+	SceneTransition.change_scene_to_file("res://Scenes/Levels/plains.tscn")

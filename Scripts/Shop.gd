@@ -3,8 +3,8 @@ extends CanvasLayer
 var currItem = 0
 var hasItem = false
 var itemDict = Game.items[currItem]
-@onready var buySound = $shopSFX/buyNoise
-@onready var buyFailed = $shopSFX/buyFailed
+@onready var buySound = $"../shopSFX/buyNoise"
+@onready var buyFailed = $"../shopSFX/buyFailed"
 @onready var buyButton = $Control/Buy
 
 func _ready():
@@ -72,14 +72,14 @@ func _on_buy_pressed():
 		
 		if itemDict["Type"] == "Multiplier":
 			Game.coin_multipliers.append(Game.items[currItem]["Multiplier Num"])
-			print("1")
+			#print("1")
 		elif itemDict["Type"] == "Wallet":
-			print("2")
-			Game.walletMax = Game.walletMax + Game.items[currItem]["Wallet Val"]
+			#print("2")
+			Game.walletMax = Game.items[currItem]["Wallet Val"]
 		Game.coins -= Game.items[currItem]["Cost"]
 		buySound.play()
 		
-	print(Game.coin_multipliers)
+	#print(Game.coin_multipliers)
 	
 	checkItems()
 

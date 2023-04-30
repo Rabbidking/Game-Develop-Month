@@ -1,43 +1,47 @@
-[gd_scene load_steps=44 format=3 uid="uid://bjqjq65drevbw"]
+[gd_scene load_steps=48 format=3 uid="uid://bjqjq65drevbw"]
 
-[ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_30dfk"]
-[ext_resource type="Texture2D" uid="uid://dmad3sb2oyf2a" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_C.png" id="2_1akno"]
-[ext_resource type="Texture2D" uid="uid://cqaalh81p8t7k" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_A.png" id="2_6gpa1"]
-[ext_resource type="Texture2D" uid="uid://ixb3mfd0n7jt" path="res://TileMaps/Tileset_Bridge.png" id="2_e7kbo"]
-[ext_resource type="Texture2D" uid="uid://cdn86l47es7dr" path="res://TileMaps/Tileset_Floor.png" id="3_iydls"]
-[ext_resource type="Texture2D" uid="uid://dxhv6w4nm3b8h" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_B.png" id="3_keoas"]
-[ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="4_axqys"]
-[ext_resource type="Texture2D" uid="uid://bxwm1bhbriiwh" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_C.png" id="4_nnvb2"]
-[ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="4_vski6"]
-[ext_resource type="Texture2D" uid="uid://4h4ld1m87y4s" path="res://TileMaps/Tileset_Bush.png" id="5_lalg3"]
-[ext_resource type="Texture2D" uid="uid://lef1ip7cgjl1" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_D.png" id="5_lgtwu"]
-[ext_resource type="Texture2D" uid="uid://cpy8fenxroenl" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_B.png" id="6_bejqc"]
-[ext_resource type="Texture2D" uid="uid://ckiwjj3658cq1" path="res://Sprites/Background Sprites/Object_House/Object_House_C.png" id="6_h0frd"]
-[ext_resource type="Texture2D" uid="uid://7fdh12fad7mn" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_A.png" id="6_o4miw"]
-[ext_resource type="Texture2D" uid="uid://dxypgkuxwc38e" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_C.png" id="7_ffdvl"]
-[ext_resource type="Texture2D" uid="uid://dcnvmdr1s6bo8" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_A.png" id="8_3o6pv"]
-[ext_resource type="Texture2D" uid="uid://kvaakirrnhsw" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_C.png" id="8_42qih"]
-[ext_resource type="Texture2D" uid="uid://c4ak87uhr7lbl" path="res://Sprites/Background Sprites/Object_House/Object_House_B.png" id="8_qqrn4"]
-[ext_resource type="Texture2D" uid="uid://cyf3tm55olfvr" path="res://Sprites/Background Sprites/Object_House/Object_House_A.png" id="9_36vty"]
-[ext_resource type="Texture2D" uid="uid://h3l55rgpfmo2" path="res://Sprites/Background Sprites/Object_House/Object_House_D.png" id="9_rao0g"]
-[ext_resource type="Texture2D" uid="uid://b32qnsvv3jra2" path="res://Sprites/Background Sprites/Object_Rock/Object_Rock_A.png" id="11_23h3y"]
-[ext_resource type="Texture2D" uid="uid://d17xyaedkb8av" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_D.png" id="11_ushy7"]
-[ext_resource type="Texture2D" uid="uid://dq5g8aapbxemt" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_D.png" id="12_a783m"]
-[ext_resource type="Texture2D" uid="uid://2ft0oqi3uxbx" path="res://Sprites/Background Sprites/Object_Rock/Object_Rock_D.png" id="12_efhdv"]
-[ext_resource type="PackedScene" uid="uid://dvgsg4hw8fq80" path="res://Scenes/Characters/shopkeep.tscn" id="13_hulqt"]
-[ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="13_tqype"]
-[ext_resource type="Texture2D" uid="uid://4blbc6yp8p7n" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_A.png" id="13_yyusq"]
-[ext_resource type="Texture2D" uid="uid://blg6saf6dugx" path="res://Sprites/Background Sprites/Object_Barrel/Object_Barrel.png" id="15_q8xx6"]
-[ext_resource type="Texture2D" uid="uid://dv76jxf5numsf" path="res://Sprites/Background Sprites/Object_Crate/Object_Crate.png" id="16_g0jv4"]
-[ext_resource type="Texture2D" uid="uid://cbtjeaje7imcp" path="res://Sprites/Background Sprites/Tile_Fence/Tile_Fence_Middle.png" id="17_jsgpc"]
-[ext_resource type="Texture2D" uid="uid://br46g7x5ewqfc" path="res://Sprites/Background Sprites/Tile_Fence/Tile_Fence_EdgeLeft.png" id="18_ulcvm"]
-[ext_resource type="Texture2D" uid="uid://cku6475j66a0g" path="res://Sprites/Background Sprites/Object_Boulder/Object_Boulder_A.png" id="23_tdp38"]
-[ext_resource type="Texture2D" uid="uid://yytlg75ydok5" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_B.png" id="28_sfg8j"]
-[ext_resource type="Texture2D" uid="uid://c6mssao6fk5oa" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_C.png" id="34_n4xry"]
-[ext_resource type="Texture2D" uid="uid://egdbkhne1yvi" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_B.png" id="35_gjbhh"]
+[ext_resource type="Texture2D" uid="uid://bfpdisqwgpfwy" path="res://Sprites/Background Sprites/Object_Sky/Object_SkyV3.png" id="1_riwwm"]
+[ext_resource type="Texture2D" uid="uid://c2bnuyp7a3jdd" path="res://TileMaps/BGTileset_Bush.png" id="2_2s7xd"]
+[ext_resource type="Texture2D" uid="uid://dmad3sb2oyf2a" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_C.png" id="3_o3q8l"]
+[ext_resource type="Texture2D" uid="uid://cqaalh81p8t7k" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_A.png" id="4_y0v1c"]
+[ext_resource type="Texture2D" uid="uid://dxhv6w4nm3b8h" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_B.png" id="5_hief3"]
+[ext_resource type="Texture2D" uid="uid://bxwm1bhbriiwh" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_C.png" id="6_71uyf"]
+[ext_resource type="Texture2D" uid="uid://lef1ip7cgjl1" path="res://Sprites/Background Sprites/BGObject_Tree/BGObject_Tree_D.png" id="7_ks6s3"]
+[ext_resource type="Texture2D" uid="uid://7fdh12fad7mn" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_A.png" id="8_5roro"]
+[ext_resource type="Texture2D" uid="uid://yytlg75ydok5" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_B.png" id="9_f5v6y"]
+[ext_resource type="Texture2D" uid="uid://kvaakirrnhsw" path="res://Sprites/Background Sprites/Object_Tree/Object_Tree_C.png" id="10_a56wy"]
+[ext_resource type="Texture2D" uid="uid://d17xyaedkb8av" path="res://Sprites/Background Sprites/BGObject_Shrub/BGObject_Shrub_D.png" id="11_xpy6p"]
+[ext_resource type="Texture2D" uid="uid://dq5g8aapbxemt" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_D.png" id="12_jqulv"]
+[ext_resource type="Texture2D" uid="uid://4blbc6yp8p7n" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_A.png" id="13_entpu"]
+[ext_resource type="Texture2D" uid="uid://ixb3mfd0n7jt" path="res://TileMaps/Tileset_Bridge.png" id="14_i1xe2"]
+[ext_resource type="Texture2D" uid="uid://cdn86l47es7dr" path="res://TileMaps/Tileset_Floor.png" id="15_hnq2u"]
+[ext_resource type="Texture2D" uid="uid://4h4ld1m87y4s" path="res://TileMaps/Tileset_Bush.png" id="16_iebnh"]
+[ext_resource type="Texture2D" uid="uid://cpy8fenxroenl" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_B.png" id="17_a7h6q"]
+[ext_resource type="Texture2D" uid="uid://dxypgkuxwc38e" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_C.png" id="18_wnffl"]
+[ext_resource type="Texture2D" uid="uid://dcnvmdr1s6bo8" path="res://Sprites/Background Sprites/Object_Shrub/Object_Shrub_A.png" id="19_tk5v2"]
+[ext_resource type="Texture2D" uid="uid://ckiwjj3658cq1" path="res://Sprites/Background Sprites/Object_House/Object_House_C.png" id="20_kn1nj"]
+[ext_resource type="Texture2D" uid="uid://c4ak87uhr7lbl" path="res://Sprites/Background Sprites/Object_House/Object_House_B.png" id="21_7gysm"]
+[ext_resource type="Texture2D" uid="uid://h3l55rgpfmo2" path="res://Sprites/Background Sprites/Object_House/Object_House_D.png" id="22_ow8h6"]
+[ext_resource type="Texture2D" uid="uid://cyf3tm55olfvr" path="res://Sprites/Background Sprites/Object_House/Object_House_A.png" id="23_ocrp2"]
+[ext_resource type="Texture2D" uid="uid://b32qnsvv3jra2" path="res://Sprites/Background Sprites/Object_Rock/Object_Rock_A.png" id="24_l22j0"]
+[ext_resource type="Texture2D" uid="uid://2ft0oqi3uxbx" path="res://Sprites/Background Sprites/Object_Rock/Object_Rock_D.png" id="25_ct00f"]
+[ext_resource type="Texture2D" uid="uid://blg6saf6dugx" path="res://Sprites/Background Sprites/Object_Barrel/Object_Barrel.png" id="26_eem2g"]
+[ext_resource type="Texture2D" uid="uid://dv76jxf5numsf" path="res://Sprites/Background Sprites/Object_Crate/Object_Crate.png" id="27_k2n6f"]
+[ext_resource type="Texture2D" uid="uid://cbtjeaje7imcp" path="res://Sprites/Background Sprites/Tile_Fence/Tile_Fence_Middle.png" id="28_hlwq6"]
+[ext_resource type="Texture2D" uid="uid://br46g7x5ewqfc" path="res://Sprites/Background Sprites/Tile_Fence/Tile_Fence_EdgeLeft.png" id="29_yjekn"]
+[ext_resource type="Texture2D" uid="uid://cku6475j66a0g" path="res://Sprites/Background Sprites/Object_Boulder/Object_Boulder_A.png" id="30_jmm6s"]
+[ext_resource type="PackedScene" uid="uid://cvweuwm70dfls" path="res://Scenes/Objects/coin.tscn" id="31_43cw3"]
+[ext_resource type="PackedScene" uid="uid://dvgsg4hw8fq80" path="res://Scenes/Characters/shopkeep.tscn" id="32_16fs8"]
+[ext_resource type="PackedScene" uid="uid://cg30x40n0c7pl" path="res://Scenes/Characters/Player.tscn" id="33_xan4r"]
+[ext_resource type="Texture2D" uid="uid://c6mssao6fk5oa" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_C.png" id="34_hgm2v"]
+[ext_resource type="Texture2D" uid="uid://egdbkhne1yvi" path="res://Sprites/Background Sprites/Object_Foliage/Object_Foliage_B.png" id="35_x21qe"]
+[ext_resource type="PackedScene" uid="uid://brfqb8s5liuri" path="res://Scenes/Objects/death_plane.tscn" id="36_f12ld"]
+[ext_resource type="PackedScene" uid="uid://dxrorg1km34ay" path="res://Scenes/UI/pause_menu.tscn" id="37_34khk"]
+[ext_resource type="PackedScene" uid="uid://cb30r1baciypu" path="res://Scenes/UI/UI.tscn" id="38_oeh1n"]
+[ext_resource type="PackedScene" uid="uid://b7dpkfhxun4kx" path="res://Scenes/Objects/invisible_bounds.tscn" id="39_my1wj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtwnb"]
-texture = ExtResource("4_vski6")
+texture = ExtResource("2_2s7xd")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -57,7 +61,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_gtwnb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pvf7"]
-texture = ExtResource("2_e7kbo")
+texture = ExtResource("14_i1xe2")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -355,7 +359,7 @@ physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_6pvf7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x3mmv"]
-texture = ExtResource("3_iydls")
+texture = ExtResource("15_hnq2u")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -506,7 +510,7 @@ physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_x3mmv")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nx1gw"]
-texture = ExtResource("5_lalg3")
+texture = ExtResource("16_iebnh")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -533,7 +537,7 @@ offset_left = 4.0
 offset_top = 880.0
 offset_right = 13056.0
 offset_bottom = 3310.0
-texture = ExtResource("1_30dfk")
+texture = ExtResource("1_riwwm")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
@@ -554,113 +558,113 @@ offset_bottom = 920.0
 [node name="BgObjectShrubC4" type="Sprite2D" parent="BG Background"]
 position = Vector2(2272, 1744)
 scale = Vector2(2, 2)
-texture = ExtResource("2_1akno")
+texture = ExtResource("3_o3q8l")
 
 [node name="BgObjectTreeA" type="Sprite2D" parent="BG Background"]
 position = Vector2(6656, 1180)
 scale = Vector2(2, 2)
-texture = ExtResource("2_6gpa1")
+texture = ExtResource("4_y0v1c")
 
 [node name="BgObjectTreeB" type="Sprite2D" parent="BG Background"]
 position = Vector2(7971, 1191)
 scale = Vector2(2, 2)
-texture = ExtResource("3_keoas")
+texture = ExtResource("5_hief3")
 
 [node name="BgObjectTreeC" type="Sprite2D" parent="BG Background"]
 position = Vector2(5246, 1171)
 scale = Vector2(2, 2)
-texture = ExtResource("4_nnvb2")
+texture = ExtResource("6_71uyf")
 
 [node name="BgObjectTreeD" type="Sprite2D" parent="BG Background"]
 position = Vector2(1545, 1526)
 scale = Vector2(2, 2)
-texture = ExtResource("5_lgtwu")
+texture = ExtResource("7_ks6s3")
 
 [node name="ObjectTreeA" type="Sprite2D" parent="BG Background"]
 position = Vector2(2072, 1297)
 scale = Vector2(2, 2)
-texture = ExtResource("6_o4miw")
+texture = ExtResource("8_5roro")
 
 [node name="ObjectTreeB" type="Sprite2D" parent="BG Background"]
 position = Vector2(904, 1297)
 scale = Vector2(2, 2)
-texture = ExtResource("28_sfg8j")
+texture = ExtResource("9_f5v6y")
 
 [node name="ObjectTreeC" type="Sprite2D" parent="BG Background"]
 position = Vector2(7423, 1166)
 scale = Vector2(2, 2)
-texture = ExtResource("8_42qih")
+texture = ExtResource("10_a56wy")
 
 [node name="BgObjectShrubC" type="Sprite2D" parent="BG Background"]
 position = Vector2(8094, 734)
 scale = Vector2(2, 2)
-texture = ExtResource("2_1akno")
+texture = ExtResource("3_o3q8l")
 
 [node name="BgObjectShrubC2" type="Sprite2D" parent="BG Background"]
 position = Vector2(9888, 718)
 scale = Vector2(2, 2)
-texture = ExtResource("2_1akno")
+texture = ExtResource("3_o3q8l")
 
 [node name="BgObjectShrubD" type="Sprite2D" parent="BG Background"]
 position = Vector2(1219, 1856)
 scale = Vector2(2, 2)
-texture = ExtResource("11_ushy7")
+texture = ExtResource("11_xpy6p")
 
 [node name="BgObjectShrubD2" type="Sprite2D" parent="BG Background"]
 position = Vector2(5191, 1612)
 scale = Vector2(2, 2)
-texture = ExtResource("11_ushy7")
+texture = ExtResource("11_xpy6p")
 
 [node name="BgObjectShrubC3" type="Sprite2D" parent="BG Background"]
 position = Vector2(7847, 1667)
 scale = Vector2(2, 2)
-texture = ExtResource("2_1akno")
+texture = ExtResource("3_o3q8l")
 
 [node name="ObjectFoliageD" type="Sprite2D" parent="BG Background"]
 position = Vector2(648, 1741)
 scale = Vector2(2, 2)
-texture = ExtResource("12_a783m")
+texture = ExtResource("12_jqulv")
 
 [node name="ObjectFoliageA" type="Sprite2D" parent="BG Background"]
 position = Vector2(1028, 1775)
 scale = Vector2(2, 2)
-texture = ExtResource("13_yyusq")
+texture = ExtResource("13_entpu")
 
 [node name="ObjectFoliageA2" type="Sprite2D" parent="BG Background"]
 position = Vector2(10685, 752)
 scale = Vector2(2, 2)
-texture = ExtResource("13_yyusq")
+texture = ExtResource("13_entpu")
 
 [node name="ObjectFoliageD2" type="Sprite2D" parent="BG Background"]
 position = Vector2(7673, 1610)
 scale = Vector2(2, 2)
-texture = ExtResource("12_a783m")
+texture = ExtResource("12_jqulv")
 
-[node name="Tilemaps" type="Control" parent="."]
+[node name="TileMaps" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Bridge" type="TileMap" parent="Tilemaps"]
+[node name="Bridge" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_su3g1")
 format = 2
 layer_0/tile_data = PackedInt32Array(1310745, 0, 2, 1376281, 786432, 0, 1441817, 786432, 1, 1507353, 786432, 2, 1572889, 786432, 3, 1638425, 786432, 4, 1376282, 851968, 0, 1441818, 851968, 1, 1507354, 851968, 2, 1572890, 851968, 3, 1638426, 851968, 4, 1376283, 917504, 0, 1441819, 917504, 1, 1507355, 917504, 2, 1376284, 983040, 0, 1441820, 983040, 1, 1376285, 1048576, 0, 1441821, 1048576, 1, 1376286, 1114112, 0, 1441822, 1114112, 1, 1507358, 1114112, 2, 1376287, 1179648, 0, 1441823, 1179648, 1, 1507359, 1179648, 2, 1572895, 1179648, 3, 1638431, 1179648, 4, 1376288, 786432, 0, 1441824, 786432, 1, 1507360, 786432, 2, 1572896, 786432, 3, 1638432, 786432, 4, 1376289, 851968, 0, 1441825, 851968, 1, 1507361, 851968, 2, 1572897, 851968, 3, 1638433, 851968, 4, 1376290, 917504, 0, 1441826, 917504, 1, 1507362, 917504, 2, 1376291, 983040, 0, 1441827, 983040, 1, 1441830, 1179648, 1, 1507366, 1179648, 2, 1572902, 1179648, 3, 1638438, 1179648, 4, 1376295, 1245184, 0, 1441831, 1245184, 1, 1507367, 1245184, 2, 1572903, 1245184, 3, 1638439, 1245184, 4, 1310746, 65536, 4, 1310747, 65536, 6, 1310748, 65536, 2, 1310749, 65536, 0, 1310750, 65536, 2, 1310751, 65536, 6, 1310752, 65536, 6, 1310753, 65536, 6, 1310754, 65536, 0, 1310755, 131072, 0, 1310758, 0, 2, 1310759, 65536, 0, 1245209, 262144, 0, 1179673, 524288, 2, 1245210, 327680, 6, 1245211, 327680, 4, 1245212, 327680, 4, 1245213, 327680, 4, 1245214, 327680, 0, 1245215, 327680, 4, 1245216, 327680, 6, 1245217, 327680, 2, 1245218, 327680, 2, 1245219, 393216, 4, 1245222, 262144, 4, 1245223, 327680, 0, 1179674, 589824, 4, 1179675, 589824, 2, 1179676, 589824, 2, 1179677, 589824, 2, 1179678, 589824, 4, 1179679, 589824, 0, 1179680, 589824, 2, 1179681, 589824, 2, 1179682, 589824, 0, 1179683, 655360, 0, 1179686, 524288, 0, 1179687, 589824, 0, 1376294, 0, 0, 1376340, 786432, 0, 1441876, 786432, 1, 1507412, 786432, 2, 1572948, 786432, 3, 1638484, 786432, 4, 1376341, 851968, 0, 1441877, 851968, 1, 1507413, 851968, 2, 1572949, 851968, 3, 1638485, 851968, 4, 1376342, 917504, 0, 1441878, 917504, 1, 1376343, 983040, 0, 1376344, 1048576, 0, 1376345, 1114112, 0, 1441881, 1114112, 1, 1376346, 1179648, 0, 1441882, 1179648, 1, 1507418, 1179648, 2, 1572954, 1179648, 3, 1638490, 1179648, 4, 1376347, 1245184, 0, 1441883, 1245184, 1, 1507419, 1245184, 2, 1572955, 1245184, 3, 1638491, 1245184, 4, 1376348, 786432, 0, 1441884, 786432, 1, 1507420, 786432, 2, 1572956, 786432, 3, 1638492, 786432, 4, 1376349, 851968, 0, 1441885, 851968, 1, 1376350, 917504, 0, 1376351, 983040, 0, 1376352, 1048576, 0, 1441888, 1048576, 1, 1376353, 1114112, 0, 1441889, 1114112, 1, 1507425, 1114112, 2, 1376354, 1179648, 0, 1441890, 1179648, 1, 1507426, 1179648, 2, 1572962, 1179648, 3, 1638498, 1179648, 4, 1507414, 917504, 2, 1441879, 983040, 1, 1441880, 1048576, 1, 1507417, 1114112, 2, 1507421, 851968, 2, 1572957, 851968, 3, 1638493, 851968, 4, 1441886, 917504, 1, 1507422, 917504, 2, 1441887, 983040, 1, 1376355, 1245184, 0, 1441891, 1245184, 1, 1507427, 1245184, 2, 1572963, 1245184, 3, 1638499, 1245184, 4, 1310804, 65536, 0, 1310805, 65536, 2, 1310806, 65536, 6, 1310807, 65536, 6, 1310808, 65536, 6, 1310809, 65536, 2, 1310810, 65536, 6, 1310811, 65536, 4, 1310812, 65536, 0, 1310813, 65536, 4, 1310814, 65536, 6, 1310815, 65536, 6, 1310816, 65536, 0, 1310817, 65536, 2, 1310818, 65536, 2, 1310819, 65536, 2, 1310820, 65536, 0, 1310821, 65536, 0, 1376356, 786432, 0, 1441892, 786432, 1, 1507428, 786432, 2, 1572964, 786432, 3, 1638500, 786432, 4, 1376357, 851968, 0, 1441893, 851968, 1, 1507429, 851968, 2, 1572965, 851968, 3, 1638501, 851968, 4, 1245271, 327680, 4, 1245272, 327680, 2, 1245273, 327680, 0, 1245274, 327680, 6, 1245275, 327680, 6, 1245276, 327680, 2, 1245277, 327680, 6, 1245278, 327680, 2, 1245279, 327680, 4, 1245280, 327680, 0, 1245281, 327680, 2, 1245282, 327680, 6, 1245283, 327680, 6, 1245284, 327680, 6, 1245285, 327680, 6, 1179735, 589824, 4, 1179736, 589824, 6, 1179737, 589824, 4, 1179738, 589824, 0, 1179739, 589824, 6, 1179740, 589824, 0, 1179741, 589824, 6, 1179742, 589824, 2, 1179743, 589824, 2, 1179744, 589824, 6, 1179745, 589824, 2, 1179746, 589824, 2, 1179747, 589824, 2, 1179748, 589824, 0, 1179749, 589824, 4)
 
-[node name="BGFieldFloor" type="TileMap" parent="Tilemaps"]
+[node name="BGFieldFloor" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_v4iab")
 format = 2
 layer_0/tile_data = PackedInt32Array(852040, 589824, 6, 852041, 589824, 6, 852042, 589824, 2, 917578, 589824, 8, 917579, 589824, 6, 917577, 589824, 8, 917576, 589824, 8, 917580, 589824, 8, 852044, 589824, 2, 983116, 589824, 8, 983115, 589824, 4, 983114, 589824, 8, 983113, 589824, 0, 983112, 589824, 2, 1048649, 589824, 2, 1048650, 589824, 8, 1048651, 589824, 2, 1114187, 589824, 2, 1114186, 589824, 8, 1114185, 589824, 4, 1179721, 589824, 4, 1179722, 589824, 8, 1179723, 589824, 4, 1245260, 589824, 4, 1245256, 589824, 6, 1245257, 589824, 0, 1245258, 589824, 8, 1245259, 589824, 6, 983122, 589824, 0, 983121, 589824, 6, 983120, 589824, 0, 983119, 589824, 2, 983118, 589824, 6, 983117, 589824, 2, 983111, 589824, 0, 983110, 589824, 4, 983109, 589824, 6, 983108, 589824, 4, 983107, 589824, 4, 983106, 589824, 6, 983105, 589824, 0, 983104, 589824, 0, 983103, 589824, 0, 1048648, 589824, 8, 1048652, 589824, 8, 1114188, 589824, 8, 1179724, 589824, 8, 1179720, 589824, 6, 1048653, 589824, 8, 1114189, 589824, 8, 1179725, 589824, 8, 1245261, 589824, 8, 1048654, 589824, 8, 1114190, 589824, 8, 1179726, 589824, 8, 1245262, 589824, 8, 1048655, 589824, 8, 1114191, 589824, 8, 1179727, 589824, 8, 1245263, 589824, 8, 1048656, 589824, 8, 1114192, 589824, 8, 1179728, 589824, 8, 1245264, 589824, 8, 1048657, 589824, 8, 1114193, 589824, 8, 1179729, 589824, 8, 1245265, 589824, 8, 1048658, 589824, 8, 1114194, 589824, 8, 1179730, 589824, 8, 1245266, 589824, 8, 1048639, 589824, 8, 1114175, 589824, 8, 1179711, 589824, 8, 1245247, 589824, 8, 1048640, 589824, 8, 1114176, 589824, 8, 1179712, 589824, 8, 1245248, 589824, 8, 1048641, 589824, 8, 1114177, 589824, 8, 1179713, 589824, 8, 1245249, 589824, 8, 1048642, 589824, 8, 1114178, 589824, 8, 1179714, 589824, 8, 1245250, 589824, 8, 1048643, 589824, 8, 1114179, 589824, 8, 1179715, 589824, 8, 1245251, 589824, 8, 1048644, 589824, 8, 1114180, 589824, 8, 1179716, 589824, 8, 1245252, 589824, 8, 1048645, 589824, 8, 1114181, 589824, 8, 1179717, 589824, 8, 1245253, 589824, 8, 1048646, 589824, 8, 1114182, 589824, 8, 1179718, 589824, 8, 1245254, 589824, 8, 1048647, 589824, 8, 1114183, 589824, 8, 1179719, 589824, 8, 1245255, 589824, 8, 983102, 524288, 6, 1048638, 524288, 8, 1114174, 524288, 8, 1179710, 524288, 8, 1245246, 524288, 8, 983123, 655360, 6, 1048659, 655360, 8, 1114195, 655360, 8, 1179731, 655360, 8, 1245267, 655360, 8, 852039, 589824, 6, 1376296, 327680, 4, 1441832, 327680, 0, 1507368, 327680, 6, 1376297, 327680, 6, 1441833, 327680, 2, 1507369, 327680, 0, 1376298, 327680, 0, 1441834, 327680, 2, 1507370, 327680, 4, 1376299, 327680, 6, 1441835, 327680, 0, 1507371, 327680, 6, 1376300, 327680, 4, 1441836, 327680, 6, 1507372, 327680, 6, 1376301, 327680, 6, 1441837, 327680, 2, 1507373, 327680, 2, 1376302, 327680, 4, 1441838, 327680, 2, 1507374, 327680, 0, 1376303, 327680, 4, 1441839, 327680, 4, 1507375, 327680, 0, 1376304, 327680, 4, 1441840, 327680, 2, 1507376, 327680, 0, 1376305, 327680, 4, 1441841, 327680, 4, 1507377, 327680, 4, 1376306, 327680, 2, 1441842, 327680, 0, 1507378, 327680, 6, 1376307, 327680, 4, 1441843, 327680, 0, 1507379, 327680, 6, 1376308, 327680, 0, 1441844, 327680, 6, 1507380, 327680, 0, 1376309, 327680, 4, 1441845, 327680, 0, 1507381, 327680, 0, 1376310, 327680, 0, 1441846, 327680, 2, 1507382, 327680, 4, 1376311, 327680, 6, 1441847, 327680, 2, 1507383, 327680, 2, 1376312, 327680, 2, 1441848, 327680, 6, 1507384, 327680, 2, 1376313, 327680, 6, 1441849, 327680, 0, 1507385, 327680, 0, 1376314, 327680, 4, 1441850, 327680, 0, 1507386, 327680, 2, 1376315, 327680, 0, 1441851, 327680, 2, 1507387, 327680, 6, 1376316, 327680, 6, 1441852, 327680, 6, 1507388, 327680, 2, 1376317, 327680, 4, 1441853, 327680, 0, 1507389, 327680, 4, 1376318, 327680, 6, 1441854, 327680, 2, 1507390, 327680, 0, 1376319, 327680, 0, 1441855, 327680, 4, 1507391, 327680, 0, 1376320, 327680, 2, 1441856, 327680, 4, 1507392, 327680, 0, 1376321, 327680, 4, 1441857, 327680, 2, 1507393, 327680, 0, 1376322, 327680, 6, 1441858, 327680, 2, 1507394, 327680, 2, 1376323, 327680, 2, 1441859, 327680, 2, 1507395, 327680, 2, 1376324, 327680, 2, 1441860, 327680, 0, 1507396, 327680, 4, 1376325, 327680, 0, 1441861, 327680, 4, 1507397, 327680, 4, 1376326, 327680, 2, 1441862, 327680, 6, 1507398, 327680, 2, 1376327, 327680, 4, 1441863, 327680, 2, 1507399, 327680, 0, 1376328, 327680, 4, 1441864, 327680, 0, 1507400, 327680, 6, 1376329, 327680, 4, 1441865, 327680, 0, 1507401, 327680, 2, 1376330, 327680, 4, 1441866, 327680, 2, 1507402, 327680, 0, 1376331, 327680, 0, 1441867, 327680, 2, 1507403, 327680, 6, 1376332, 327680, 2, 1441868, 327680, 6, 1507404, 327680, 4, 1376333, 327680, 0, 1441869, 327680, 6, 1507405, 327680, 0, 1376334, 327680, 6, 1441870, 327680, 0, 1507406, 327680, 6, 1376335, 327680, 6, 1441871, 327680, 6, 1507407, 327680, 0, 1376336, 327680, 6, 1441872, 327680, 4, 1507408, 327680, 2, 1376337, 327680, 2, 1441873, 327680, 4, 1507409, 327680, 4, 1376338, 327680, 4, 1441874, 327680, 4, 1507410, 327680, 4, 1376339, 327680, 6, 1441875, 327680, 4, 1507411, 327680, 6, 1572923, 589824, 2, 1572924, 589824, 0, 1572925, 589824, 2, 1572926, 589824, 0, 1572927, 589824, 4, 1572928, 589824, 0, 1572929, 589824, 0, 1572930, 589824, 6, 1572931, 589824, 2, 1572932, 589824, 4, 1572933, 589824, 4, 1572934, 589824, 2, 1572935, 589824, 0, 1572936, 589824, 0, 1572937, 589824, 6, 1572938, 589824, 6, 1572939, 589824, 4, 1572940, 589824, 6, 1572941, 589824, 2, 1572942, 589824, 6, 1572943, 589824, 0, 1572944, 589824, 4, 1572945, 589824, 0, 1572946, 589824, 0, 1572947, 589824, 2, 1572906, 589824, 6, 1572907, 589824, 0, 1572908, 589824, 6, 1572909, 589824, 0, 1572910, 589824, 0, 1572911, 589824, 0, 1572912, 589824, 2, 1572913, 589824, 0, 1572914, 589824, 2, 1572915, 589824, 4, 1572916, 589824, 0, 1572917, 589824, 6, 1572918, 589824, 6, 1572919, 589824, 2, 1572920, 589824, 6, 1572921, 589824, 4, 1572922, 589824, 6, 1572904, 589824, 6, 1572905, 589824, 4, 1638440, 589824, 8, 1638441, 589824, 8, 1638442, 589824, 8, 1638443, 589824, 8, 1638444, 589824, 8, 1638445, 589824, 8, 1638446, 589824, 8, 1638447, 589824, 8, 1638448, 589824, 8, 1638449, 589824, 8, 1638450, 589824, 8, 1638451, 589824, 8, 1638452, 589824, 8, 1638453, 589824, 8, 1638454, 589824, 8, 1638455, 589824, 8, 1638456, 589824, 8, 1638457, 589824, 8, 1638458, 589824, 8, 1638459, 589824, 8, 1638460, 589824, 8, 1638461, 589824, 8, 1638462, 589824, 8, 1638463, 589824, 8, 1638464, 589824, 8, 1638465, 589824, 8, 1638466, 589824, 8, 1638467, 589824, 8, 1638468, 589824, 8, 1638469, 589824, 8, 1638470, 589824, 8, 1638471, 589824, 8, 1638472, 589824, 8, 1638473, 589824, 8, 1638474, 589824, 8, 1638475, 589824, 8, 1638476, 589824, 8, 1638477, 589824, 8, 1638478, 589824, 8, 1638479, 589824, 8, 1638480, 589824, 8, 1638481, 589824, 8, 1638482, 589824, 8, 1638483, 589824, 8, 852043, 589824, 0, 1114184, 589824, 2)
 
-[node name="FieldFloor" type="TileMap" parent="Tilemaps"]
+[node name="FieldFloor" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_v4iab")
 format = 2
 layer_0/tile_data = PackedInt32Array(1507328, 327680, 2, 1507329, 327680, 0, 1507330, 327680, 6, 1507331, 327680, 6, 1507332, 327680, 2, 1507333, 327680, 2, 1507334, 327680, 6, 1376256, 65536, 4, 1376257, 65536, 0, 1376258, 65536, 0, 1376259, 65536, 6, 1376260, 65536, 4, 1376261, 65536, 2, 1376262, 65536, 0, 1376263, 65536, 0, 1441792, 327680, 6, 1441793, 327680, 6, 1441794, 327680, 4, 1441795, 327680, 4, 1441796, 327680, 0, 1441797, 327680, 0, 1441798, 327680, 2, 1441799, 327680, 4, 1507335, 327680, 6, 1572872, 589824, 6, 1572871, 589824, 6, 1572870, 589824, 0, 1572869, 589824, 6, 1572868, 589824, 0, 1572867, 589824, 0, 1572866, 589824, 4, 1572865, 589824, 0, 1572864, 589824, 4, 1638408, 589824, 8, 1638407, 589824, 8, 1638406, 589824, 8, 1638405, 589824, 8, 1638404, 589824, 8, 1638403, 589824, 8, 1638402, 589824, 8, 1638401, 589824, 8, 1638400, 589824, 8, 1507336, 327680, 6, 1441800, 327680, 4, 1376264, 131072, 0, 1441801, 65536, 0, 1441802, 65536, 0, 1441803, 65536, 0, 1441804, 65536, 6, 1441805, 65536, 6, 1376270, 0, 0, 1376271, 65536, 4, 1376272, 65536, 2, 1376273, 65536, 0, 1310738, 0, 4, 1310739, 65536, 6, 1310740, 65536, 4, 1310741, 65536, 2, 1310742, 65536, 6, 1310743, 65536, 6, 1310744, 65536, 0, 1507352, 327680, 4, 1441816, 327680, 2, 1376280, 327680, 2, 1507351, 327680, 0, 1441815, 327680, 0, 1441814, 327680, 6, 1376279, 327680, 0, 1376278, 327680, 0, 1376277, 327680, 0, 1376276, 327680, 0, 1376275, 327680, 4, 1376274, 327680, 0, 1441811, 327680, 2, 1441812, 327680, 0, 1441813, 327680, 0, 1507350, 327680, 2, 1507349, 327680, 4, 1507348, 327680, 0, 1507347, 327680, 2, 1507346, 327680, 2, 1507345, 327680, 2, 1507344, 327680, 4, 1507343, 327680, 4, 1507342, 327680, 2, 1441806, 327680, 4, 1441807, 327680, 4, 1441808, 327680, 4, 1441809, 327680, 2, 1441810, 327680, 6, 1507341, 327680, 0, 1507340, 327680, 6, 1507339, 327680, 0, 1507338, 327680, 6, 1507337, 327680, 0, 1572873, 589824, 2, 1572874, 589824, 0, 1572875, 589824, 0, 1572876, 589824, 0, 1572877, 589824, 2, 1572878, 589824, 4, 1572879, 589824, 4, 1572880, 589824, 6, 1572881, 589824, 2, 1572882, 589824, 4, 1572883, 589824, 4, 1572884, 589824, 4, 1572885, 589824, 6, 1572886, 589824, 2, 1572887, 589824, 6, 1572888, 589824, 0, 1638409, 589824, 8, 1638410, 589824, 8, 1638411, 589824, 8, 1638412, 589824, 8, 1638413, 589824, 8, 1638414, 589824, 8, 1638415, 589824, 8, 1638416, 589824, 8, 1638417, 589824, 8, 1638418, 589824, 8, 1638419, 589824, 8, 1638420, 589824, 8, 1638421, 589824, 8, 1638422, 589824, 8, 1638423, 589824, 8, 1638424, 589824, 8, 1310760, 65536, 0, 1310761, 65536, 2, 1310762, 65536, 0, 1310763, 65536, 4, 1310764, 65536, 0, 1310765, 65536, 6, 1310766, 65536, 0, 1310767, 65536, 4, 1310768, 65536, 0, 1310769, 65536, 2, 1310770, 65536, 2, 1310771, 65536, 6, 1310772, 65536, 6, 1310773, 65536, 2, 1310774, 65536, 6, 1310775, 65536, 4, 1310776, 65536, 2, 1310777, 65536, 6, 1310778, 65536, 4, 1310779, 65536, 6, 1310780, 65536, 4, 1310781, 65536, 6, 1310782, 327680, 6, 1310783, 327680, 0, 1310784, 327680, 2, 1310785, 327680, 0, 1310786, 327680, 6, 1310787, 327680, 4, 1310788, 327680, 6, 1310789, 327680, 6, 1310790, 327680, 6, 1310791, 327680, 4, 1310792, 327680, 4, 1310793, 327680, 2, 1310794, 327680, 2, 1310795, 327680, 6, 1310796, 327680, 6, 917576, 393216, 2, 917575, 327680, 0, 917574, 327680, 6, 917573, 327680, 0, 917572, 327680, 0, 852039, 393216, 0, 852038, 65536, 2, 852037, 65536, 4, 852036, 65536, 0, 852035, 65536, 0, 852034, 65536, 4, 852033, 65536, 6, 852032, 65536, 4, 852031, 65536, 6, 852030, 0, 0, 917571, 327680, 4, 917570, 327680, 0, 917569, 327680, 2, 917568, 327680, 6, 917567, 327680, 4, 917566, 262144, 2, 983112, 262144, 6, 917580, 327680, 4, 983116, 327680, 4, 1048652, 327680, 6, 1114188, 327680, 4, 1179724, 327680, 2, 917581, 327680, 4, 917582, 327680, 4, 917583, 327680, 0, 917584, 327680, 0, 917585, 327680, 2, 917586, 327680, 2, 917587, 393216, 2, 852045, 65536, 0, 852046, 65536, 6, 852047, 65536, 0, 852048, 65536, 0, 852049, 65536, 4, 852050, 65536, 2, 852051, 131072, 0, 1310797, 327680, 0, 1310798, 327680, 4, 1310799, 327680, 4, 1310800, 327680, 6, 1310801, 327680, 0, 1310802, 327680, 4, 1310803, 327680, 6, 1245257, 393216, 2, 1245256, 262144, 4, 1179723, 262144, 2, 1048651, 262144, 4, 917579, 262144, 4, 852044, 262144, 2, 1114185, 393216, 4, 1114184, 262144, 4, 1048648, 262144, 6, 983113, 393216, 4)
 
-[node name="Bushes" type="TileMap" parent="Tilemaps"]
+[node name="Bushes" type="TileMap" parent="TileMaps"]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_plpve")
 format = 2
@@ -675,194 +679,194 @@ offset_bottom = 40.0
 [node name="ObjectShrubB" type="Sprite2D" parent="BG Objects"]
 position = Vector2(1642, 2752)
 scale = Vector2(2, 2)
-texture = ExtResource("6_bejqc")
+texture = ExtResource("17_a7h6q")
 
 [node name="ObjectShrubB2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(5395, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("6_bejqc")
+texture = ExtResource("17_a7h6q")
 
 [node name="ObjectShrubC" type="Sprite2D" parent="BG Objects"]
 position = Vector2(3076, 2432)
 scale = Vector2(2, 2)
-texture = ExtResource("7_ffdvl")
+texture = ExtResource("18_wnffl")
 
 [node name="ObjectShrubA" type="Sprite2D" parent="BG Objects"]
 position = Vector2(2397, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("8_3o6pv")
+texture = ExtResource("19_tk5v2")
 
 [node name="ObjectShrubA2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(6694, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("8_3o6pv")
+texture = ExtResource("19_tk5v2")
 
 [node name="ObjectShrubA3" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8210, 1600)
 scale = Vector2(2, 2)
-texture = ExtResource("8_3o6pv")
+texture = ExtResource("19_tk5v2")
 
 [node name="ObjectHouseC" type="Sprite2D" parent="BG Objects"]
 position = Vector2(2743, 2176)
 scale = Vector2(2, 2)
-texture = ExtResource("6_h0frd")
+texture = ExtResource("20_kn1nj")
 
 [node name="ObjectHouseC2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(10284, 1281)
 scale = Vector2(2, 2)
-texture = ExtResource("6_h0frd")
+texture = ExtResource("20_kn1nj")
 
 [node name="ObjectHouseB" type="Sprite2D" parent="BG Objects"]
 position = Vector2(5868, 2176)
 scale = Vector2(2, 2)
-texture = ExtResource("8_qqrn4")
+texture = ExtResource("21_7gysm")
 
 [node name="ObjectHouseB2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8586, 2176)
 scale = Vector2(2, 2)
-texture = ExtResource("8_qqrn4")
+texture = ExtResource("21_7gysm")
 
 [node name="ObjectHouseD2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8552, 1280)
 scale = Vector2(2, 2)
-texture = ExtResource("9_rao0g")
+texture = ExtResource("22_ow8h6")
 
 [node name="ObjectHouseA" type="Sprite2D" parent="BG Objects"]
 position = Vector2(10777, 2176)
 scale = Vector2(2, 2)
-texture = ExtResource("9_36vty")
+texture = ExtResource("23_ocrp2")
 
 [node name="ObjectRockA" type="Sprite2D" parent="BG Objects"]
 position = Vector2(9723, 2528)
-texture = ExtResource("11_23h3y")
+texture = ExtResource("24_l22j0")
 
 [node name="ObjectRockD" type="Sprite2D" parent="BG Objects"]
 position = Vector2(10234, 2528)
-texture = ExtResource("12_efhdv")
+texture = ExtResource("25_ct00f")
 
 [node name="ObjectBarrel" type="Sprite2D" parent="BG Objects"]
 position = Vector2(11219, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(11349, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel3" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8923, 1600)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel4" type="Sprite2D" parent="BG Objects"]
 position = Vector2(9053, 1600)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel13" type="Sprite2D" parent="BG Objects"]
 position = Vector2(10610, 1600)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel5" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7954, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel7" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7445, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel8" type="Sprite2D" parent="BG Objects"]
 position = Vector2(6331, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel9" type="Sprite2D" parent="BG Objects"]
 position = Vector2(5121, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel10" type="Sprite2D" parent="BG Objects"]
 position = Vector2(5246, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel11" type="Sprite2D" parent="BG Objects"]
 position = Vector2(3054, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel12" type="Sprite2D" parent="BG Objects"]
 position = Vector2(3179, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectBarrel6" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8074, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("15_q8xx6")
+texture = ExtResource("26_eem2g")
 
 [node name="ObjectCrate" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7589, 2432)
 scale = Vector2(2, 2)
-texture = ExtResource("16_g0jv4")
+texture = ExtResource("27_k2n6f")
 
 [node name="ObjectCrate2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(9075, 2432)
 scale = Vector2(2, 2)
-texture = ExtResource("16_g0jv4")
+texture = ExtResource("27_k2n6f")
 
 [node name="ObjectCrate4" type="Sprite2D" parent="BG Objects"]
 position = Vector2(10922, 2432)
 scale = Vector2(2, 2)
-texture = ExtResource("16_g0jv4")
+texture = ExtResource("27_k2n6f")
 
 [node name="ObjectCrate3" type="Sprite2D" parent="BG Objects"]
 position = Vector2(9940, 1537)
 scale = Vector2(2, 2)
-texture = ExtResource("16_g0jv4")
+texture = ExtResource("27_k2n6f")
 
 [node name="TileFenceMiddle" type="Sprite2D" parent="BG Objects"]
 position = Vector2(6579, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("17_jsgpc")
+texture = ExtResource("28_hlwq6")
 
 [node name="TileFenceMiddle2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(6707, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("17_jsgpc")
+texture = ExtResource("28_hlwq6")
 
 [node name="TileFenceEdgeLeft" type="Sprite2D" parent="BG Objects"]
 position = Vector2(6451, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("18_ulcvm")
+texture = ExtResource("29_yjekn")
 
 [node name="TileFenceMiddle3" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7937, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("17_jsgpc")
+texture = ExtResource("28_hlwq6")
 
 [node name="TileFenceMiddle4" type="Sprite2D" parent="BG Objects"]
 position = Vector2(8065, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("17_jsgpc")
+texture = ExtResource("28_hlwq6")
 
 [node name="TileFenceEdgeLeft2" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7809, 2496)
 scale = Vector2(2, 2)
-texture = ExtResource("18_ulcvm")
+texture = ExtResource("29_yjekn")
 
 [node name="ObjectHouseD" type="Sprite2D" parent="BG Objects"]
 position = Vector2(7044, 2176)
 scale = Vector2(2, 2)
-texture = ExtResource("9_rao0g")
+texture = ExtResource("22_ow8h6")
 
 [node name="ObjectBoulderA" type="Sprite2D" parent="BG Objects"]
 position = Vector2(9968, 2496)
-texture = ExtResource("23_tdp38")
+texture = ExtResource("30_jmm6s")
 
 [node name="Coins" type="Control" parent="."]
 layout_mode = 3
@@ -872,207 +876,207 @@ offset_top = 1595.0
 offset_right = 9065.0
 offset_bottom = 1635.0
 
-[node name="Coin" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin" parent="Coins" instance=ExtResource("31_43cw3")]
 
-[node name="Coin2" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin2" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-66.999, 0)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin3" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-34.999, -52)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin4" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-102, -52.0001)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin5" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-131.999, 0.00012207)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin6" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-198.999, 0.00012207)
 
-[node name="Coin7" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin7" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-166.998, -52)
 
-[node name="Coin8" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin8" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-233.999, -52.0001)
 
-[node name="Coin9" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin9" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-264, 0.00012207)
 
-[node name="Coin10" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin10" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-331, 0.00012207)
 
-[node name="Coin11" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin11" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-299, -52)
 
-[node name="Coin12" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin12" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-366, -52.0001)
 
-[node name="Coin13" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin13" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-396, 0)
 
-[node name="Coin14" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin14" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-463, 0)
 
-[node name="Coin15" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin15" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-431, -52)
 
-[node name="Coin16" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin16" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-498, -52.0001)
 
-[node name="Coin17" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin17" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-523.999, 0.00012207)
 
-[node name="Coin18" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin18" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-590.999, 0.00012207)
 
-[node name="Coin19" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin19" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-558.998, -52)
 
-[node name="Coin20" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin20" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-625.999, -52.0001)
 
-[node name="Coin21" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin21" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-655.998, 0)
 
-[node name="Coin22" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin22" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-722.999, 0)
 
-[node name="Coin23" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin23" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-690.999, -52)
 
-[node name="Coin24" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin24" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-757.998, -52.0001)
 
-[node name="Coin25" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin25" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-787.999, 0)
 
-[node name="Coin26" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin26" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-855, 1)
 
-[node name="Coin27" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin27" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-823, -52)
 
-[node name="Coin28" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin28" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-889.999, -52.0001)
 
-[node name="Coin29" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin29" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-919.999, 0.00012207)
 
-[node name="Coin30" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin30" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-987, 0.00012207)
 
-[node name="Coin31" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin31" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(-955, -52)
 
-[node name="Coin36" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin36" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1652, 0)
 
-[node name="Coin37" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin37" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1585, 0)
 
-[node name="Coin38" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin38" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1617, -52)
 
-[node name="Coin39" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin39" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1550, -52.0001)
 
-[node name="Coin40" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin40" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1520, 0)
 
-[node name="Coin41" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin41" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1453, 0)
 
-[node name="Coin42" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin42" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1485, -52)
 
-[node name="Coin43" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin43" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1418, -52.0001)
 
-[node name="Coin44" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin44" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1388, 0.00012207)
 
-[node name="Coin45" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin45" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1321, 0.00012207)
 
-[node name="Coin46" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin46" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1353, -52)
 
-[node name="Coin47" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin47" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1286, -52.0001)
 
-[node name="Coin48" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin48" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1260, 0)
 
-[node name="Coin49" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin49" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1193, 0)
 
-[node name="Coin50" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin50" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1225, -52)
 
-[node name="Coin51" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin51" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1158, -52.0001)
 
-[node name="Coin52" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin52" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1128, 0.00012207)
 
-[node name="Coin53" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin53" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1061, 0.00012207)
 
-[node name="Coin54" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin54" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1093, -52)
 
-[node name="Coin55" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin55" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(1026, -52.0001)
 
-[node name="Coin56" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin56" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(996.002, 0.00012207)
 
-[node name="Coin57" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin57" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(929.001, 0.00012207)
 
-[node name="Coin58" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin58" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(961, -52)
 
-[node name="Coin59" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin59" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(894.002, -52.0001)
 
-[node name="Coin60" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin60" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(864.002, 0)
 
-[node name="Coin61" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin61" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(797.001, 0)
 
-[node name="Coin63" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin63" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(611, 647)
 
-[node name="Coin64" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin64" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(665, 647)
 
-[node name="Coin65" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin65" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(360, 521)
 
-[node name="Coin66" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin66" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(414, 521)
 
-[node name="Coin67" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin67" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(611.001, 392)
 
-[node name="Coin68" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin68" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(665.001, 392)
 
-[node name="Coin69" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin69" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(361, 257)
 
-[node name="Coin70" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin70" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(415, 257)
 
-[node name="Coin62" parent="Coins" instance=ExtResource("13_tqype")]
+[node name="Coin62" parent="Coins" instance=ExtResource("31_43cw3")]
 position = Vector2(829, -52)
 
-[node name="Shopkeep" parent="." instance=ExtResource("13_hulqt")]
+[node name="Shopkeep" parent="." instance=ExtResource("32_16fs8")]
 position = Vector2(6115, 2438)
 
-[node name="Player" parent="." instance=ExtResource("4_axqys")]
+[node name="Player" parent="." instance=ExtResource("33_xan4r")]
 position = Vector2(35, 2528)
 
 [node name="Foreground" type="Control" parent="."]
@@ -1085,119 +1089,141 @@ offset_bottom = 2860.0
 
 [node name="ObjectFoliageC" type="Sprite2D" parent="Foreground"]
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC7" type="Sprite2D" parent="Foreground"]
 position = Vector2(-508, -8)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC4" type="Sprite2D" parent="Foreground"]
 position = Vector2(1041, 124)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC5" type="Sprite2D" parent="Foreground"]
 position = Vector2(1673, -5)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC10" type="Sprite2D" parent="Foreground"]
 position = Vector2(4092, -224)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC12" type="Sprite2D" parent="Foreground"]
 position = Vector2(5024, 118)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC15" type="Sprite2D" parent="Foreground"]
 position = Vector2(5760, -61)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC16" type="Sprite2D" parent="Foreground"]
 position = Vector2(6674, -117)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC17" type="Sprite2D" parent="Foreground"]
 position = Vector2(6912, -1099)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC19" type="Sprite2D" parent="Foreground"]
 position = Vector2(8839, -1097)
 scale = Vector2(2, 2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC2" type="Sprite2D" parent="Foreground"]
 position = Vector2(659, 4)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC8" type="Sprite2D" parent="Foreground"]
 position = Vector2(-239, 172)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC9" type="Sprite2D" parent="Foreground"]
 position = Vector2(-901, 196)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC3" type="Sprite2D" parent="Foreground"]
 position = Vector2(1301, -126)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC11" type="Sprite2D" parent="Foreground"]
 position = Vector2(4372, -3)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC13" type="Sprite2D" parent="Foreground"]
 position = Vector2(5269, -138)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC14" type="Sprite2D" parent="Foreground"]
 position = Vector2(6161, 2)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC18" type="Sprite2D" parent="Foreground"]
 position = Vector2(7813, -1120)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC20" type="Sprite2D" parent="Foreground"]
 position = Vector2(9340, -1027)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageC6" type="Sprite2D" parent="Foreground"]
 position = Vector2(1793, -219)
 rotation = 3.14159
 scale = Vector2(2, -2)
-texture = ExtResource("34_n4xry")
+texture = ExtResource("34_hgm2v")
 
 [node name="ObjectFoliageB" type="Sprite2D" parent="Foreground"]
 position = Vector2(104, -39)
 scale = Vector2(2, 2)
-texture = ExtResource("35_gjbhh")
+texture = ExtResource("35_x21qe")
 
 [node name="ObjectFoliageB2" type="Sprite2D" parent="Foreground"]
 position = Vector2(788, -165)
 scale = Vector2(2, 2)
-texture = ExtResource("35_gjbhh")
+texture = ExtResource("35_x21qe")
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(66, 2626)
+
+[node name="DeathPlane" parent="." instance=ExtResource("36_f12ld")]
+position = Vector2(68, 3327)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pause" parent="UI" instance=ExtResource("37_34khk")]
+
+[node name="UI" parent="UI" instance=ExtResource("38_oeh1n")]
+
+[node name="InvisibleBounds" parent="." instance=ExtResource("39_my1wj")]
+position = Vector2(-6, 1969)
+
+[node name="InvisibleBounds2" parent="." instance=ExtResource("39_my1wj")]
+position = Vector2(13068, 1772)
