@@ -1408,3 +1408,6 @@ stream = ExtResource("60_81175")
 autoplay = true
 max_distance = 20000.0
 bus = &"Music"
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(83, 3220)

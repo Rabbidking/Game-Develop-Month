@@ -122,7 +122,7 @@ func die():
 		position = level_start.position
 	else:
 		print("Error: LevelStart node not found.")
-	Game.playerHP = 10
+	Game.playerHP = 3
 	get_tree().reload_current_scene()
 	
 		
