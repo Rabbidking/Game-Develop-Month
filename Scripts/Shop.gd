@@ -56,9 +56,9 @@ func _on_prev_pressed():
 
 
 func _on_buy_pressed():
-	print(currItem)
+	#print(currItem)
 	itemDict = Game.items[currItem]
-	print(itemDict)
+	#print(itemDict)
 	
 	if Game.coins < itemDict["Cost"]:
 		buyFailed.play()
