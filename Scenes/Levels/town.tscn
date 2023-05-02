@@ -1111,6 +1111,22 @@ position = Vector2(829, -52)
 [node name="Shopkeep" parent="." instance=ExtResource("32_16fs8")]
 position = Vector2(6115, 2989)
 
+[node name="Enemies" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 551.0
+offset_right = 40.0
+offset_bottom = 591.0
+
+[node name="Rockpillar" parent="Enemies" instance=ExtResource("40_acg4o")]
+position = Vector2(4358, 2317)
+
+[node name="Red Whisker" parent="Enemies" instance=ExtResource("42_j022f")]
+position = Vector2(11725, 2499)
+
+[node name="DinoBrute" parent="Enemies" instance=ExtResource("43_hnl1s")]
+position = Vector2(12115, 2498)
+
 [node name="Player" parent="." instance=ExtResource("33_xan4r")]
 position = Vector2(35, 3079)
 
@@ -1266,22 +1282,6 @@ position = Vector2(-6, 2520)
 
 [node name="InvisibleBounds2" parent="." instance=ExtResource("39_my1wj")]
 position = Vector2(13068, 2323)
-
-[node name="Enemies" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 551.0
-offset_right = 40.0
-offset_bottom = 591.0
-
-[node name="Rockpillar" parent="Enemies" instance=ExtResource("40_acg4o")]
-position = Vector2(4358, 2317)
-
-[node name="Red Whisker" parent="Enemies" instance=ExtResource("42_j022f")]
-position = Vector2(11725, 2499)
-
-[node name="DinoBrute" parent="Enemies" instance=ExtResource("43_hnl1s")]
-position = Vector2(12115, 2498)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(35, 3079)

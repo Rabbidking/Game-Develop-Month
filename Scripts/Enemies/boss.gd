@@ -16,7 +16,6 @@ var hit_cooldown = false
 var dead = false
 var in_range = false
 
-
 func _physics_process(delta):
 	if dead == false:
 		if $Hit_Range.is_colliding() and hit_cooldown == false:
@@ -41,20 +40,13 @@ func hurt():
 		$SFX/dragonHurt.play()
 		Game.boss_current_health -= Game.coins
 		Game.coins = 0
-		
-		if Game.boss_current_health <= 0:
-			Game.boss_current_health = 0
-			#stop the speedrun timer here
-			Utils.timer_on = false
-			$SFX/dragonDie.play()
-			#boss_killed.emit()
-			anim.play("Die")
-			await anim.animation_finished
-			queue_free()
-			SceneTransition.change_scene_to_file("res://Scenes/main.tscn")
 	else:
 		anim.play("Lick")
 		$SFX/dragonLaugh.play()
+		
+	if Game.boss_current_health <= 0:
+		dead = true
+		die()
 
 
 func _on_hurt_box_body_entered(body):
@@ -67,17 +59,18 @@ func _on_cooldown_timeout():
 	hit_cooldown = false
 
 func fire_bullet():
-	#var main = get_tree().current_scene
-	var enemyBullet = EnemyBullet.instantiate()
-	var root = get_tree().get_root()
-	var current_scene = root.get_child(root.get_child_count()-1)
-	#main.add_child(enemyBullet)
-	current_scene.call_deferred("add_child", enemyBullet)
-	#current_scene.add_child(enemyBullet)
-	var direction = player.global_position - global_position
-	direction = direction.normalized()
-	enemyBullet.position = global_position 
-	enemyBullet.rotation = direction.angle()
+	if dead == false:
+		#var main = get_tree().current_scene
+		var enemyBullet = EnemyBullet.instantiate()
+		var root = get_tree().get_root()
+		var current_scene = root.get_child(root.get_child_count()-1)
+		#main.add_child(enemyBullet)
+		current_scene.call_deferred("add_child", enemyBullet)
+		#current_scene.add_child(enemyBullet)
+		var direction = player.global_position - global_position
+		direction = direction.normalized()
+		enemyBullet.position = global_position 
+		enemyBullet.rotation = direction.angle()
 
 
 func _on_shoot_timer_timeout():
@@ -97,3 +90,14 @@ func _on_range_detect_body_exited(body):
 	if body.get_collision_layer_value(1):
 		in_range = false
 		$Shoot_Timer.stop()
+
+func die():
+	Game.boss_current_health = 0
+	#stop the speedrun timer here
+	Utils.timer_on = false
+	$SFX/dragonDie.play()
+	#boss_killed.emit()
+	anim.play("Die")
+	await anim.animation_finished
+	queue_free()
+	SceneTransition.change_scene_to_file("res://Scenes/main.tscn")
