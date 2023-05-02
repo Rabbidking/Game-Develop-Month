@@ -6,8 +6,8 @@ var coins = 0
 var base_coin_value = 1
 var walletMax = 50
 
-var boss_max_health = 1000000
-var boss_current_health = 1000000
+var boss_max_health = 500000
+var boss_current_health = 500000
 var regen_amount = 10000
 
 var items = {

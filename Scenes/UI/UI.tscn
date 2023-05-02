@@ -37,7 +37,7 @@ modulate = Color(1, 0, 0, 1)
 offset_left = 439.0
 offset_right = 636.0
 offset_bottom = 27.0
-max_value = 1e+06
+max_value = 500000.0
 step = 1.0
 show_percentage = false
 

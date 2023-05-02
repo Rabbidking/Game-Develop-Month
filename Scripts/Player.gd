@@ -23,7 +23,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _process(delta):
 		
-	if Game.playerHP <= 0:
+	if Game.playerHP == 0:
 		die()
 
 
